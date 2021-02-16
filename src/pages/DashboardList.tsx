@@ -35,7 +35,9 @@ const List = () => {
 
   return (
     <div className="bg">
-      <Row>Header</Row>
+      <Row>
+        <Header />
+      </Row>
       <Row>
         <Button>Rank</Button>
         <Button>Volume</Button>

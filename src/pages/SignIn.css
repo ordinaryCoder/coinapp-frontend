@@ -1,7 +1,7 @@
 .background {
   background-color: #0e0f18;
+  height: 100vh;
 }
-
 .header {
   color: white;
   font-size: 25px;
@@ -10,15 +10,19 @@
   margin-bottom: 140px;
 }
 
-.headerx {
-  color: white;
-}
-.subheadersup {
+.subheader {
   color: white;
   font-size: 31px;
   margin-left: 30px;
 }
-.subheadertwosup {
+
+.mainheading {
+  color: white;
+  font-size: 31px;
+  margin-left: 30px;
+}
+
+.mainheadingtwo {
   color: white;
   font-size: 31px;
 
@@ -27,15 +31,13 @@
   padding-bottom: 100px;
 }
 
-.email {
+.emailid {
   margin-left: 22px;
   background-color: #0e0f18;
   height: 50px;
 
   width: 326px;
   font-size: 20px;
-  border: none;
-  border-bottom: 2px solid #adb3bc;
 }
 
 .password {
@@ -45,29 +47,22 @@
   height: 50px;
   width: 326px;
   font-size: 20px;
-  border: none;
-  border-bottom: 2px solid #adb3bc;
 }
 
-.footer {
+.forgotpass {
   color: white;
-  margin-left: 20px;
-  padding-bottom: 14px;
-  padding-top: 57px;
-  font-size: 13px;
+  font-size: 19px;
+  margin-left: 137px;
+  padding-top: 163px;
+
+  padding-bottom: 74px;
 }
 
-.footertwo {
-  color: white;
-  margin-left: 120px;
-  font-size: 13px;
-}
-
-.signupbutton {
+.signinbutton {
   background-color: #0057ff;
   color: white;
   height: 72px;
   font-size: 18px;
   width: 377px;
-  margin-top: 93px;
+  margin-top: -15px;
 }

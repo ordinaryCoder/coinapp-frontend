@@ -1,49 +1,38 @@
-.center{
-    background-color: #0E0F18;
-    height: 100vh;
+.center {
+  background-color: #0e0f18;
+  height: 100vh;
 }
 
-.adjustcenter{
-
-    padding-top: 325px;
-
+.adjustcenter {
+  padding-top: 325px;
 }
-.heading{
-font-size: 40px;
-color: white;
-margin-left: 30px;
-padding-bottom: 14px;
-
-
+.heading {
+  font-size: 40px;
+  color: white;
+  margin-left: 30px;
+  padding-bottom: 14px;
 }
 
-.subheading{
-
-    color: #D8D9DD;
-    font-size: 18px;
-    margin-left: 30px;
+.subheading {
+  color: #d8d9dd;
+  font-size: 18px;
+  margin-left: 30px;
 }
 
-
-.childsubheading{
-    margin-left: 38px;
-    padding-top: 11px;
-
+.childsubheading {
+  margin-left: 38px;
+  padding-top: 11px;
 }
-.buttonsign{
-    background-color: #0057FF;
-    color: white;
-    padding: 11px;
-    border-radius: 117px;
-    margin-left: 91px;
-    width: 190px;
-    margin-top: 42px;
-    height: 49px;
+.buttonsign {
+  background-color: #0057ff;
+  color: white;
+  padding: 11px;
+  border-radius: 117px;
+  margin-left: 91px;
+  width: 190px;
+  margin-top: 42px;
+  height: 49px;
 }
-.buttonsignup{
-
-   
-    margin-left: 154px;
-  
-  
+.buttonsignup {
+  margin-left: 154px;
 }

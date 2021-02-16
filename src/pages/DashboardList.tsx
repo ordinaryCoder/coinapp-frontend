@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Button, Row } from "reactstrap";
 import { DashboardListItem } from "../component/DashboardListItem";
+import "./Dashboard.css";
 
 export type ICyptoData = {
   id: String;

@@ -34,7 +34,7 @@ const List = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg">
       <Row>Header</Row>
       <Row>
         <Button>Rank</Button>
@@ -47,7 +47,7 @@ const List = () => {
         ))}
       </Row>
       <Row>Footer</Row>
-    </>
+    </div>
   );
 };
 

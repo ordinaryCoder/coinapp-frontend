@@ -1,27 +1,59 @@
+
+/* @font-face {
+  font-family: "sfPro";
+  src: url("../customFonts/FontsFree-Net-SFProText-Regular.ttf") format("ttf");
+} */
+
+@font-face {
+  font-family: 'sfpro';
+  src:  url('../customFonts/FontsFree-Net-SFProText-Regular.ttf') format('ttf'),
+        
+}
 .center {
   background-color: #0e0f18;
   height: 100vh;
 }
+.images{
 
+  margin-left: 144px;
+  
+}
+.imagetop{
+
+
+}
 .adjustcenter {
-  padding-top: 325px;
+    padding-top: 223px;
 }
 .heading {
-  font-size: 40px;
-  color: white;
-  margin-left: 30px;
+  font-size: 30px;
+  color: #ffffff; 
+  
+  margin-left: 62px;
   padding-bottom: 14px;
+  padding-top: 55px;
+  font-family:'sfpro';
+   font-weight:bold;
+  letter-spacing:-10;
+  line-break: 36;
+
 }
 
 .subheading {
-  color: #d8d9dd;
-  font-size: 18px;
-  margin-left: 30px;
+  color: #ffffff; 
+  font-size: 16px;
+  margin-left: 59px;
+  font-weight: normal;
+      letter-spacing: 0;
 }
 
 .childsubheading {
-  margin-left: 38px;
+  margin-left: 35px;
   padding-top: 11px;
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: normal;
+      letter-spacing: 0;
 }
 .buttonsign {
   background-color: #0057ff;
@@ -32,7 +64,33 @@
   width: 190px;
   margin-top: 42px;
   height: 49px;
+  border-color: #0057FF;
+ 
+  
 }
+.buttonsign:hover {
+  background-color: #0057ff;
+  color: white;
+}
+
 .buttonsignup {
-  margin-left: 154px;
+  background-color: transparent;
+  
+  padding: 11px;
+  border-radius: 117px;
+  margin-left: 91px;
+  width: 190px;
+  margin-top: 18px;
+    height: 49px;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff; 
+    letter-spacing:-10;
+   
+}
+.buttonsignup:hover{
+
+  background-color: #0057ff;
+  border-color: #0057FF;
 }

@@ -38,6 +38,8 @@
 
   width: 326px;
   font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #adb3bc;
 }
 
 .password {
@@ -47,6 +49,8 @@
   height: 50px;
   width: 326px;
   font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #adb3bc;
 }
 
 .forgotpass {

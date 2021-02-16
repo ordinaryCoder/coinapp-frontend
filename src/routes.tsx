@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Login } from "./pages/login";
-import { Signup } from "./pages/signup";
+import { Signin } from "./pages/Signin";
+import { Signup } from "./pages/Signup";
 import List from "./pages/list";
 import App from "./App";
 import Home from "./pages/home";
@@ -13,10 +13,10 @@ const Routes = () => {
         {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
         <Switch>
-          <Route exact path="/login">
-            <Login />
+          <Route exact path="/Signin">
+            <Signin />
           </Route>
-          <Route exact path="/signup">
+          <Route exact path="/Signup">
             <Signup />
           </Route>
           <Route exact path="/list">

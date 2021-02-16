@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Login } from "./pages/login";
-import { Signup } from "./pages/signup";
-import List from "./pages/list";
-import App from "./App";
-import Home from "./pages/home";
+import List from "./pages/DashboardList";
+import Home from "./pages/Home";
+import { Login } from "./pages/Login";
+import { Signup } from "./pages/Signup";
 
 const Routes = () => {
   return (

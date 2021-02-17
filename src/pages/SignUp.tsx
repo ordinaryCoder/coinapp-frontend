@@ -7,7 +7,7 @@ export const Signup = () => {
   return (
     <div className="background">
       <p className="header">sign in</p>
-      <span className="headerx">x</span>
+    
       <h1 className="subheadersup">Lets create your</h1>
       <h1 className="subheadertwosup">coinapp account</h1>
 

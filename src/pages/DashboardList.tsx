@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button, Row } from "reactstrap";
+import { Button, Container, Row } from "reactstrap";
 import { DashboardListItem } from "../component/DashboardListItem";
+import { Header } from "../component/Header";
 import "./Dashboard.css";
 
 export type ICyptoData = {
@@ -34,22 +35,22 @@ const List = () => {
   }, []);
 
   return (
-    <div className="bg">
-      <Row>
-        <Header />
-      </Row>
-      <Row>
+    <Container className="j-even p-15">
+      <Header />
+
+      <Row id="sort-wrapper" className="d-flex">
         <Button>Rank</Button>
         <Button>Volume</Button>
         <Button>24 Hours</Button>
       </Row>
-      <Row>
-        {cryptoList.map((item) => (
+
+      {cryptoList.length > 0 &&
+        cryptoList.map((item) => (
           <DashboardListItem key={item.id.toString()} item={item} />
         ))}
-      </Row>
+
       <Row>Footer</Row>
-    </div>
+    </Container>
   );
 };
 

@@ -1,6 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button, Container, Row } from "reactstrap";
+import {
+  Button,
+  Container,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Row,
+} from "reactstrap";
 import { DashboardListItem } from "../component/DashboardListItem";
 import { Header } from "../component/Header";
 import "./Dashboard.css";
@@ -38,6 +46,14 @@ const List = () => {
     <Container className="j-even p-15">
       <Header />
 
+      <InputGroup>
+        <Input
+          onChange={(e) => console.log("e", e.target.value)}
+          id="search-box"
+          placeholder="Search"
+        />
+      </InputGroup>
+
       <Row id="sort-wrapper" className="d-flex">
         <Button>Rank</Button>
         <Button>Volume</Button>
@@ -49,7 +65,7 @@ const List = () => {
           <DashboardListItem key={item.id.toString()} item={item} />
         ))}
 
-      <Row>Footer</Row>
+      <Row className="list-footer">Footer</Row>
     </Container>
   );
 };

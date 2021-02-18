@@ -122,3 +122,22 @@
 .neg-change {
   color: #fc3044;
 }
+
+.list-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  margin-left: 0;
+}
+
+#search-box {
+  width: 95%;
+  border: none;
+  height: 4vh;
+  font-size: 32px;
+  padding-left: 15px;
+}

@@ -8,8 +8,6 @@ interface IDashboardListItem {
 }
 
 export const DashboardListItem = (props: IDashboardListItem) => {
-  console.log("dashboard item", props.item);
-
   const priceChange = (newPrice: string, oldPrice: string) => {
     let roundedNewprice = parseFloat(newPrice) - parseFloat(oldPrice);
     if (isNaN(roundedNewprice)) return "--";

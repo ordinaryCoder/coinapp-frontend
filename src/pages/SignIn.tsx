@@ -7,7 +7,7 @@ export const Signin = () => {
   return (
     <div className="background">
       <p className="header">sign up </p>
-      <p className="subheader">x</p>
+    
       <h1 className="mainheading">Welcome back! </h1>
       <h1 className="mainheadingtwo">You've been missed</h1>
 

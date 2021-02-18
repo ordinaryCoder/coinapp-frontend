@@ -2,6 +2,9 @@ import React from "react";
 import { Button } from "reactstrap";
 import { useHistory } from "react-router-dom";
 import "./Home.css";
+import coinapp from './../assets/images/coinapp.png'; 
+
+
 
 const Home = () => {
   const history = useHistory();
@@ -14,8 +17,12 @@ const Home = () => {
   };
   return (
     <>
+    <div className="container">
       <div className="center">
         <div className="adjustcenter">
+          <div className="images">
+          <img src={coinapp} alt="mypic"  />
+          </div>
           <h1 className="heading">Welcome to coinapp</h1>
           <p className="subheading">
             Craving for your favourite food? Takeaway{" "}
@@ -30,6 +37,7 @@ const Home = () => {
             Sign up
           </Button>
         </div>
+      </div>
       </div>
     </>
   );

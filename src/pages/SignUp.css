@@ -29,26 +29,37 @@
   padding-bottom: 100px;
 }
 
-.email {
+.email{
   margin-left: 22px;
   background-color: #0e0f18;
   height: 50px;
-
+  color: #ffffff;
   width: 326px;
   font-size: 20px;
   border: none;
   border-bottom: 2px solid #adb3bc;
+ 
+  
+}
+.email:focus{
+  outline: none;
+
 }
 
 .password {
   margin-left: 22px;
-
+  color: #ffffff;
   background-color: #0e0f18;
   height: 50px;
   width: 326px;
   font-size: 20px;
   border: none;
   border-bottom: 2px solid #adb3bc;
+  
+}
+.password:focus{
+
+  outline: none;
 }
 
 .footer {

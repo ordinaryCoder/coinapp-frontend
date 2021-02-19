@@ -6,6 +6,8 @@ import firebase from "../firebase";
 import { db } from '../firebase';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import coinapp from './../assets/images/coinapp.png';
+
 
 
 toast.configure()
@@ -83,8 +85,15 @@ export const Signup = () => {
   }
   return (
     <div className="background">
+      <div >
+        <p className="headersignup">sign in</p>
+        <img src={coinapp} className="imagesignup" />
+      </div>
 
-      <p className="header">sign in</p>
+
+
+
+
 
       <h1 className="subheadersup">Lets create your</h1>
       <h1 className="subheadertwosup">coinapp account</h1>
@@ -92,7 +101,7 @@ export const Signup = () => {
       <Form onSubmit={handlesignup}>
         <Input
           type="email"
-          name="email"
+
           value={email}
 
           autoComplete="off"
@@ -104,7 +113,7 @@ export const Signup = () => {
         />
         <Input
           type="password"
-          name="password"
+
           value={password}
 
 

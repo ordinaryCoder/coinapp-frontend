@@ -2,12 +2,18 @@
   background-color: #0e0f18;
   height: 100vh;
 }
-.header {
+.headersignin {
   color: white;
   font-size: 25px;
-  padding-top: 100px;
+  padding-top: 46px;
   margin-left: 35px;
-  margin-bottom: 106px;
+  margin-bottom: -36px;
+}
+
+.imagesignin{
+
+      width: 50px;
+    margin-left: 153px;
 }
 
 
@@ -18,6 +24,7 @@
   margin-left: 30px;
   font-weight: bold;
   letter-spacing:10;
+  padding-top: 187px;
 
 }
 

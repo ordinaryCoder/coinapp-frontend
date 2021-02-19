@@ -1,16 +1,21 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
+import { BiSearchAlt } from "react-icons/bi";
+import { IoMdStats } from "react-icons/io";
+import "./Header.css";
 
 export const Header = () => {
   return (
-    <Row>
-      <Col>
-        <img src="" alt="Left icon" />
+    <Row id="header-wrapper" className="d-flex">
+      <Col className="mr-auto">
+        <BiSearchAlt />
       </Col>
 
-      <Col>Coin Market</Col>
-      <Col>
-        <img src="" alt="Right Icon" />
+      <Col id="header-title" className="m-auto f-14">
+        Coin Market
+      </Col>
+      <Col className="ml-auto">
+        <IoMdStats />
       </Col>
     </Row>
   );

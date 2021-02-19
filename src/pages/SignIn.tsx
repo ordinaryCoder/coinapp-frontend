@@ -5,6 +5,8 @@ import "./SignIn.css";
 import firebase from "../firebase";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import coinapp from './../assets/images/coinapp.png';
+
 
 
 
@@ -63,8 +65,10 @@ export const Signin = () => {
 
   return (
     <div className="background">
-      <p className="header">sign up </p>
-
+      <div>
+        <p className="headersignin">sign up </p>
+        <img src={coinapp} className="imagesignin" />
+      </div>
       <h1 className="mainheading">Welcome back! </h1>
       <h1 className="mainheadingtwo">You've been missed</h1>
 

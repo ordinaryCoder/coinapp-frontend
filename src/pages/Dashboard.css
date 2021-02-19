@@ -1,3 +1,143 @@
 .bg {
   background-color: #0e0f18;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.coin-logo {
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.cap-case {
+  text-transform: capitalize;
+}
+
+.fl-right {
+  float: right;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.j-even {
+  justify-content: space-evenly;
+}
+
+.al-slf-c {
+  align-self: center;
+}
+
+#sort-wrapper {
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#sort-wrapper > button:nth-of-type(2) {
+  margin-right: auto;
+  margin-left: 5vw;
+}
+
+#sort-wrapper > button {
+  background-color: #1a1b24;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px 8px 12px;
+  font-size: 12px;
+}
+
+.mt-10 {
+  margin-top: 10;
+}
+
+#logo-wrapper {
+  display: flex;
+}
+
+#coin-logo {
+  padding: 5px;
+  align-self: center;
+  background-color: #13141c;
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+}
+
+#cypto-name > h2 {
+  padding-left: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+#cypto-name > h2 > span {
+  padding-left: 5px;
+  color: #636363;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+#cypto-name > p {
+  padding-left: 10px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #bebebe;
+  padding-top: 12px;
+}
+
+#price-change > p {
+  padding-top: 7px;
+  font-size: 14px;
+  margin-left: auto;
+  letter-spacing: 1px;
+}
+
+.pos-change {
+  color: #32cc86;
+}
+
+.neg-change {
+  color: #fc3044;
+}
+
+.list-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  margin-left: 0;
+}
+
+#search-box {
+  width: 95%;
+  border: none;
+  height: 4vh;
+  font-size: 32px;
+  padding-left: 15px;
+}

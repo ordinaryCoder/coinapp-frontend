@@ -4,6 +4,7 @@ import List from "./pages/DashboardList";
 import Home from "./pages/Home";
 import { Signin } from "./pages/SignIn";
 import { Signup } from "./pages/SignUp";
+import { CryptoStats } from "./pages/CryptoStats";
 
 const Routes = () => {
   return (
@@ -21,6 +22,7 @@ const Routes = () => {
           <Route exact path="/list">
             <List />
           </Route>
+
           <Route exact path="/">
             <Home />
           </Route>

@@ -12,6 +12,7 @@ import Settings from "./pages/Settings";
 import AllNotify from "./pages/AllNotify";
 
 
+import { CryptoStats } from "./pages/CryptoStats";
 
 const Routes = () => {
   return (
@@ -31,6 +32,7 @@ const Routes = () => {
           <Route exact path="/list">
             <List />
           </Route>
+
           <Route exact path="/">
             <Home />
           </Route>

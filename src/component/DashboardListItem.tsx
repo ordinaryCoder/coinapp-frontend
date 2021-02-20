@@ -3,31 +3,31 @@ import { Col, Row } from "reactstrap";
 import { ICyptoData } from "../pages/DashboardList";
 import "../pages/Dashboard.css";
 
-interface IDashboardListItem {
+export interface IDashboardListItem {
   item: ICyptoData;
 }
 
+export function getColor(newPrice: string, oldPrice: string) {
+  let priceChange = parseFloat(newPrice) - parseFloat(oldPrice);
+  if (priceChange < 0) return "neg-change";
+  else return "pos-change";
+}
+
+export const priceChange = (newPrice: string, oldPrice: string) => {
+  let roundedNewprice = parseFloat(newPrice) - parseFloat(oldPrice);
+  if (isNaN(roundedNewprice)) return "--";
+  else if (roundedNewprice < 0.01 && roundedNewprice > -10)
+    return roundedNewprice.toFixed(3);
+  else if (roundedNewprice < 0.001 && roundedNewprice > -10)
+    return roundedNewprice.toFixed(3);
+  else if (roundedNewprice < 0.0001 && roundedNewprice > -10)
+    return roundedNewprice.toFixed(4);
+  else if (roundedNewprice < 0.00001 && roundedNewprice > -10)
+    return roundedNewprice.toFixed(5);
+  else return roundedNewprice.toFixed(2);
+};
+
 export const DashboardListItem = (props: IDashboardListItem) => {
-  const priceChange = (newPrice: string, oldPrice: string) => {
-    let roundedNewprice = parseFloat(newPrice) - parseFloat(oldPrice);
-    if (isNaN(roundedNewprice)) return "--";
-    else if (roundedNewprice < 0.01 && roundedNewprice > -10)
-      return roundedNewprice.toFixed(3);
-    else if (roundedNewprice < 0.001 && roundedNewprice > -10)
-      return roundedNewprice.toFixed(3);
-    else if (roundedNewprice < 0.0001 && roundedNewprice > -10)
-      return roundedNewprice.toFixed(4);
-    else if (roundedNewprice < 0.00001 && roundedNewprice > -10)
-      return roundedNewprice.toFixed(5);
-    else return roundedNewprice.toFixed(2);
-  };
-
-  function getColor(newPrice: string, oldPrice: string) {
-    let priceChange = parseFloat(newPrice) - parseFloat(oldPrice);
-    if (priceChange < 0) return "neg-change";
-    else return "pos-change";
-  }
-
   function roundOff(labelValue: string) {
     // Nine Zeroes for Billions
     return Math.abs(Number(labelValue)) >= 1.0e9
@@ -47,7 +47,7 @@ export const DashboardListItem = (props: IDashboardListItem) => {
         <img
           id="coin-logo"
           className="coin-logo mr-auto"
-          src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
+          src={`https://static.coincap.io/assets/icons/${props.item.symbol.toLowerCase()}@2x.png`}
           alt="coin logo"
         />
       </Col>
@@ -62,7 +62,7 @@ export const DashboardListItem = (props: IDashboardListItem) => {
 
       <Col id="crypto-rate" xs="5" className="ml-auto d-block">
         <p className="text-right">
-          ${parseFloat(props.item.priceUsd.toString()).toFixed(2)}
+          ${parseFloat(props.item?.priceUsd?.toString()).toFixed(2)}
         </p>
         <div id="price-change" className="d-flex">
           <p

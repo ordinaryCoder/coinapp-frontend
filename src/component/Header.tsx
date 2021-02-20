@@ -4,11 +4,15 @@ import { BiSearchAlt } from "react-icons/bi";
 import { IoMdStats } from "react-icons/io";
 import "./Header.css";
 
-export const Header = () => {
+interface HeaderProps {
+  handleClickLeftIcon: () => void;
+}
+
+export const Header = (props: HeaderProps) => {
   return (
     <Row id="header-wrapper" className="d-flex">
       <Col className="mr-auto">
-        <BiSearchAlt />
+        <BiSearchAlt onClick={props.handleClickLeftIcon} />
       </Col>
 
       <Col id="header-title" className="m-auto f-14">

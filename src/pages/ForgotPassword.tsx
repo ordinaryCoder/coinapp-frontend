@@ -6,6 +6,8 @@ import coinapp from './../assets/images/coinapp.png';
 
 const ForgotPassword = () => {
     return (
+
+
         <div className="backgroundforgot">
             <div className="myicon">
                 <BiArrowBack />
@@ -35,9 +37,9 @@ const ForgotPassword = () => {
             <div >
                 <Button className="recoverpass">Recover password</Button>
             </div>
-
-
         </div>
+
+
     )
 }
 

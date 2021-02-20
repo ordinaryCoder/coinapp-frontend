@@ -1,0 +1,83 @@
+.allbody{
+
+    font-family: "SF Pro Display" !important;
+    color: #ffffff;
+    background-color: #0e0f18;
+    height: 789px;
+}
+.backnotify{
+font-size: 30px;
+margin-top: 30px;
+margin-left: 16px;
+color: #666666;
+}
+
+.headernotify{
+
+    margin-left: 138px;
+    margin-top: -26px;
+    font-size: 20px;
+    color: #ffffff;
+    
+}
+
+.pushnotify{
+    font-size: 16px;
+    padding-top: 42px;
+    margin-left: 23px;
+
+}
+.togglefirst{
+
+    margin-top: -40px;
+    margin-left: 300px;    
+}
+
+.updatenotify{
+    font-size: 16px;
+    padding-top: 25px;
+    margin-left: 23px;
+
+}
+
+.togglesecond{
+
+    margin-top: -40px;
+    margin-left: 300px;   
+
+}
+
+.releasenotify{
+
+
+    font-size: 16px;
+    padding-top: 25px;
+    margin-left: 23px;
+}
+
+
+.togglethird{
+
+    margin-top: -40px;
+    margin-left: 300px;   
+
+}
+
+
+.othernotifications{
+
+    font-size: 16px;
+    padding-top: 25px;
+    margin-left: 23px;
+
+
+}
+
+.togglefourth{
+    margin-top: -40px;
+    margin-left: 300px;   
+
+
+
+}
+

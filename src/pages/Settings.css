@@ -1,0 +1,277 @@
+.backgroundsetting{
+    font-family: "SF Pro Display" !important;
+    color: #ffffff;
+    background-color: #0e0f18; 
+}
+
+.seticon{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 16px;
+    color: #666666;
+
+
+}
+.Settingheader{
+    margin-left: 155px;
+margin-top: -26px;
+font-size: 20px;
+}
+
+.headergeneral{
+
+    padding-top: 30px;
+    font-size: 34px;
+   
+    font-weight: bold;
+    margin-left: 19px;
+}
+
+
+.setnotification{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+}
+
+.notifiicon{
+
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+}
+.setcurrency{
+    font-size: 16px;
+  
+    margin-left: 23px;
+    margin-top: -5px;
+}
+.currcyicon{
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;  
+    color: #666666;  
+}
+
+
+.setalerts{
+
+    font-size: 16px;
+    margin-top: -5px;
+    margin-left: 23px;
+}
+.alerticon{
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666;
+}
+
+.setpolicy{
+    font-size: 16px;
+    padding-top: 0px;
+    margin-left: 23px;
+
+}
+
+.policyicon{
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666;
+
+}
+
+
+
+
+/* Account Section */
+
+.headerAcount{
+    padding-top: 1px;
+    font-size: 34px;
+   
+    font-weight: bold;
+    margin-left: 19px;
+
+}
+
+.hearderuserprofile{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+
+}
+
+.accountarraw{
+
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+
+}
+
+.headerchangepin{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+    margin-top: -28px;
+
+}
+
+.accountarrawtwo{
+
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+
+}
+
+.headerlogout{
+    font-size: 16px;
+    margin-left: 23px;
+    margin-top: -2px;
+
+}
+
+.accountarrowthree{
+
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+
+}
+
+
+/* Social Section */
+
+.headersocial{
+    padding-top: 1px;
+    font-size: 34px;
+   
+    font-weight: bold;
+    margin-left: 19px;
+
+}
+
+.headertelegram{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+}
+
+.forwardarrow{
+
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+
+}
+
+.headertwiter{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+    margin-top: -25px;
+}
+
+.forwardarrowtwo{
+    
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+}
+
+.headermedium{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+    margin-top: -28px;
+}
+
+
+.forwardarrowthree{
+
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+
+}
+.shareapp{
+
+    font-size: 16px;
+    padding-top: 23px;
+    margin-left: 23px;
+    margin-top: -27px;
+    
+}
+
+
+.forwardarrowfour{
+    margin-left: 327px;
+    margin-bottom: 17px;
+    margin-top: -19px;
+    font-size: 30px;   
+    color: #666666; 
+
+}
+
+
+
+
+.setfooter{
+
+    
+}
+
+.copyicon{
+    font-size: 30px;
+    margin-left: 23px;
+
+}
+
+.documenticon{
+    font-size: 30px;
+    margin-left: 43px;
+
+}
+
+.plusicon{
+    font-size: 60px;
+    margin-left: 36px;
+}
+
+.staricon{
+
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.iossettingicon{
+
+    font-size: 30px;
+    margin-left: 43px;
+}

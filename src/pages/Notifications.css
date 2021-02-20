@@ -1,8 +1,17 @@
+.backgroundNotifications{
+
+    font-family: "SF Pro Display" !important;
+    color: #ffffff;
+    background-color: #0e0f18; 
+    height: 811px;
+
+}
 .imageNotifications{
 
     width: 39px;
     margin-left: 166px;
     margin-top: 35px;
+    
 }
 .iconNotifications{
 

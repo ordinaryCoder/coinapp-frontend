@@ -7,6 +7,10 @@ import { Signup } from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import Notifications from "./pages/Notifications";
 import UserProfile from "./pages/UserProfile";
+import Settings from "./pages/Settings";
+
+import AllNotify from "./pages/AllNotify";
+
 
 
 const Routes = () => {
@@ -42,6 +46,16 @@ const Routes = () => {
 
           <Route exact path="/UserProfile">
             <UserProfile />
+          </Route>
+
+
+          <Route exact path="/Settings">
+            <Settings />
+          </Route>
+
+
+          <Route exact path="/AllNotify">
+            <AllNotify />
           </Route>
 
 

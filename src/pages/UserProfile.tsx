@@ -5,7 +5,7 @@ import './UserProfile.css';
 
 const UserProfile = () => {
     return (
-        <div>
+        <div className="backgrounduserprofile">
             <div className="userprofileicon">
                 <BiArrowBack />
                 <p className="userprofileupper">User profile</p>

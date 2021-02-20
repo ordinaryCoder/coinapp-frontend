@@ -8,30 +8,32 @@ import { Button } from 'reactstrap';
 
 const Notification = () => {
     return (
-        <div>
 
+        <div className="backgroundNotifications">
             <div >
-                <img src={coinapp} className="imageNotifications" />
-            </div>
-            <div className="iconNotifications">
-                <AiOutlineMail />
-            </div>
-            <div className="headingNotifications">
-                <h1>Check your email</h1>
-            </div>
 
-            <div className="subheadingNotifications">
-                <p>we've sent instructions on how to reset</p>
-            </div>
-            <div className="subheadingNotificationstwo">
-                <p>The password(also check the spam folder).</p>
-            </div>
-            <Button color="primary" className="Notificationsbutton" >
-                Go to email
+                <div >
+                    <img src={coinapp} className="imageNotifications" />
+                </div>
+                <div className="iconNotifications">
+                    <AiOutlineMail />
+                </div>
+                <div className="headingNotifications">
+                    <h1>Check your email</h1>
+                </div>
+
+                <div className="subheadingNotifications">
+                    <p>we've sent instructions on how to reset</p>
+                </div>
+                <div className="subheadingNotificationstwo">
+                    <p>The password(also check the spam folder).</p>
+                </div>
+                <Button className="Notificationsbutton" >
+                    Go to email
         </Button>
 
+            </div>
         </div>
-
     )
 }
 

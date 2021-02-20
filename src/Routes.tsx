@@ -22,6 +22,11 @@ const Routes = () => {
           <Route exact path="/list">
             <List />
           </Route>
+          <Route
+            component={(props: any) => <CryptoStats {...props} />}
+            exact
+            path="/details/:id"
+          />
 
           <Route exact path="/">
             <Home />

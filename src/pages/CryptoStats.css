@@ -1,5 +1,5 @@
 #curr-value {
-  font-size: 32px;
+  font-size: 30px;
   padding: 15px;
 }
 
@@ -21,4 +21,61 @@
   font-size: 14px;
   letter-spacing: 0.32px;
   padding: 10px;
+}
+
+#stats-coin-wrapper {
+  margin-left: auto;
+  display: flex;
+  background: #1b1c24;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+
+#stat-coin-logo {
+  align-self: center;
+  background-color: none;
+  justify-self: center;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+}
+
+#graph-opt-wrapper {
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#graph-opt-wrapper > button:nth-of-type(2) {
+  margin-right: 2vw;
+  margin-left: auto;
+}
+
+#graph-opt-wrapper > button {
+  background-color: #1a1b24;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px 8px 12px;
+  font-size: 12px;
+}
+
+.mkt-dt-title {
+  padding: 10px 0px 2px 5px;
+  color: #636363;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.36px;
+}
+
+.mkt-dt-content {
+  padding: 2px 0px 10px 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.36px;
+}
+
+#mkt-det-wrapper {
+  margin-right: auto;
 }

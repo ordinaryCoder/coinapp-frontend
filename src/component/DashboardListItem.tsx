@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "reactstrap";
 import { ICyptoData } from "../pages/DashboardList";
 import "../pages/Dashboard.css";
+import { Link } from "react-router-dom";
 
 export interface IDashboardListItem {
   item: ICyptoData;
@@ -42,44 +43,47 @@ export const DashboardListItem = (props: IDashboardListItem) => {
   }
 
   return (
-    <Row id="single-list-wrapper" className=" d-flex m-auto p-15">
-      <Col id="logo-wrapper" xs="2">
-        <img
-          id="coin-logo"
-          className="coin-logo mr-auto"
-          src={`https://static.coincap.io/assets/icons/${props.item.symbol.toLowerCase()}@2x.png`}
-          alt="coin logo"
-        />
-      </Col>
+    <Link to={`/details/${props.item.id}`}>
+      <Row id="single-list-wrapper" className=" d-flex m-auto p-15">
+        <Col id="logo-wrapper" xs="2">
+          <img
+            id="coin-logo"
+            className="coin-logo mr-auto"
+            src={`https://static.coincap.io/assets/icons/${props.item.symbol.toLowerCase()}@2x.png`}
+            alt="coin logo"
+          />
+        </Col>
 
-      <Col id="cypto-name" xs="5">
-        <h2>
-          {props.item.rank}. {props.item.id}
-          <span>({props.item.symbol})</span>
-        </h2>
-        <p>${roundOff(props.item.marketCapUsd?.toString())}</p>
-      </Col>
+        <Col id="cypto-name" xs="5">
+          <h2>
+            {props.item.rank}. {props.item.id}
+            <span>({props.item.symbol})</span>
+          </h2>
+          <p>${roundOff(props.item.marketCapUsd?.toString())}</p>
+        </Col>
 
-      <Col id="crypto-rate" xs="5" className="ml-auto d-block">
-        <p className="text-right">
-          ${parseFloat(props.item?.priceUsd?.toString()).toFixed(2)}
-        </p>
-        <div id="price-change" className="d-flex">
-          <p
-            className={getColor(
-              props.item?.vwap24Hr?.toString(),
-              props.item?.priceUsd?.toString()
-            )}
-          >
-            $
-            {priceChange(
-              props.item?.vwap24Hr?.toString(),
-              props.item?.priceUsd?.toString()
-            )}
-            ({parseFloat(props.item.changePercent24Hr?.toString()).toFixed(2)}%)
+        <Col id="crypto-rate" xs="5" className="ml-auto d-block">
+          <p className="text-right">
+            ${parseFloat(props.item?.priceUsd?.toString()).toFixed(2)}
           </p>
-        </div>
-      </Col>
-    </Row>
+          <div id="price-change" className="d-flex">
+            <p
+              className={getColor(
+                props.item?.vwap24Hr?.toString(),
+                props.item?.priceUsd?.toString()
+              )}
+            >
+              $
+              {priceChange(
+                props.item?.vwap24Hr?.toString(),
+                props.item?.priceUsd?.toString()
+              )}
+              ({parseFloat(props.item.changePercent24Hr?.toString()).toFixed(2)}
+              %)
+            </p>
+          </div>
+        </Col>
+      </Row>
+    </Link>
   );
 };

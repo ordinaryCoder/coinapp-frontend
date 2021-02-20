@@ -4,6 +4,14 @@ import List from "./pages/DashboardList";
 import Home from "./pages/Home";
 import { Signin } from "./pages/SignIn";
 import { Signup } from "./pages/SignUp";
+import ForgotPassword from "./pages/ForgotPassword";
+import Notifications from "./pages/Notifications";
+import UserProfile from "./pages/UserProfile";
+import Settings from "./pages/Settings";
+
+import AllNotify from "./pages/AllNotify";
+
+
 import { CryptoStats } from "./pages/CryptoStats";
 
 const Routes = () => {
@@ -15,9 +23,11 @@ const Routes = () => {
         <Switch>
           <Route exact path="/Signin">
             <Signin />
+
           </Route>
           <Route exact path="/Signup">
             <Signup />
+
           </Route>
           <Route exact path="/list">
             <List />
@@ -31,6 +41,37 @@ const Routes = () => {
           <Route exact path="/">
             <Home />
           </Route>
+
+          <Route exact path="/forgotpwd">
+            <ForgotPassword />
+          </Route>
+
+          <Route exact path="/Notifications">
+            <Notifications />
+          </Route>
+
+
+          <Route exact path="/UserProfile">
+            <UserProfile />
+          </Route>
+
+
+          <Route exact path="/Settings">
+            <Settings />
+          </Route>
+
+
+          <Route exact path="/AllNotify">
+            <AllNotify />
+          </Route>
+
+
+
+
+
+
+
+
         </Switch>
       </div>
     </Router>

@@ -9,7 +9,7 @@ import Notifications from "./pages/Notifications";
 import UserProfile from "./pages/UserProfile";
 import Settings from "./pages/Settings";
 
-import AllNotify from "./pages/AllNotify";
+//import AllNotify from "./pages/AllNotify";
 
 
 import { CryptoStats } from "./pages/CryptoStats";
@@ -61,9 +61,9 @@ const Routes = () => {
           </Route>
 
 
-          <Route exact path="/AllNotify">
+          {/* <Route exact path="/AllNotify">
             <AllNotify />
-          </Route>
+          </Route> */}
 
 
 

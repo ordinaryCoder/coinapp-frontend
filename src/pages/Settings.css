@@ -1,22 +1,24 @@
-.backgroundsetting{
-    font-family: "SF Pro Display" !important;
-    color: #ffffff;
-    background-color: #0e0f18; 
+.overflow-hidden{
+
+    
 }
 
 .seticon{
     font-size: 30px;
     margin-top: 30px;
-    margin-left: 16px;
+    /* margin-left: 16px; */
     color: #666666;
 
 
 }
 .Settingheader{
-    margin-left: 155px;
-margin-top: -26px;
+    /* margin-left: 155px; */
+    margin-top: -34px;
 font-size: 20px;
 color: #ffffff;
+align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .headergeneral{
@@ -25,7 +27,7 @@ color: #ffffff;
     font-size: 34px;
    
     font-weight: bold;
-    margin-left: 19px;
+    /* margin-left: 19px; */
     color: #ffffff;
 }
 
@@ -34,59 +36,73 @@ color: #ffffff;
 
     font-size: 16px;
     padding-top: 23px;
-    margin-left: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 23px; */
 }
 
 .notifiicon{
 
-    margin-left: 327px;
-    margin-bottom: 17px;
-    margin-top: -19px;
+    /* margin-left: 327px; */
+ 
+    margin-top: -20px;
     font-size: 30px;   
     color: #666666; 
 }
 .setcurrency{
     font-size: 16px;
-  
-    margin-left: 23px;
-    margin-top: -5px;
+    
+    padding-top: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 23px; */
+    
 }
 .currcyicon{
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
+   
     margin-top: -19px;
     font-size: 30px;  
     color: #666666;  
+   
 }
 
 
 .setalerts{
 
     font-size: 16px;
-    margin-top: -5px;
-    margin-left: 23px;
+    
+    padding-top: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 23px; */
 }
 .alerticon{
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666;
+    font-size: 30px;  
+    color: #666666;  
 }
 
 .setpolicy{
     font-size: 16px;
-    padding-top: 0px;
-    margin-left: 23px;
+    
+    padding-top: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 23px; */
 
 }
 
 .policyicon{
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666;
+    font-size: 30px;  
+    color: #666666;  
 
 }
 
@@ -100,62 +116,65 @@ color: #ffffff;
     font-size: 34px;
    
     font-weight: bold;
-    margin-left: 19px;
+    /* margin-left: 19px; */
 
 }
 
 .hearderuserprofile{
 
     font-size: 16px;
+    
     padding-top: 23px;
-    margin-left: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 23px; */
 
 }
 
 .accountarraw{
 
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
-
+    font-size: 30px;  
+    color: #666666;  
 }
 
 .headerchangepin{
 
     font-size: 16px;
+    
     padding-top: 23px;
-    margin-left: 23px;
-    margin-top: -28px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
 }
 
 .accountarrawtwo{
 
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
-
+    font-size: 30px;  
+    color: #666666;  
 }
 
 .headerlogout{
     font-size: 16px;
-    margin-left: 23px;
-    margin-top: -2px;
+    
+    padding-top: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
 }
 
 .accountarrowthree{
 
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
-
+    font-size: 30px;  
+    color: #666666;  
 }
 
 
@@ -166,114 +185,128 @@ color: #ffffff;
     font-size: 34px;
    
     font-weight: bold;
-    margin-left: 19px;
+    /* margin-left: 19px; */
 
 }
 
 .headertelegram{
 
     font-size: 16px;
+    
     padding-top: 23px;
-    margin-left: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 23px; */
 }
 
 .forwardarrow{
 
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
+    font-size: 30px;  
+    color: #666666;  
 
 }
 
 .headertwiter{
 
+   
     font-size: 16px;
+    
     padding-top: 23px;
-    margin-left: 23px;
-    margin-top: -25px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .forwardarrowtwo{
     
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
+    font-size: 30px;  
+    color: #666666;  
 }
 
 .headermedium{
 
     font-size: 16px;
+    
     padding-top: 23px;
-    margin-left: 23px;
-    margin-top: -28px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 
 .forwardarrowthree{
 
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
+    font-size: 30px;  
+    color: #666666;  
 
 }
 .shareapp{
 
     font-size: 16px;
+    
     padding-top: 23px;
-    margin-left: 23px;
-    margin-top: -27px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
     
 }
 
 
 .forwardarrowfour{
-    margin-left: 327px;
-    margin-bottom: 17px;
+    /* margin-left: 327px; */
     margin-top: -19px;
-    font-size: 30px;   
-    color: #666666; 
+    font-size: 30px;  
+    color: #666666;  
+
 
 }
+
+
+
 
 
 
 
 .setfooter{
 
-    
-}
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
 
+}
 .copyicon{
     font-size: 30px;
-    margin-left: 23px;
+    /* margin-left: 23px; */
 
 }
 
 .documenticon{
     font-size: 30px;
-    margin-left: 43px;
+    /* margin-left: 43px; */
 
 }
 
 .plusicon{
     font-size: 60px;
-    margin-left: 36px;
+    /* margin-left: 36px; */
 }
 
 .staricon{
 
     font-size: 30px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .iossettingicon{
 
     font-size: 30px;
-    margin-left: 43px;
+    /* margin-left: 43px; */
 }

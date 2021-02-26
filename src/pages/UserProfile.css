@@ -1,17 +1,9 @@
 
-.backgrounduserprofile{
-
-
-    font-family: "SF Pro Display" !important;
-    color: #ffffff;
-    background-color: #0e0f18; 
-    height: 812px;
-}
 .userprofileicon{
 
 
     font-size: 30px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     padding-top: 33px;
 
 
@@ -19,13 +11,14 @@
 .userprofileupper{
 
     font-size: 18px;
-    margin-left: 135px;
-    margin-top: -29px;
+    /* margin-left: 135px; */
+    margin-top: -38px;
+    padding-left: 115px;
 }
 .Headingdetails{
     color: #ffffff;
     font-size: 32px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     margin-top: 73px;
     font-weight: bold;
 }
@@ -33,37 +26,40 @@
 
     font-size: 16px;
     color: #666666;
-    margin-left: 13px;
+    /* margin-left: 13px; */
     margin-top: 33px;
 }
 .userdetailsprofilename{
 
     font-size: 16px;
     color: #666666;
-    margin-left: 14px;
+    /* margin-left: 14px; */
     margin-top: 46px;
 }
 
 .userdetailsprofileemail{
     font-size: 16px;
     color: #666666;
-    margin-left: 14px;
+    /* margin-left: 14px; */
     margin-top: 46px;
 
 }
 
 .changepass{
     font-size: 20px;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     margin-top: 56px;
     color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
 .forwardicon{
-    margin-left: 325px;
+    /* margin-left: 325px; */
     margin-bottom: 3px;
-    margin-top: -26px;
+   
     font-size: 30px;
     color: #666666;
 
@@ -71,16 +67,19 @@
 }
 .deleteAccount{
     font-size: 20px;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     margin-top: 12px;
     color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
 .forwardicontwo{
-    margin-left: 337px;
+    /* margin-left: 337px; */
     margin-bottom: 7px;
-    margin-top: -26px;
+   
     font-size: 30px;
     color: #666666;
 
@@ -89,7 +88,7 @@
 
 .usermyname{
 
-    margin-left: 14px;
+    /* margin-left: 14px; */
     margin-top: 7px;
     font-weight: bold;
     font-size: 20px;
@@ -97,7 +96,7 @@
 }
 
 .usermylastname{
-    margin-left: 14px;
+    /* margin-left: 14px; */
     margin-top: 7px;
     font-weight: bold;
     font-size: 20px;
@@ -106,7 +105,7 @@
 
 
 .usermyemail{
-    margin-left: 14px;
+    /* margin-left: 14px; */
     margin-top: 7px;
     font-weight: bold;
     font-size: 20px;

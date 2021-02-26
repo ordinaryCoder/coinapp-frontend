@@ -1,10 +1,4 @@
-/* .allbody{
 
-    font-family: "SF Pro Display" !important;
-    color: #ffffff;
-    background-color: #0e0f18;
-    height: 789px;
-}
 .backnotify{
 font-size: 30px;
 margin-top: 30px;
@@ -15,69 +9,61 @@ color: #666666;
 .headernotify{
 
     margin-left: 138px;
-    margin-top: -26px;
+    margin-top: -31px;
     font-size: 20px;
     color: #ffffff;
     
 }
 
 .pushnotify{
-    font-size: 16px;
-    padding-top: 42px;
+    font-size: 18px;
+    
     margin-left: 23px;
+    padding-top: 52px;
+    margin-top: -22px;
+    display: flex;
+    justify-content: space-between;
+
 
 }
-.togglefirst{
 
-    margin-top: -40px;
-    margin-left: 300px;    
-}
 
 .updatenotify{
-    font-size: 16px;
-    padding-top: 25px;
+    font-size: 18px;
+    
     margin-left: 23px;
+    padding-top: 32px;
+    margin-top: -22px;
+    display: flex;
+    justify-content: space-between;
 
 }
 
-.togglesecond{
 
-    margin-top: -40px;
-    margin-left: 300px;   
-
-}
 
 .releasenotify{
 
-
-    font-size: 16px;
-    padding-top: 25px;
+    font-size: 18px;
+    
     margin-left: 23px;
+    padding-top: 32px;
+    margin-top: -22px;
+    display: flex;
+    justify-content: space-between;
 }
 
 
-.togglethird{
 
-    margin-top: -40px;
-    margin-left: 300px;   
-
-}
 
 
 .othernotifications{
 
-    font-size: 16px;
-    padding-top: 25px;
+   font-size: 18px;
     margin-left: 23px;
-
-
+    padding-top: 32px;
+    margin-top: -22px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.togglefourth{
-    margin-top: -40px;
-    margin-left: 300px;   
 
-
-
-}
- */

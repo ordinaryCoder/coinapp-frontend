@@ -7,6 +7,7 @@ import { db } from '../firebase';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import coinapp from './../assets/images/coinapp.png';
+import { Container, Row, Col } from 'reactstrap';
 
 
 
@@ -84,54 +85,66 @@ export const Signup = () => {
 
   }
   return (
-    <div className="background">
-      <div >
-        <p className="headersignup">sign in</p>
-        <img src={coinapp} className="imagesignup" />
-      </div>
+    <div style={{ height: "100vh" }} >
+
+      <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }} >
+        <Row className="">
+          <Col lg="12" md="12" sm="12" className="px-0">
+            <div className="align-center">
+              <div className="adjustcentersignup">
+                <p className="headersignup">sign in</p>
+                <img src={coinapp} className="imagesignup" />
 
 
 
 
 
 
-      <h1 className="subheadersup">Lets create your</h1>
-      <h1 className="subheadertwosup">coinapp account</h1>
 
-      <Form onSubmit={handlesignup}>
-        <Input
-          type="email"
+                <h1 className="subheadersup">Lets create your</h1>
+                <h1 className="subheadertwosup">coinapp account</h1>
+                <div>
 
-          value={email}
+                  <Input
+                    type="email"
 
-          autoComplete="off"
-          placeholder="Enter your email address"
-          className="email"
+                    value={email}
 
-          onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="off"
+                    placeholder="Enter your email address"
+                    className="email"
 
-        />
-        <Input
-          type="password"
+                    onChange={(e) => setEmail(e.target.value)}
 
-          value={password}
+                  />
+                  <Input
+                    type="password"
+
+                    value={password}
 
 
-          placeholder="Enter your password"
-          className="password"
-          autoComplete="off"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <p className="footer">
-          By signing up you accept the Terms of Service and{" "}
-        </p>
-        <p className="footertwo">Privacy Policy.</p>
-        <Button color="primary" className="signupbutton" >
-          Sign up
+                    placeholder="Enter your password"
+                    className="passwordsignup"
+                    autoComplete="off"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <p className="footer">
+                    By signing up you accept the Terms of Service and{" "}
+                  </p>
+                  <p className="footertwo">Privacy Policy.</p>
+                </div>
+              </div>
+            </div>
+            <Col>
+              <Button color="primary" className="signupbutton" onClick={handlesignup}>
+                Sign up
         </Button>
+            </Col>
 
 
-      </Form>
+          </Col>
+        </Row>
+      </Container>
 
     </div>
 

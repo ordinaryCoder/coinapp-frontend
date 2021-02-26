@@ -6,6 +6,8 @@ import firebase from "../firebase";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import coinapp from './../assets/images/coinapp.png';
+import { Container, Row, Col } from 'reactstrap';
+
 
 
 
@@ -64,40 +66,56 @@ export const Signin = () => {
   }
 
   return (
-    <div className="background">
-      <div>
-        <p className="headersignin">sign up </p>
-        <img src={coinapp} className="imagesignin" />
-      </div>
-      <h1 className="mainheading">Welcome back! </h1>
-      <h1 className="mainheadingtwo">You've been missed</h1>
+    <div style={{ height: "100vh" }}>
+      <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }} >
+        <Row className="">
+          <Col lg="12" md="12" sm="12">
+            <div className="align-center">
+              <div className=" adjustcentertwo">
+                <p className="headersignin">sign up </p>
+                <img src={coinapp} className="imagesignin" />
 
-      <Form onSubmit={handlesignin}>
-        <Input
-          type="email"
-          name="email"
-          value={email}
+                <h1 className="mainheading">Welcome back! </h1>
+                <h1 className="mainheadingtwo">You've been missed</h1>
+                <div>
 
-          placeholder="Enter your email address"
-          className="emailid"
-          autoComplete="off"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Input
-          type="password"
-          name="password"
-          value={password}
+                  <Input
+                    type="email"
+                    name="email"
+                    value={email}
 
-          placeholder="Enter your password"
-          className="password"
-          autoComplete="off"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <p className="forgotpass">Forget password?</p>
-        <Button color="primary" className="signinbutton" >
-          Sign in
-        </Button>
-      </Form>
+                    placeholder="Enter your email address"
+                    className="emailid"
+                    autoComplete="off"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <Input
+                    type="password"
+                    name="password"
+                    value={password}
+
+                    placeholder="Enter your password"
+                    className="password"
+                    autoComplete="off"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <p className="forgotpass">Forget password?</p>
+
+
+                </div>
+              </div>
+            </div>
+
+          </Col>
+          <Col>
+            <Button color="primary" className="signinbutton" onClick={handlesignin} >
+              Sign in
+              </Button>
+          </Col>
+        </Row>
+
+      </Container>
+
     </div>
   );
 };

@@ -7,110 +7,117 @@ import { TiDocument } from 'react-icons/ti';
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 
 import './Settings.css'
+import { Container, Row, Col } from 'reactstrap';
 
 const Settings = () => {
     return (
-        <div className="backgroundsetting">
-            <BiArrowBack className="seticon" />
-            <h2 className="Settingheader">Settings</h2>
+        <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
+            <Row>
+                <Col lg="12" md="12" sm="12">
 
-            <h1 className="headergeneral">General</h1>
+                    <BiArrowBack className="seticon" />
+                    <h2 className="Settingheader">Settings</h2>
 
-            <div>
-                <div >
-                    <p className="setnotification">Notifications</p>
-                    <IoIosArrowForward className="notifiicon" />
-                </div>
-                <div>
-                    <p className="setcurrency">Currency Preference</p>
-                    <IoIosArrowForward className="currcyicon" />
-                </div>
+                    <h1 className="headergeneral">General</h1>
 
-                <div>
-                    <p className="setalerts">Alerts</p>
-                    <IoIosArrowForward className="alerticon" />
-                </div>
+                    <div >
+                        <div className="setnotification" >
+                            <p>Notifications</p>
+                            <IoIosArrowForward className="notifiicon" />
+                        </div>
+                        <div className="setcurrency">
+                            <p >Currency Preference</p>
+                            <IoIosArrowForward className="currcyicon" />
+                        </div>
 
-                <div>
-                    <p className="setpolicy">Terms of Use & Privacy Policy</p>
-                    <IoIosArrowForward className="policyicon" />
-                </div>
+                        <div className="setalerts">
+                            <p >Alerts</p>
+                            <IoIosArrowForward className="alerticon" />
+                        </div>
 
-            </div>
+                        <div className="setpolicy">
+                            <p >Terms of Use & Privacy Policy</p>
+                            <IoIosArrowForward className="policyicon" />
+                        </div>
 
-
-
-
-
-
-            <h1 className="headerAcount">Account</h1>
-
-            <div>
-                <div >
-                    <p className="hearderuserprofile">User Profile</p>
-                    <IoIosArrowForward className="accountarraw" />
-                </div>
-                <div>
-                    <p className="headerchangepin">Change PIN</p>
-                    <IoIosArrowForward className="accountarrawtwo" />
-                </div>
-
-                <div>
-                    <p className="headerlogout">Log Out</p>
-                    <IoIosArrowForward className="accountarrowthree" />
-                </div>
-
-
-
-            </div>
+                    </div>
 
 
 
 
 
 
+                    <h1 className="headerAcount">Account</h1>
 
-            <h1 className="headersocial">Social</h1>
+                    <div>
+                        <div className="hearderuserprofile">
+                            <p >User Profile</p>
+                            <IoIosArrowForward className="accountarraw" />
+                        </div>
+                        <div className="headerchangepin">
+                            <p >Change PIN</p>
+                            <IoIosArrowForward className="accountarrawtwo" />
+                        </div>
 
-            <div>
-                <div >
-                    <p className="headertelegram">Telegram</p>
-                    <IoIosArrowForward className="forwardarrow" />
-                </div>
-                <div>
-                    <p className="headertwiter">Twitter</p>
-                    <IoIosArrowForward className="forwardarrowtwo" />
-                </div>
-
-                <div>
-                    <p className="headermedium">Medium</p>
-                    <IoIosArrowForward className="forwardarrowthree" />
-                </div>
-
-
-                <div>
-                    <p className="shareapp">Share the app</p>
-                    <IoIosArrowForward className="forwardarrowfour" />
-                </div>
+                        <div className="headerlogout">
+                            <p >Log Out</p>
+                            <IoIosArrowForward className="accountarrowthree" />
+                        </div>
 
 
 
-            </div>
+                    </div>
 
 
 
-            <div className="setfooter">
-
-                <FiCopy className="copyicon" />
-                <TiDocument className="documenticon" />
-                <BsFillPlusCircleFill className="plusicon" />
-                <AiOutlineStar className="staricon" />
-                <IoIosSettings className="iossettingicon" />
-
-            </div>
 
 
-        </div>
+
+
+                    <h1 className="headersocial">Social</h1>
+
+                    <div>
+                        <div className="headertelegram">
+                            <p >Telegram</p>
+                            <IoIosArrowForward className="forwardarrow" />
+                        </div>
+                        <div className="headertwiter">
+                            <p >Twitter</p>
+                            <IoIosArrowForward className="forwardarrowtwo" />
+                        </div>
+
+                        <div className="headermedium">
+                            <p >Medium</p>
+                            <IoIosArrowForward className="forwardarrowthree" />
+                        </div>
+
+
+                        <div className="shareapp">
+                            <p >Share the app</p>
+                            <IoIosArrowForward className="forwardarrowfour" />
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <div className="setfooter">
+
+                        <FiCopy className="copyicon" />
+                        <TiDocument className="documenticon" />
+                        <BsFillPlusCircleFill className="plusicon" />
+                        <AiOutlineStar className="staricon" />
+                        <IoIosSettings className="iossettingicon" />
+
+                    </div>
+
+
+
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

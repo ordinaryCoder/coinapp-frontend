@@ -9,24 +9,25 @@
   src:  url('../customFonts/FontsFree-Net-SFProText-Regular.ttf') format('ttf')
         
 }
-.center {
+.align-center {
+  text-align: center;
   background-color: #0e0f18;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .images{
 
-  margin-left: 144px;
+  /* margin-left: 144px; */
   
 }
 
 .adjustcenter {
-    padding-top: 223px;
+  padding-top: 22%;
 }
 .heading {
   font-size: 30px;
   color: #ffffff; 
   
-  margin-left: 62px;
+  /* margin-left: 62px; */
   padding-bottom: 14px;
   padding-top: 55px;
   font-family:'sfpro';
@@ -39,13 +40,13 @@
 .subheading {
   color: #ffffff; 
   font-size: 16px;
-  margin-left: 59px;
+  /* margin-left: 59px; */
   font-weight: normal;
       letter-spacing: 0;
 }
 
 .childsubheading {
-  margin-left: 35px;
+  /* margin-left: 35px; */
   padding-top: 11px;
   color: #ffffff; 
   font-size: 16px;
@@ -57,7 +58,7 @@
   color: white;
   padding: 11px;
   border-radius: 117px;
-  margin-left: 91px;
+  /* margin-left: 91px; */
   width: 190px;
   margin-top: 42px;
   height: 49px;
@@ -75,7 +76,7 @@
   
   padding: 11px;
   border-radius: 117px;
-  margin-left: 91px;
+  /* margin-left: 91px; */
   width: 190px;
   margin-top: 18px;
     height: 49px;

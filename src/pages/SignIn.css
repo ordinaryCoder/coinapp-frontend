@@ -2,18 +2,29 @@
   background-color: #0e0f18;
   height: 100vh;
 }
+.align-center{
+
+  text-align: center;
+ 
+}
 .headersignin {
-  color: white;
+  color: #ffffff;
   font-size: 25px;
   padding-top: 46px;
-  margin-left: 35px;
+  /* margin-left: 35px; */
   margin-bottom: -36px;
+  padding-right: 220px;
+}
+.adjustcentertwo {
+
+  padding-top: 0%;
 }
 
 .imagesignin{
 
-      width: 50px;
-    margin-left: 153px;
+  width: 25px;
+  padding-top: 8px;
+    /* margin-left: 153px;  */
 }
 
 
@@ -21,24 +32,24 @@
   
   color: #ffffff;
   font-size: 30px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   font-weight: bold;
   letter-spacing:10;
-  padding-top: 187px;
-
+  padding-top: 35px;
+  padding-right: 95px;
 }
 
 .mainheadingtwo {
-  color: white;
+  color: #ffffff;
   font-size: 31px;
-
-  margin-left: 30px;
+    padding-right: 36px;
+  /* margin-left: 30px; */
 
   padding-bottom: 100px;
 }
 
 .emailid {
-  margin-left: 22px;
+  /* margin-left: 22px; */
   background-color: #0e0f18;
   height: 50px;
   color: #ffffff;
@@ -46,6 +57,7 @@
   font-size: 20px;
   border: none;
   border-bottom: 2px solid #adb3bc;
+  margin: 0 auto;
 }
 
 .emailid:focus{
@@ -53,7 +65,7 @@
 }
 
 .password {
-  margin-left: 22px;
+  /* margin-left: 22px; */
   color: #ffffff;
   background-color: #0e0f18;
   height: 50px;
@@ -61,6 +73,7 @@
   font-size: 20px;
   border: none;
   border-bottom: 2px solid #adb3bc;
+  margin: 0 auto;
 }
 
 .password:focus{
@@ -71,16 +84,18 @@
   font-weight:normal;
   color: white;
   font-size: 19px;
-  margin-left: 137px;
-  padding-top: 93px;
-  padding-bottom: 73px;
+  /* margin-left: 137px; */
+  padding-top: 126px;
+  padding-bottom: 26px;
+  margin-top: 6vh;
 }
 
 .signinbutton {
   background-color: #0057ff;
   color: white;
-  height: 72px;
+  height: 80px;
   font-size: 18px;
-  width: 377px;
-  margin-top: 23px;
+  width: 100%;
+  border-radius: 0;
+  margin-top: 9vh;
 }

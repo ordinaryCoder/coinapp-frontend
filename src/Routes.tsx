@@ -9,10 +9,13 @@ import Notifications from "./pages/Notifications";
 import UserProfile from "./pages/UserProfile";
 import Settings from "./pages/Settings";
 
-//import AllNotify from "./pages/AllNotify";
+import AllNotify from "./pages/AllNotify";
 
+import AddPin from "./pages/AddPin";
 
 import { CryptoStats } from "./pages/CryptoStats";
+import EnteroldPassword from "./pages/EnteroldPassword";
+import AddnewPin from "./pages/AddnewPin";
 
 const Routes = () => {
   return (
@@ -61,9 +64,24 @@ const Routes = () => {
           </Route>
 
 
-          {/* <Route exact path="/AllNotify">
+          <Route exact path="/AllNotify">
             <AllNotify />
-          </Route> */}
+          </Route>
+
+
+
+          <Route exact path="/AddPin">
+            <AddPin />
+          </Route>
+
+
+
+          <Route exact path="/EnteroldPassword">
+            <EnteroldPassword />
+          </Route>
+          <Route exact path="/AddnewPin">
+            <AddnewPin />
+          </Route>
 
 
 

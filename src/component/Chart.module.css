@@ -1,0 +1,18 @@
+.container {
+  height: 500;
+  width: 100%;
+  background: var(--theme-primary);
+  color: white;
+  display: flex;
+
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header > img {
+  margin-right: 5px;
+}

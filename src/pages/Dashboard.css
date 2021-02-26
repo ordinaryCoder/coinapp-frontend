@@ -2,6 +2,10 @@
   background-color: #0e0f18;
 }
 
+a {
+  text-decoration: none;
+}
+
 .d-flex {
   display: flex;
 }
@@ -38,6 +42,10 @@
 
 .p-15 {
   padding: 15px;
+}
+
+.pl-15 {
+  padding-left: 15px;
 }
 
 .j-even {

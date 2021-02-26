@@ -1,12 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { BiSearchAlt } from "react-icons/bi";
 import { Button, Container, Input, InputGroup, Row } from "reactstrap";
 import { DashboardListItem } from "../component/DashboardListItem";
 import { Header } from "../component/Header";
-import { IoMdStats } from "react-icons/io";
 import "./Dashboard.css";
-import { useHistory } from "react-router-dom";
 
 export type ICyptoData = {
   id: String;
@@ -22,8 +19,7 @@ export type ICyptoData = {
   vwap24Hr: String;
 };
 
-const List = () => {
-  const history = useHistory();
+const FavList = () => {
   const [cryptoList, setCyptos] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
 
@@ -52,43 +48,8 @@ const List = () => {
       });
   };
 
-  const sortByVol = () => {
-    let tempList = [...cryptoList];
-    console.log("temp", tempList);
-    tempList.sort(
-      (a, b) =>
-        parseFloat(b?.volumeUsd24Hr.toString()) -
-        parseFloat(a?.volumeUsd24Hr.toString())
-    );
-    setCyptos(tempList);
-  };
-
-  const sortByRank = () => {
-    let tempList = [...cryptoList];
-    console.log("Rank", tempList);
-    tempList.sort(
-      (a, b) => parseFloat(a?.rank.toString()) - parseFloat(b?.rank.toString())
-    );
-    setCyptos(tempList);
-  };
-
-  const sort24HourChange = () => {
-    let tempList = [...cryptoList];
-    console.log("24 Hour Change", tempList);
-    tempList.sort(
-      (a, b) =>
-        parseFloat(b?.vwap24Hr?.toString()) -
-        parseFloat(a?.vwap24Hr?.toString())
-    );
-    setCyptos(tempList);
-  };
-
-  const handleSearchClick = () => {
+  const clickSearch = () => {
     setSearch(!optSearch);
-  };
-
-  const handleStatClick = () => {
-    history.push("/market");
   };
 
   const Search = (
@@ -104,19 +65,15 @@ const List = () => {
 
   const Sort = (
     <Row id="sort-wrapper" className="d-flex">
-      <Button onClick={sortByRank}>Rank</Button>
-      <Button onClick={sortByVol}>Volume</Button>
-      <Button onClick={sort24HourChange}>24 Hours</Button>
+      <Button>Alphabetical</Button>
+      <Button>Volume</Button>
+      <Button>24 Hours</Button>
     </Row>
   );
 
   return (
     <Container className="j-even p-15">
-      <Header
-        leftIcon={<BiSearchAlt onClick={handleSearchClick} />}
-        title={"Coin Market"}
-        rightIcon={<IoMdStats onClick={handleStatClick} />}
-      />
+      <Header leftIcon={""} title={""} rightIcon={""} />
       {optSearch ? Search : Sort}
       {cryptoList.length > 0 &&
         cryptoList.map((item) => (
@@ -128,4 +85,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default FavList;

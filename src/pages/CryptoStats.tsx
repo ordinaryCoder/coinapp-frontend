@@ -2,18 +2,26 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "reactstrap";
 import { Header } from "../component/Header";
 import "./CryptoStats.css";
-import {
-  getColor,
-  IDashboardListItem,
-  priceChange,
-} from "../component/DashboardListItem";
-import { useParams } from "react-router-dom";
+import { getColor, priceChange } from "../component/DashboardListItem";
+import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { ICyptoData } from "./DashboardList";
 import { AiOutlineExpandAlt, AiOutlineLineChart } from "react-icons/ai";
-import Chart from "../component/Chart";
+import CoinChart from "../component/CoinChart";
+import { IoMdStats } from "react-icons/io";
+import { BiLeftArrowAlt } from "react-icons/bi";
 
 export const CryptoStats = () => {
+  const history = useHistory();
+
+  const handleBackClick = () => {
+    window.history.back();
+  };
+
+  const handleStatClick = () => {
+    history.push("/market");
+  };
+
   const { id } = useParams<{ id: string }>();
   const [cryptoStats, setStats] = useState<ICyptoData>({
     id: "",
@@ -23,7 +31,7 @@ export const CryptoStats = () => {
     supply: "",
     maxSuppy: "",
     marketCapUsd: "",
-    VolumeUsd24Hr: "",
+    volumeUsd24Hr: "",
     priceUsd: "",
     changePercent24Hr: "",
     vwap24Hr: "",
@@ -38,12 +46,18 @@ export const CryptoStats = () => {
         setStats(res.data.data);
       })
       .catch((err) => {
-        console.log("error");
+        console.log("error", err);
       });
   }, []);
+
   return (
     <Container className="p-15">
-      <Header handleClickLeftIcon={() => {}} />
+      <Header
+        leftIcon={<BiLeftArrowAlt onClick={handleBackClick} />}
+        title={`${cryptoStats.id} (${cryptoStats.symbol})`}
+        rightIcon={<IoMdStats onClick={handleStatClick} />}
+      />
+
       <Row id="curr-value">
         <div>
           <p>$ {parseFloat(cryptoStats?.priceUsd.toString()).toFixed(2)}</p>
@@ -79,9 +93,7 @@ export const CryptoStats = () => {
           <AiOutlineExpandAlt />
         </Button>
       </Row>
-
-      <Chart />
-
+      <CoinChart />
       <Row className="d-flex">
         <Col id="mkt-det-wrapper">
           <div id="market-details">

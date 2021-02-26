@@ -1,26 +1,22 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
-import { BiSearchAlt } from "react-icons/bi";
-import { IoMdStats } from "react-icons/io";
+
 import "./Header.css";
 
 interface HeaderProps {
-  handleClickLeftIcon: () => void;
+  leftIcon: React.ReactNode;
+  title: String;
+  rightIcon: React.ReactNode;
 }
 
 export const Header = (props: HeaderProps) => {
   return (
     <Row id="header-wrapper" className="d-flex">
-      <Col className="mr-auto">
-        <BiSearchAlt onClick={props.handleClickLeftIcon} />
-      </Col>
-
+      <Col className="mr-auto"> {props.leftIcon}</Col>
       <Col id="header-title" className="m-auto f-14">
-        Coin Market
+        {props.title}
       </Col>
-      <Col className="ml-auto">
-        <IoMdStats />
-      </Col>
+      <Col className="ml-auto">{props.rightIcon}</Col>
     </Row>
   );
 };

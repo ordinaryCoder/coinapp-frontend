@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
 import { ICyptoData } from "../pages/DashboardList";
-import "../pages/Dashboard.css";
 import { Link } from "react-router-dom";
 
 export interface IDashboardListItem {

@@ -11,8 +11,9 @@ import Settings from "./pages/Settings";
 
 //import AllNotify from "./pages/AllNotify";
 
-
 import { CryptoStats } from "./pages/CryptoStats";
+import MarketView from "./pages/MarketView";
+import FavList from "./pages/Favourites";
 
 const Routes = () => {
   return (
@@ -23,11 +24,9 @@ const Routes = () => {
         <Switch>
           <Route exact path="/Signin">
             <Signin />
-
           </Route>
           <Route exact path="/Signup">
             <Signup />
-
           </Route>
           <Route exact path="/list">
             <List />
@@ -37,6 +36,10 @@ const Routes = () => {
             exact
             path="/details/:id"
           />
+
+          <Route>
+            <MarketView />
+          </Route>
 
           <Route exact path="/">
             <Home />
@@ -50,28 +53,20 @@ const Routes = () => {
             <Notifications />
           </Route>
 
-
           <Route exact path="/UserProfile">
             <UserProfile />
           </Route>
 
-
           <Route exact path="/Settings">
             <Settings />
           </Route>
-
+          <Route exact path="/favs">
+            <FavList />
+          </Route>
 
           {/* <Route exact path="/AllNotify">
             <AllNotify />
           </Route> */}
-
-
-
-
-
-
-
-
         </Switch>
       </div>
     </Router>

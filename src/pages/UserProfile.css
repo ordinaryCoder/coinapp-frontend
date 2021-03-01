@@ -3,22 +3,21 @@
 
 
     font-size: 30px;
-    /* margin-left: 10px; */
     padding-top: 33px;
+    color:#666666
 
 
 }
 .userprofileupper{
 
     font-size: 18px;
-    /* margin-left: 135px; */
     margin-top: -38px;
     padding-left: 115px;
+    color: #ffffff;
 }
 .Headingdetails{
     color: #ffffff;
     font-size: 32px;
-    /* margin-left: 15px; */
     margin-top: 73px;
     font-weight: bold;
 }
@@ -26,28 +25,39 @@
 
     font-size: 16px;
     color: #666666;
-    /* margin-left: 13px; */
     margin-top: 33px;
+}
+
+.usermyname{
+
+    color:#ffffff
 }
 .userdetailsprofilename{
 
     font-size: 16px;
     color: #666666;
-    /* margin-left: 14px; */
     margin-top: 46px;
 }
 
+
+.usermylastname{
+
+    color:#ffffff
+}
 .userdetailsprofileemail{
     font-size: 16px;
     color: #666666;
-    /* margin-left: 14px; */
     margin-top: 46px;
 
+}
+
+.usermyemail{
+
+    color:#ffffff
 }
 
 .changepass{
     font-size: 20px;
-    /* margin-left: 12px; */
     margin-top: 56px;
     color: #ffffff;
     display: flex;
@@ -57,17 +67,13 @@
 }
 
 .forwardicon{
-    /* margin-left: 325px; */
     margin-bottom: 3px;
    
     font-size: 30px;
     color: #666666;
-
-
 }
 .deleteAccount{
     font-size: 20px;
-    /* margin-left: 12px; */
     margin-top: 12px;
     color: #ffffff;
     display: flex;
@@ -77,18 +83,14 @@
 }
 
 .forwardicontwo{
-    /* margin-left: 337px; */
     margin-bottom: 7px;
    
     font-size: 30px;
     color: #666666;
-
-
 }
 
 .usermyname{
 
-    /* margin-left: 14px; */
     margin-top: 7px;
     font-weight: bold;
     font-size: 20px;
@@ -96,7 +98,6 @@
 }
 
 .usermylastname{
-    /* margin-left: 14px; */
     margin-top: 7px;
     font-weight: bold;
     font-size: 20px;
@@ -105,7 +106,6 @@
 
 
 .usermyemail{
-    /* margin-left: 14px; */
     margin-top: 7px;
     font-weight: bold;
     font-size: 20px;

@@ -25,7 +25,7 @@ const AllNotify = () => {
     return (
 
         <>
-            <Container >
+            <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
                 <Row>
                     <Col lg="12" md="12" sm="12">
                         <BiArrowBack className="backnotify" />

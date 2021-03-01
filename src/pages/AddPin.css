@@ -68,5 +68,7 @@
     height: 72px;
     font-size: 18px;
     width: 100%;
-    margin-top: 58%;
+    margin-top: 95%;
+    position: fixed;
+    bottom: 0;
   }

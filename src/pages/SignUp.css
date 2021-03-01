@@ -1,7 +1,4 @@
-.background {
-  background-color: #0e0f18;
-  height: 100vh;
-}
+
 .align-center{
   text-align: center;
 }
@@ -9,7 +6,6 @@
   color: #ffffff;
   font-size: 25px;
   padding-top: 46px;
-  /* margin-left: 35px; */
   margin-bottom: -36px;
   padding-right: 220px;
 } 
@@ -25,7 +21,6 @@
 }
 .imagesignup {
  
-  /* margin-left: 162px; */
   width: 30px;
   padding-top: 8px;
 }
@@ -35,7 +30,6 @@
 .subheadersup {
   color: #ffffff;
   font-size: 30px;
-  /* margin-left: 30px; */
   font-weight: bold;
   letter-spacing: 10;
   padding-top: 35px;
@@ -45,14 +39,12 @@
   color: #ffffff;
   font-size: 31px;
   padding-right: 103px;
-  /* margin-left: 30px; */
 
-  padding-bottom: 100px;
+  padding-bottom: 75px;
   font-weight: bold;
 }
 
 .email{
-  /* margin-left: 22px; */
   background-color: #0e0f18;
   height: 50px;
   color: #ffffff;
@@ -61,6 +53,7 @@
   border: none;
   border-bottom: 2px solid #adb3bc;
   margin: 0 auto;
+  border-radius: 0;
   
 }
 .email:focus{
@@ -78,6 +71,7 @@
   border: none;
   border-bottom: 2px solid #adb3bc;
   margin: 0 auto;
+  border-radius: 0;
 }
 
 .password:focus{
@@ -89,7 +83,6 @@
   font-weight: normal;
   color:#ffffff;
   font-size: 19px;
-  /* margin-left: 52px; */
   padding-bottom: 14px;
   padding-top: 57px;
   font-size: 13px;
@@ -98,9 +91,8 @@
 
 .footertwo {
   color: #ffffff;
-  /* margin-left: 149px; */
   font-size: 13px;
-  margin-top: -13px;
+  margin-top: -19px;
 }
 
 .signupbutton {
@@ -110,9 +102,26 @@
   font-size: 18px;
   width: 100%;
   border-radius: 0;
-  margin-top: 23vh;
+  margin-top: 9vh;
 }
 .signupbutton:focus{
   outline: none;
 
+}
+
+.mycoltwo{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.myrowtwo{
+
+  position: relative;
+    height: 100vh;
+  
+}
+
+.Toastify__toast-body{
+  background: transparent;
 }

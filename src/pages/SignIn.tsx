@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input } from "reactstrap";
+import { Input } from "reactstrap";
 import { Button } from "reactstrap";
 import "./SignIn.css";
 import firebase from "../firebase";
@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import coinapp from './../assets/images/coinapp.png';
 import { Container, Row, Col } from 'reactstrap';
+import { Link, useHistory } from "react-router-dom";
 
 
 
@@ -16,6 +17,8 @@ import { Container, Row, Col } from 'reactstrap';
 
 
 export const Signin = () => {
+
+  const history = useHistory();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -41,19 +44,17 @@ export const Signin = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
-        toast.success('user signed in successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 })
+        toast.success('user signed in successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 5000 })
         console.log("emptyone", user)
-
-
-        // this.props.history.push('/');
+        history.push("/list")
       })
       .catch((error) => {
         //this.setState({ error: error });
-        toast.error('sign up to signup', { position: toast.POSITION.BOTTOM_CENTER, autoClose: 1000 })
+        toast.error('No user found', { position: toast.POSITION.BOTTOM_RIGHT, autoClose: 5000 })
 
 
 
-        console.log("signin error", error.message);
+        console.log("signin err cons", error.message);
       });
 
 
@@ -68,11 +69,11 @@ export const Signin = () => {
   return (
     <div style={{ height: "100vh" }}>
       <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }} >
-        <Row className="">
+        <Row className="myrow">
           <Col lg="12" md="12" sm="12">
             <div className="align-center">
               <div className=" adjustcentertwo">
-                <p className="headersignin">sign up </p>
+                <p className="headersignin"><Link to={'/Signup'}>sign up</Link> </p>
                 <img src={coinapp} className="imagesignin" />
 
                 <h1 className="mainheading">Welcome back! </h1>
@@ -99,7 +100,7 @@ export const Signin = () => {
                     autoComplete="off"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <p className="forgotpass">Forget password?</p>
+                  <p className="forgotpass"> <Link to={'/ForgotPassword'} >Forget password?</Link></p>
 
 
                 </div>
@@ -107,12 +108,12 @@ export const Signin = () => {
             </div>
 
           </Col>
-          <Col>
+          <Col className="mycol">
             <Button color="primary" className="signinbutton" onClick={handlesignin} >
               Sign in
               </Button>
           </Col>
-        </Row>
+        </Row  >
 
       </Container>
 

@@ -8,6 +8,7 @@ import { BsFillPlusCircleFill } from 'react-icons/bs';
 
 import './Settings.css'
 import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Settings = () => {
     return (
@@ -22,7 +23,7 @@ const Settings = () => {
 
                     <div >
                         <div className="setnotification" >
-                            <p>Notifications</p>
+                            <p><Link to={'Allnotify'}>Notifications</Link></p>
                             <IoIosArrowForward className="notifiicon" />
                         </div>
                         <div className="setcurrency">
@@ -51,11 +52,11 @@ const Settings = () => {
 
                     <div>
                         <div className="hearderuserprofile">
-                            <p >User Profile</p>
+                            <p><Link to={'UserProfile'}>User Profile</Link></p>
                             <IoIosArrowForward className="accountarraw" />
                         </div>
                         <div className="headerchangepin">
-                            <p >Change PIN</p>
+                            <p><Link to={'AddPin'}>Change PIN</Link></p>
                             <IoIosArrowForward className="accountarrawtwo" />
                         </div>
 

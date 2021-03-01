@@ -32,7 +32,7 @@
 }
 
 .newpincontainer > div {
-    background-color: black;
+   
     color: white;
     width: 100px;
     margin: 10px;
@@ -52,9 +52,11 @@
 
 
   width: 55px;
+  border-radius: 0;
   border-inline-end: none;
   border-inline-start: none;
   border-block-start: none;
+  background: transparent;
 }
 
 .newpinbutton{
@@ -63,8 +65,9 @@
     color: white;
     height: 72px;
     font-size: 18px;
-    width: 377px;
-    margin-top: 23px;
-    margin-top: 392px;
+    width: 100%;
+    margin-top: 95%;
+    position: fixed;
+    bottom: 0;
 
 }

@@ -41,15 +41,13 @@ const Routes = () => {
             path="/details/:id"
           />
 
-          <Route>
-            <MarketView />
-          </Route>
+
 
           <Route exact path="/">
             <Home />
           </Route>
 
-          <Route exact path="/forgotpwd">
+          <Route exact path="/ForgotPassword">
             <ForgotPassword />
           </Route>
 
@@ -81,6 +79,11 @@ const Routes = () => {
           </Route>
           <Route exact path="/AddnewPin">
             <AddnewPin />
+          </Route>
+
+
+          <Route exact path="/market">
+            <MarketView />
           </Route>
         </Switch>
       </div>

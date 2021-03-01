@@ -12,7 +12,7 @@
 .align-center {
   text-align: center;
   background-color: #0e0f18;
-  /* height: 100vh; */
+   height: 100vh; 
 }
 .images{
 
@@ -21,7 +21,7 @@
 }
 
 .adjustcenter {
-  padding-top: 22%;
+  padding-top: 12%;
 }
 .heading {
   font-size: 30px;

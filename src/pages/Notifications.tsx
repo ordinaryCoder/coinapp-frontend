@@ -4,6 +4,7 @@ import coinapp from './../assets/images/coinapp.png';
 import { AiOutlineMail } from 'react-icons/ai';
 import { Button } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -26,15 +27,15 @@ const Notification = () => {
                             <h1>Check your email</h1>
                         </div>
 
-                        <div className="subheadingNotifications">
-                            <p>we've sent instructions on how to reset</p>
+                        <div >
+                            <p className="subheadingNotifications">we've sent instructions on how to reset</p>
                         </div>
-                        <div className="subheadingNotificationstwo">
-                            <p>The password(also check the spam folder).</p>
+                        <div >
+                            <p className="subheadingNotificationstwo">The password(also check the spam folder).</p>
                         </div>
-                        <Button className="Notificationsbutton" >
-                            Go to email
-        </Button>
+                        <Button className="Notificationsbutton" ><Link to={'Signin'}>
+                            Go to email</Link>
+                        </Button>
 
                     </div>
                 </Col>

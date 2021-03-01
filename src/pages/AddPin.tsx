@@ -11,10 +11,11 @@ import { Container, Row, Col } from 'reactstrap';
 
 const AddPin = () => {
     return (
-        <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-            <Row>
-                <Col lg="12" md="12" sm="12">
-                    <div>
+        <div>
+            <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
+                <Row>
+                    <Col lg="12" md="12" sm="12">
+
 
                         <div className="addpinicon">
                             <BiArrowBack />
@@ -42,14 +43,24 @@ const AddPin = () => {
                             <div><Input type="password" className="inputone" /></div>
 
                         </div>
-                        <Button color="primary" className="savepinbutton" >Save PIN
-                        </Button>
 
 
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+
+
+
+                    </Col>
+
+                </Row>
+
+            </Container>
+            <div>
+                <Button color="primary" className="savepinbutton" >Save PIN
+         </Button>
+
+            </div>
+        </div>
+
+
     )
 }
 

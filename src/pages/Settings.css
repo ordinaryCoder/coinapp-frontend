@@ -280,6 +280,12 @@ align-items: center;
     align-items: center;
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 35%;
 
 }
 .copyicon{

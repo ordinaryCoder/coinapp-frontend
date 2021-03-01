@@ -118,9 +118,9 @@ const FavouriteCoinList = () => {
   return (
     <Container className="j-even p-15">
       <Header
-        leftIcon={<RiDeleteBinLine onClick={handleDelete} />}
+        leftIcon={<RiDeleteBinLine size={20} onClick={handleDelete} />}
         title={"Favourite Coin"}
-        rightIcon={<BiSearchAlt onClick={handleSearchClick} />}
+        rightIcon={<BiSearchAlt size={20} onClick={handleSearchClick} />}
       />
       {optSearch ? Search : Sort}
       {FavList.length > 0 && optSearch === false

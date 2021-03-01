@@ -49,7 +49,7 @@ const Routes = () => {
             <Notifications />
           </Route>
 
-          <Route exact path="/user-profile">
+          <Route exact path="/UserProfile">
             <UserProfile />
           </Route>
 

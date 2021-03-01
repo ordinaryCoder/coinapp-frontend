@@ -154,3 +154,7 @@ a {
 #crypto-rate {
   padding-top: 20px;
 }
+
+.m-0 {
+  margin: none;
+}

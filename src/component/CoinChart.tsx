@@ -319,6 +319,16 @@ class ApexChartX extends React.Component<any, any> {
           zoom: {
             autoScaleYaxis: true,
           },
+          toolbar: {
+            tools: {
+              download: true,
+              selection: true,
+              zoom: true,
+              zoomin: true,
+              zoomout: true,
+              pan: '<img src="../assets/images/move-icon.png"  width="20">',
+            },
+          },
         },
         colors: ["white", "white", "white"],
         stroke: {

@@ -18,6 +18,7 @@ import AddPin from "./pages/AddPin";
 import { CryptoStats } from "./pages/CryptoStats";
 import EnteroldPassword from "./pages/EnteroldPassword";
 import AddnewPin from "./pages/AddnewPin";
+import FavouriteCoinList from "./pages/FavouriteList";
 
 const Routes = () => {
   return (
@@ -32,40 +33,31 @@ const Routes = () => {
           <Route exact path="/Signup">
             <Signup />
           </Route>
+          <Route exact path="/forgotpwd">
+            <ForgotPassword />
+          </Route>
+
           <Route exact path="/list">
             <List />
           </Route>
-          <Route
-            component={(props: any) => <CryptoStats {...props} />}
-            exact
-            path="/details/:id"
-          />
 
-          <Route>
+          <Route exact path="/market">
             <MarketView />
-          </Route>
-
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route exact path="/forgotpwd">
-            <ForgotPassword />
           </Route>
 
           <Route exact path="/Notifications">
             <Notifications />
           </Route>
 
-          <Route exact path="/UserProfile">
+          <Route exact path="/user-profile">
             <UserProfile />
           </Route>
 
           <Route exact path="/Settings">
             <Settings />
           </Route>
-          <Route exact path="/favs">
-            <FavList />
+          <Route exact path="/favourite">
+            <FavouriteCoinList />
           </Route>
 
           <Route exact path="/AllNotify">
@@ -82,6 +74,14 @@ const Routes = () => {
           <Route exact path="/AddnewPin">
             <AddnewPin />
           </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route
+            component={(props: any) => <CryptoStats {...props} />}
+            exact
+            path="/details/:id"
+          />
         </Switch>
       </div>
     </Router>

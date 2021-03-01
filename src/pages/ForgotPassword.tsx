@@ -21,8 +21,8 @@ const ForgotPassword = () => {
     return (
         <div>
             <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-                <Row>
-                    <Col lg="12" md="12" sm="12">
+                <Row className="rowforgotpass">
+                    <Col lg="12" md="12" sm="12" className="newcolforgotpass">
 
                         <div className="myicon">
                             <BiArrowBack />
@@ -50,15 +50,14 @@ const ForgotPassword = () => {
                                 className="inputforgot" placeholder="Enter your email address" />
                         </div>
 
+                        <Button className="recoverpass" onClick={handlerecover}><Link to={'Notifications'}> Recover password</Link></Button>
 
 
                     </Col>
                 </Row>
 
             </Container>
-            <div >
-                <Button className="recoverpass" onClick={handlerecover}><Link to={'Notifications'}> Recover password</Link></Button>
-            </div>
+
         </div>
 
     )

@@ -27,7 +27,7 @@ export const priceChange = (newPrice: string, oldPrice: string) => {
   else return roundedNewprice.toFixed(2);
 };
 
-export const DashboardListItem = (props: IDashboardListItem) => {
+export const FavouriteListItem = (props: IDashboardListItem) => {
   function roundOff(labelValue: string) {
     // Nine Zeroes for Billions
     return Math.abs(Number(labelValue)) >= 1.0e9

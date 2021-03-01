@@ -64,11 +64,27 @@
 
 
     background-color: #0057ff;
-    color: white;
-    height: 72px;
+    color:#ffffff;
+   
     font-size: 18px;
-    width: 100%;
-    margin-top: 95%;
-    position: fixed;
+   
     bottom: 0;
+    height: 10%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .newclasscol{
+
+    height: 100%;
+    position: relative;
+  }
+
+  .rowclass{
+
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 100%;
   }

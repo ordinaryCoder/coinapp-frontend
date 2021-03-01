@@ -78,7 +78,7 @@
 
 .forgotpass {
   font-weight:normal;
-  color: white;
+  color: #ffffff; 
   font-size: 19px;
   padding-top: 35px;
   padding-bottom: 26px;
@@ -87,7 +87,7 @@
 
 .signinbutton {
   background-color: #0057ff;
-  color: white;
+  color: #ffffff; 
   height: 80px;
   font-size: 18px;
   width: 100%;

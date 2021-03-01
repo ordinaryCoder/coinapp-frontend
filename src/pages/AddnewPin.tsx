@@ -10,8 +10,8 @@ const AddnewPin = () => {
     return (
         <div>
             <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-                <Row>
-                    <Col lg="12" md="12" sm="12">
+                <Row className="rowclassnewpin">
+                    <Col lg="12" md="12" sm="12" className="newclassnewpin">
 
 
                         <div className="addnewpinicon">
@@ -40,17 +40,19 @@ const AddnewPin = () => {
                             <div><Input type="password" className="inputnewpinone" /></div>
                         </div>
 
+                        <Button color="primary" className="newpinbutton" >Update PIN
+
+</Button>
+
+
 
                     </Col>
 
                 </Row>
 
             </Container>
-            <div>
-                <Button color="primary" className="newpinbutton" >Update PIN
 
-            </Button>
-            </div>
+
         </div>
 
     )

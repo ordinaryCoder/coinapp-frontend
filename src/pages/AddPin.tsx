@@ -11,10 +11,10 @@ import { Container, Row, Col } from 'reactstrap';
 
 const AddPin = () => {
     return (
-        <div>
+        <div >
             <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-                <Row>
-                    <Col lg="12" md="12" sm="12">
+                <Row className="rowclass">
+                    <Col lg="12" md="12" sm="12" className="newclasscol">
 
 
                         <div className="addpinicon">
@@ -47,17 +47,17 @@ const AddPin = () => {
 
 
 
+                        <Button color="primary" className="savepinbutton" >Save PIN
+         </Button>
+
+
 
                     </Col>
 
                 </Row>
 
             </Container>
-            <div>
-                <Button color="primary" className="savepinbutton" >Save PIN
-         </Button>
 
-            </div>
         </div>
 
 

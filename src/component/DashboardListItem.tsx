@@ -62,7 +62,7 @@ export const DashboardListItem = (props: IDashboardListItem) => {
         </Col>
 
         <Col id="crypto-rate" xs="5" className="ml-auto d-block">
-          <p className="text-right">
+          <p className="text-right m-0">
             ${parseFloat(props.item?.priceUsd?.toString()).toFixed(2)}
           </p>
           <div id="price-change" className="d-flex">

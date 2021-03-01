@@ -53,9 +53,9 @@ export const CryptoStats = () => {
   return (
     <Container className="p-15">
       <Header
-        leftIcon={<BiLeftArrowAlt onClick={handleBackClick} />}
+        leftIcon={<BiLeftArrowAlt size={20} onClick={handleBackClick} />}
         title={`${cryptoStats.id} (${cryptoStats.symbol})`}
-        rightIcon={<IoMdStats onClick={handleStatClick} />}
+        rightIcon={<IoMdStats size={20} onClick={handleStatClick} />}
       />
 
       <Row id="curr-value">
@@ -94,7 +94,7 @@ export const CryptoStats = () => {
         </Button>
       </Row>
       <CoinChart />
-      <Row className="d-flex">
+      <Row className="d-flex m-0">
         <Col id="mkt-det-wrapper">
           <div id="market-details">
             <p className="mkt-dt-title">Market Cap</p>

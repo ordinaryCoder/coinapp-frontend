@@ -14,7 +14,7 @@ export const Header = (props: HeaderProps) => {
     <Row id="header-wrapper" className="d-flex">
       <Col className="mr-auto"> {props.leftIcon}</Col>
       <Col id="header-title" className="m-auto f-14">
-        {props.title}
+        {props.title.toString()}
       </Col>
       <Col className="ml-auto">{props.rightIcon}</Col>
     </Row>

@@ -34,5 +34,6 @@
   text-align: center;
   letter-spacing: 0.42px;
   color: #ffffff;
+  text-transform: capitalize;
   opacity: 1;
 }

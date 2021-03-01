@@ -21,9 +21,9 @@ const MarketView = () => {
     <div className="justify-content-center">
       <Container className="p-15">
         <Header
-          leftIcon={<BiLeftArrowAlt onClick={handleBackClick} />}
+          leftIcon={<BiLeftArrowAlt size={20} onClick={handleBackClick} />}
           title={"Market Overview"}
-          rightIcon={<IoMdStats onClick={handleStatClick} />}
+          rightIcon={<IoMdStats size={20} onClick={handleStatClick} />}
         />
         <Row id="curr-value">
           <div>

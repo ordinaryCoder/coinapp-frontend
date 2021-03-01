@@ -11,12 +11,14 @@ import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const Settings = () => {
+  const goBack = () => {
+    window.history.back();
+  };
   return (
     <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
       <Row>
         <Col lg="12" md="12" sm="12">
-
-          <BiArrowBack className="seticon" />
+          <BiArrowBack size={20} onClick={goBack} className="seticon" />
           <h2 className="Settingheader">Settings</h2>
 
           <h1 className="headergeneral">General</h1>

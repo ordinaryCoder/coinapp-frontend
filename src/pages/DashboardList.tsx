@@ -115,9 +115,9 @@ const List = () => {
   return (
     <Container className="j-even p-15">
       <Header
-        leftIcon={<BiSearchAlt onClick={handleSearchClick} />}
+        leftIcon={<BiSearchAlt size={20} onClick={handleSearchClick} />}
         title={"Coin Market"}
-        rightIcon={<IoMdStats onClick={handleStatClick} />}
+        rightIcon={<IoMdStats size={20} onClick={handleStatClick} />}
       />
       {optSearch ? Search : Sort}
       {cryptoList.length > 0 &&

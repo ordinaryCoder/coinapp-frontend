@@ -4,6 +4,7 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
 import { IoIosSettings } from "react-icons/io";
 import { TiDocument } from "react-icons/ti";
+import { Link } from "react-router-dom";
 import { Row } from "reactstrap";
 import "../pages/Settings";
 
@@ -23,15 +24,27 @@ export const Footer = () => {
     setShow(!showAdd);
   };
 
+  const addToFav = () => {
+    alert("added to Favourite");
+  };
+
   return (
     <Row className="list-footer">
       {showAdd && CoinSetting}
       <div className="setfooter">
-        <FiCopy className="copyicon" />
+        <Link to="/list">
+          <FiCopy className="copyicon" />
+        </Link>
+
         <TiDocument className="documenticon" />
         <BsFillPlusCircleFill onClick={addTransaction} className="plusicon" />
-        <AiOutlineStar className="staricon" />
-        <IoIosSettings className="iossettingicon" />
+        <Link to="/favourite">
+          <AiOutlineStar className="staricon" />
+        </Link>
+
+        <Link to="/Settings">
+          <IoIosSettings className="iossettingicon" />
+        </Link>
       </div>
     </Row>
   );

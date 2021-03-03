@@ -83,7 +83,9 @@ export const Signup = () => {
             <div className="align-center">
               <div className="adjustcentersignup">
                 <p className="headersignup">
-                  <Link to={"/Signin"}>sign in</Link>
+                  <Link to={"/Signin"} className="lickclasssignup">
+                    sign in
+                  </Link>
                 </p>
                 <img src={coinapp} className="imagesignup" />
                 <h1 className="subheadersup">Lets create your</h1>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
 import { IoIosArrowForward, IoIosSettings } from "react-icons/io";
@@ -9,11 +9,55 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 import './Settings.css'
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import firebase from "../firebase";
+import { useHistory } from "react-router-dom";
+
 
 const Settings = () => {
+  const history = useHistory();
+
+  const [userState, setuserState] = useState<any>(null)
+
+  useEffect(() => {
+    getUserState().then(user => {
+
+      if (user) {
+        setuserState(user);
+      }
+    }
+    )
+  })
+
+
   const goBack = () => {
     window.history.back();
   };
+
+
+  const logout = () => {
+    firebase.auth().signOut().catch(err => {
+
+      console.log(err);
+    });
+  }
+
+
+  const getUserState = () => {
+    return new Promise(resolve => firebase.auth().onAuthStateChanged(resolve));
+  }
+
+
+
+  const logouttwo = () => {
+    firebase.auth().signOut();
+    setuserState(null);
+    history.push("/Signin");
+  }
+
+
+
+
+
   return (
     <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
       <Row>
@@ -25,7 +69,7 @@ const Settings = () => {
 
           <div >
             <div className="setnotification" >
-              <p><Link to={'Allnotify'}>Notifications</Link></p>
+              <p><Link to={'Allnotify'} className="link-class-settings-notification">Notifications</Link></p>
               <IoIosArrowForward className="notifiicon" />
             </div>
             <div className="setcurrency">
@@ -54,16 +98,16 @@ const Settings = () => {
 
           <div>
             <div className="hearderuserprofile">
-              <p><Link to={'UserProfile'}>User Profile</Link></p>
+              <p><Link to={'UserProfile'} className="link-class-settings-profile">User Profile</Link></p>
               <IoIosArrowForward className="accountarraw" />
             </div>
             <div className="headerchangepin">
-              <p><Link to={'AddPin'}>Change PIN</Link></p>
+              <p><Link to={'AddPin'} className="link-class-settings-pin">Change PIN</Link></p>
               <IoIosArrowForward className="accountarrawtwo" />
             </div>
 
             <div className="headerlogout">
-              <p >Log Out</p>
+              <p onClick={logouttwo}>Log Out</p>
               <IoIosArrowForward className="accountarrowthree" />
             </div>
 

@@ -50,7 +50,7 @@ const ForgotPassword = () => {
                                 className="inputforgot" placeholder="Enter your email address" />
                         </div>
 
-                        <Button className="recoverpass" onClick={handlerecover}><Link to={'Notifications'}> Recover password</Link></Button>
+                        <Button className="recoverpass" onClick={handlerecover}><Link to={'Notifications'} className="link-class-recover-pass"> Recover password</Link></Button>
 
 
                     </Col>

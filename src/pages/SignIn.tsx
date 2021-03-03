@@ -28,13 +28,13 @@ export const Signin = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
-        toast.success("user signed in successfully", {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 5000,
-        });
         dispatch(setUid(`${user.user?.uid}`));
         console.log("emptyone", user.user);
         history.push("/list");
+        toast.success("user signed in successfully", {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 1000,
+        });
       })
       .catch((error) => {
         //this.setState({ error: error });
@@ -57,7 +57,9 @@ export const Signin = () => {
             <div className="align-center">
               <div className=" adjustcentertwo">
                 <p className="headersignin">
-                  <Link to={"/Signup"}>sign up</Link>{" "}
+                  <Link to={"/Signup"} className="linkclass">
+                    sign up
+                  </Link>{" "}
                 </p>
                 <img src={coinapp} className="imagesignin" />
 
@@ -83,7 +85,10 @@ export const Signin = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <p className="forgotpass">
-                    <Link to={"/ForgotPassword"}>Forget password?</Link>
+                    {" "}
+                    <Link to={"/ForgotPassword"} className="linkclassforogt">
+                      Forget password?
+                    </Link>
                   </p>
                 </div>
               </div>

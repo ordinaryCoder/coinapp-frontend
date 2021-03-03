@@ -7,6 +7,11 @@ import { TiDocument } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { Row } from "reactstrap";
 import "../pages/Settings";
+import { MdStars } from "react-icons/md";
+import { connect } from "react-redux";
+import { startAction } from "../actions/startActions";
+import { stopAction } from "../actions/stopAction";
+import rotateAction from "../actions/rotation";
 
 const CoinSetting = () => {
   return (
@@ -16,16 +21,22 @@ const CoinSetting = () => {
   );
 };
 
-export const Footer = () => {
+export const Footer = (props: any) => {
   const [showAdd, setShow] = useState(false);
 
   const addTransaction = () => {
-    console.log("clicke add transaction");
+    console.log("click add transaction");
     setShow(!showAdd);
   };
 
   const addToFav = () => {
+    props.handleAddToFav(true);
     alert("added to Favourite");
+  };
+
+  const removeFromFav = () => {
+    props.handleAddToFav(false);
+    alert("removed from Favourite");
   };
 
   return (
@@ -38,14 +49,38 @@ export const Footer = () => {
 
         <TiDocument className="documenticon" />
         <BsFillPlusCircleFill onClick={addTransaction} className="plusicon" />
-        <Link to="/favourite">
-          <AiOutlineStar className="staricon" />
-        </Link>
+
+        {props.inStats ? (
+          !props.inFav ? (
+            <AiOutlineStar className="staricon" onClick={addToFav} />
+          ) : (
+            <MdStars onClick={removeFromFav} />
+          )
+        ) : (
+          <Link to="/favourite">
+            <AiOutlineStar className="staricon" />
+          </Link>
+        )}
 
         <Link to="/Settings">
-          <IoIosSettings className="iossettingicon" />
+          <IoIosSettings
+            className="iossettingicon"
+            onClick={() => props.rotateAction(!props.rotating)}
+          />
         </Link>
       </div>
     </Row>
   );
 };
+
+const mapStateToProps = (state: any) => ({
+  ...state,
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  startAction: () => dispatch(startAction),
+  stopAction: () => dispatch(stopAction),
+  rotateAction: (payload: any) => dispatch(rotateAction(payload)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

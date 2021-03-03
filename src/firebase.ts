@@ -14,5 +14,6 @@ import firebase from 'firebase';
 
   firebase.initializeApp(firebaseConfig);
   var db=firebase.firestore();
+  var realtime = firebase.database();
   export default firebase;
-  export { db };
+  export { db,realtime };

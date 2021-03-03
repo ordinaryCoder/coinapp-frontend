@@ -33,7 +33,7 @@ const Routes = () => {
           <Route exact path="/Signup">
             <Signup />
           </Route>
-          <Route exact path="/forgotpwd">
+          <Route exact path="/ForgotPassword">
             <ForgotPassword />
           </Route>
 
@@ -74,7 +74,6 @@ const Routes = () => {
           <Route exact path="/AddnewPin">
             <AddnewPin />
           </Route>
-
 
           <Route exact path="/market">
             <MarketView />

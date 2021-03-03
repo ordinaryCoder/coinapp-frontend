@@ -11,7 +11,9 @@ import firebase from 'firebase';
     appId: "1:871878861552:web:0fcc8c9d5cc40f91fc1835",
     measurementId: "G-GTCCH28TK6"
   };
+   //this.auth=firebase.auth();
 
+   
   firebase.initializeApp(firebaseConfig);
   var db=firebase.firestore();
   export default firebase;

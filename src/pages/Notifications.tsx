@@ -33,7 +33,7 @@ const Notification = () => {
                         <div >
                             <p className="subheadingNotificationstwo">The password(also check the spam folder).</p>
                         </div>
-                        <Button className="Notificationsbutton" ><Link to={'Signin'}>
+                        <Button className="Notificationsbutton" ><Link to={'Signin'} className="linkclassnotifi">
                             Go to email</Link>
                         </Button>
 

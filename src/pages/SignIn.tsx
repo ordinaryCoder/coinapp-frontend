@@ -45,7 +45,7 @@ export const Signin = () => {
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
         toast.success('user signed in successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 5000 })
-        console.log("emptyone", user)
+        console.log("emptyone", user.user?.uid)
         history.push("/list")
       })
       .catch((error) => {
@@ -73,7 +73,7 @@ export const Signin = () => {
           <Col lg="12" md="12" sm="12">
             <div className="align-center">
               <div className=" adjustcentertwo">
-                <p className="headersignin"><Link to={'/Signup'}>sign up</Link> </p>
+                <p className="headersignin"><Link to={'/Signup'} className="linkclass">sign up</Link> </p>
                 <img src={coinapp} className="imagesignin" />
 
                 <h1 className="mainheading">Welcome back! </h1>
@@ -100,7 +100,7 @@ export const Signin = () => {
                     autoComplete="off"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <p className="forgotpass"> <Link to={'/ForgotPassword'} >Forget password?</Link></p>
+                  <p className="forgotpass"> <Link to={'/ForgotPassword'} className="linkclassforogt">Forget password?</Link></p>
 
 
                 </div>

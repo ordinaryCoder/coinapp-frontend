@@ -69,7 +69,7 @@ export const Signup = () => {
           <Col lg="12" md="12" sm="12" className="px-0">
             <div className="align-center">
               <div className="adjustcentersignup">
-                <p className="headersignup"><Link to={'/Signin'}>sign in</Link></p>
+                <p className="headersignup"><Link to={'/Signin'} className="lickclasssignup">sign in</Link></p>
                 <img src={coinapp} className="imagesignup" />
                 <h1 className="subheadersup">Lets create your</h1>
                 <h1 className="subheadertwosup">coinapp account</h1>

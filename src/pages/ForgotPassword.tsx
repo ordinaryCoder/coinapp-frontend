@@ -25,7 +25,7 @@ const ForgotPassword = () => {
                     <Col lg="12" md="12" sm="12" className="newcolforgotpass">
 
                         <div className="myicon">
-                            <BiArrowBack />
+                            <Link to={'/Signin'}> <BiArrowBack /> </Link>
 
 
 

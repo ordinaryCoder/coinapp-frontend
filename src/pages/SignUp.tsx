@@ -31,9 +31,12 @@ export const Signup = () => {
   const handlesignup = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    // db.collection("posts").add({
-    //   email: email,
-    //   password: password,
+    db.collection("posts").add({
+      email: profile.email,
+      password: profile.password,
+    });
+    // .then(() => {
+    //   // alert("successfully Logged In");
     // })
     //   .then(() => {
     //     // alert("successfully Logged In");
@@ -72,7 +75,7 @@ export const Signup = () => {
               autoClose: 5000,
             });
           })
-          .catch((err) => {
+          .catch((err: any) => {
             console.log(err);
           });
       })

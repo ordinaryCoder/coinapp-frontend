@@ -4,6 +4,7 @@ import { BiArrowBack } from 'react-icons/bi';
 import coinapp from './../assets/images/coinapp.png';
 import { Button, Input } from "reactstrap";
 import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,7 +19,7 @@ const AddPin = () => {
 
 
                         <div className="addpinicon">
-                            <BiArrowBack />
+                            <Link to={'/Settings'}>   <BiArrowBack /></Link>
                             <img src={coinapp} style={{ width: "25px" }} />
                         </div>
                         <div className="addpinheader">

@@ -18,10 +18,8 @@ export const Signin = () => {
 
   const handlesignin = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-
     setEmail("");
     setPassword("");
-
     console.log(email);
     console.log(password);
     firebase

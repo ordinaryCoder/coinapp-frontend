@@ -326,7 +326,7 @@ class ApexChartX extends React.Component<any, any> {
               zoom: true,
               zoomin: true,
               zoomout: true,
-              pan: '<img src="../assets/images/move-icon.png"  width="20">',
+              pan: true,
             },
           },
         },

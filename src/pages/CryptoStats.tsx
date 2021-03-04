@@ -10,6 +10,8 @@ import { AiOutlineExpandAlt, AiOutlineLineChart } from "react-icons/ai";
 import CoinChart from "../component/CoinChart";
 import { IoMdStats } from "react-icons/io";
 import { BiLeftArrowAlt } from "react-icons/bi";
+import { Footer } from "../component/Footer";
+import { realtime } from "../firebase";
 
 export const CryptoStats = () => {
   const history = useHistory();
@@ -49,6 +51,16 @@ export const CryptoStats = () => {
         console.log("error", err);
       });
   }, []);
+
+  const [inFav, setFavFlag] = useState(false);
+
+  const handleAddToFav = (flag: boolean) => {
+    // const uid =
+    const todoRef = realtime.ref("fav");
+
+    // todoRef.child(uid).set({bitcoiin});
+    setFavFlag(flag);
+  };
 
   return (
     <Container className="p-15">
@@ -146,6 +158,7 @@ export const CryptoStats = () => {
             </p>
           </div>
         </Col>
+        <Footer inStats={true} inFav={inFav} handleAddToFav={handleAddToFav} />
       </Row>
     </Container>
   );

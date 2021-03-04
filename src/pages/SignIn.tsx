@@ -4,18 +4,19 @@ import { Button } from "reactstrap";
 import "./SignIn.css";
 import firebase from "../firebase";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import coinapp from './../assets/images/coinapp.png';
-import { Container, Row, Col } from 'reactstrap';
+import "react-toastify/dist/ReactToastify.css";
+import coinapp from "./../assets/images/coinapp.png";
+import { Container, Row, Col } from "reactstrap";
 import { Link, useHistory } from "react-router-dom";
-
-
+import { useDispatch } from "react-redux";
+import { setUid } from "../reducer/user/actions";
 export const Signin = () => {
-
   const history = useHistory();
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const handlesignin = (e: { preventDefault: () => void; }) => {
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handlesignin = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setEmail("");
     setPassword("");
@@ -25,36 +26,48 @@ export const Signin = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
-        toast.success('user signed in successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 })
-        console.log("emptyone", user.user?.uid)
-        history.push("/list")
+        dispatch(setUid(`${user.user?.uid}`));
+        console.log("emptyone", user.user);
+        history.push("/list");
+        toast.success("user signed in successfully", {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 1000,
+        });
       })
       .catch((error) => {
+        //this.setState({ error: error });
+        toast.error("No user found", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          autoClose: 5000,
+        });
 
-        toast.error(error.message, { position: toast.POSITION.BOTTOM_RIGHT, autoClose: 1000 })
-        console.log("signin error", error.message);
+        console.log("signin err cons", error.message);
       });
-  }
+  };
 
   return (
     <div style={{ height: "100vh" }}>
-      <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }} >
+      <Container
+        style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}
+      >
         <Row className="myrow">
           <Col lg="12" md="12" sm="12">
             <div className="align-center">
               <div className=" adjustcentertwo">
-                <p className="headersignin"><Link to={'/Signup'} className="linkclass">sign up</Link> </p>
+                <p className="headersignin">
+                  <Link to={"/Signup"} className="linkclass">
+                    sign up
+                  </Link>{" "}
+                </p>
                 <img src={coinapp} className="imagesignin" />
 
                 <h1 className="mainheading">Welcome back! </h1>
                 <h1 className="mainheadingtwo">You've been missed</h1>
                 <div>
-
                   <Input
                     type="email"
                     name="email"
                     value={email}
-
                     placeholder="Enter your email address"
                     className="emailid"
                     autoComplete="off"
@@ -64,29 +77,32 @@ export const Signin = () => {
                     type="password"
                     name="password"
                     value={password}
-
                     placeholder="Enter your password"
                     className="password"
                     autoComplete="off"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <p className="forgotpass"><Link to={'/ForgotPassword'} className="linkclassforogt">Forget password?</Link></p>
-
-
+                  <p className="forgotpass">
+                    {" "}
+                    <Link to={"/ForgotPassword"} className="linkclassforogt">
+                      Forget password?
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>
-
           </Col>
           <Col className="mycol">
-            <Button color="primary" className="signinbutton" onClick={handlesignin} >
+            <Button
+              color="primary"
+              className="signinbutton"
+              onClick={handlesignin}
+            >
               Sign in
-              </Button>
+            </Button>
           </Col>
-        </Row  >
-
+        </Row>
       </Container>
-
     </div>
   );
 };

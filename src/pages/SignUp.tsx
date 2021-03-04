@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import { Input } from "reactstrap";
 import { Button } from "reactstrap";
 import "./SignUp.css";
-import firebase from "../firebase";
-import { db } from '../firebase';
+import firebase, { realtime } from "../firebase";
+import { db } from "../firebase";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import coinapp from './../assets/images/coinapp.png';
-import { Container, Row, Col } from 'reactstrap';
+import "react-toastify/dist/ReactToastify.css";
+import coinapp from "./../assets/images/coinapp.png";
+import { Container, Row, Col } from "reactstrap";
 import { Link, useHistory } from "react-router-dom";
 
-
-
-toast.configure()
+toast.configure();
 export const Signup = () => {
   const history = useHistory();
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handlesignup = (e: { preventDefault: () => void; }) => {
-    e.preventDefault()
+  const handlesignup = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
 
     db.collection("posts").add({
       email: email,
@@ -50,29 +48,45 @@ export const Signup = () => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((user) => {
-        toast.success('successfully signed up', { position: toast.POSITION.TOP_RIGHT, autoClose: 2000 })
-        console.log("userdata", user)
-        history.push("/Signin")
+        toast.success("sign up successfully", {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 5000,
+        });
+        console.log("emptyone", user);
+        realtime
+          .ref("users")
+          .child(`${user?.user?.uid}`)
+          .set({ email, password })
+          .then((res: any) => {
+            console.log("res", res);
+            history.push("/Signin");
+          })
+          .catch((err: any) => {
+            console.log(err);
+          });
       })
       .catch((error) => {
-
-        toast.error(error.message, {
-
-          position: toast.POSITION.BOTTOM_RIGHT, autoClose: 2000,
-        })
-
-
-        console.log("signup error", error.message);
+        toast.error("sign up failed empty field", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          autoClose: 5000,
+        });
+        console.log("signin error", error.message);
       });
-  }
+  };
   return (
-    <div style={{ height: "100vh" }} >
-      <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }} >
+    <div style={{ height: "100vh" }}>
+      <Container
+        style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}
+      >
         <Row className="myrowtwo">
           <Col lg="12" md="12" sm="12" className="px-0">
             <div className="align-center">
               <div className="adjustcentersignup">
-                <p className="headersignup"><Link to={'/Signin'} className="lickclasssignup">sign in</Link></p>
+                <p className="headersignup">
+                  <Link to={"/Signin"} className="lickclasssignup">
+                    sign in
+                  </Link>
+                </p>
                 <img src={coinapp} className="imagesignup" />
                 <h1 className="subheadersup">Lets create your</h1>
                 <h1 className="subheadertwosup">coinapp account</h1>
@@ -101,9 +115,13 @@ export const Signup = () => {
               </div>
             </div>
             <Col className="mycoltwo">
-              <Button color="primary" className="signupbutton" onClick={handlesignup}>
+              <Button
+                color="primary"
+                className="signupbutton"
+                onClick={handlesignup}
+              >
                 Sign up
-               </Button>
+              </Button>
             </Col>
           </Col>
         </Row>

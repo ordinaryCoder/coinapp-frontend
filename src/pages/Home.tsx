@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import { Button } from "reactstrap";
 import { useHistory } from "react-router-dom";
 import "./Home.css";
-import coinapp from './../assets/images/coinapp.png';
-import { Container, Row, Col } from 'reactstrap';
+import coinapp from "./../assets/images/coinapp.png";
+import { Container, Row, Col } from "reactstrap";
+import { connect } from "react-redux";
 
-
-
-
-const Home = () => {
-
-
-
-
+const Home = (props: any) => {
+  console.log("props.", props);
 
   const history = useHistory();
 
@@ -27,7 +22,6 @@ const Home = () => {
       <Container>
         <Row>
           <Col lg="12" md="12" sm="12">
-
             <div className="align-center">
               <div className=" adjustcenter">
                 <div className="images">
@@ -43,20 +37,23 @@ const Home = () => {
                 <Row>
                   <Button onClick={handlesignin} className=" buttonsign">
                     Sign in
-                </Button>
+                  </Button>
                 </Row>
 
                 <Button onClick={handlesignup} className=" buttonsignup">
                   Sign up
-          </Button>
+                </Button>
               </div>
             </div>
-
           </Col>
         </Row>
       </Container>
     </>
   );
 };
+const mapStateToProps = (store: any) => ({
+  store,
+  email: store.userReducer.email,
+});
 
-export default Home;
+export default connect(mapStateToProps, {})(Home);

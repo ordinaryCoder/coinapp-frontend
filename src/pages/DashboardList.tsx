@@ -8,6 +8,7 @@ import { IoMdStats } from "react-icons/io";
 import "./Dashboard.css";
 import { useHistory } from "react-router-dom";
 import { Footer } from "../component/Footer";
+import { connect } from "react-redux";
 
 export type ICyptoData = {
   id: String;
@@ -23,7 +24,8 @@ export type ICyptoData = {
   vwap24Hr: String;
 };
 
-const List = () => {
+const List = (props: any) => {
+  console.log("props in luis", props);
   const history = useHistory();
   const [cryptoList, setCyptos] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
@@ -125,9 +127,11 @@ const List = () => {
           <DashboardListItem key={item.id.toString()} item={item} />
         ))}
 
-      <Footer />
+      <Footer inStats={false} inFav={false} />
     </Container>
   );
 };
-
-export default List;
+const mapStateToProps = (store: any) => ({
+  uid: store.userReducer.uid,
+});
+export default connect(mapStateToProps, {})(List);

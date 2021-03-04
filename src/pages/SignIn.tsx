@@ -10,60 +10,30 @@ import { Container, Row, Col } from 'reactstrap';
 import { Link, useHistory } from "react-router-dom";
 
 
-
-
-
-
-
-
 export const Signin = () => {
 
   const history = useHistory();
-
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
-
-
-
-
-
   const handlesignin = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-
     setEmail("");
     setPassword("");
-
-
-
-
-
     console.log(email);
     console.log(password);
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
-        toast.success('user signed in successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 5000 })
+        toast.success('user signed in successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 })
         console.log("emptyone", user.user?.uid)
         history.push("/list")
       })
       .catch((error) => {
-        //this.setState({ error: error });
-        toast.error('No user found', { position: toast.POSITION.BOTTOM_RIGHT, autoClose: 5000 })
 
-
-
-        console.log("signin err cons", error.message);
+        toast.error(error.message, { position: toast.POSITION.BOTTOM_RIGHT, autoClose: 1000 })
+        console.log("signin error", error.message);
       });
-
-
-
-
-
-
-
-
   }
 
   return (
@@ -100,7 +70,7 @@ export const Signin = () => {
                     autoComplete="off"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <p className="forgotpass"> <Link to={'/ForgotPassword'} className="linkclassforogt">Forget password?</Link></p>
+                  <p className="forgotpass"><Link to={'/ForgotPassword'} className="linkclassforogt">Forget password?</Link></p>
 
 
                 </div>

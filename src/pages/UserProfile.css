@@ -18,7 +18,7 @@
 .Headingdetails{
     color: #ffffff;
     font-size: 32px;
-    margin-top: 73px;
+    margin-top: 91px;
     font-weight: bold;
 }
 .userdetailsprofile{
@@ -110,4 +110,23 @@
     font-weight: bold;
     font-size: 20px;
 
+}
+
+.user-profile-button{
+
+    background-color: #0057ff;
+    color: white;
+   
+    font-size: 18px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height:10%;
+    left:0;
+    right:0;
+}
+
+.parentrow{
+
+    height:100%;
 }

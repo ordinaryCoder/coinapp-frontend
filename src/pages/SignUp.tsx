@@ -25,12 +25,12 @@ export const Signup = () => {
       email: email,
       password: password,
     })
-      .then(() => {
-        // alert("successfully Logged In");
-      })
-      .catch((error) => {
-        // alert(error.message);
-      });
+    // .then(() => {
+    //   // alert("successfully Logged In");
+    // })
+    // .catch((error) => {
+    //   // alert(error.message);
+    // });
     setEmail("");
     setPassword("");
     console.log(email);
@@ -50,16 +50,19 @@ export const Signup = () => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((user) => {
-        toast.success('sign up successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: 5000 })
-        console.log("emptyone", user)
+        toast.success('successfully signed up', { position: toast.POSITION.TOP_RIGHT, autoClose: 2000 })
+        console.log("userdata", user)
         history.push("/Signin")
       })
       .catch((error) => {
-        toast.error('sign up failed empty field', {
 
-          position: toast.POSITION.BOTTOM_RIGHT, autoClose: 5000,
+        toast.error(error.message, {
+
+          position: toast.POSITION.BOTTOM_RIGHT, autoClose: 2000,
         })
-        console.log("signin error", error.message);
+
+
+        console.log("signup error", error.message);
       });
   }
   return (

@@ -13,8 +13,20 @@ import { Link, useHistory } from "react-router-dom";
 toast.configure();
 export const Signup = () => {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [profile, setProfile] = useState({
+    email: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+  });
+
+  const handleChange = (evt: any) => {
+    evt.preventDefault();
+    useState((prevState: any) => ({
+      ...prevState,
+      [evt.target.name]: evt.target.value,
+    }));
+  };
 
   const handlesignup = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -29,10 +41,9 @@ export const Signup = () => {
     //   .catch((error) => {
     //     // alert(error.message);
     //   });
-    setEmail("");
-    setPassword("");
-    console.log(email);
-    console.log(password);
+
+    console.log(profile.email);
+    console.log(profile.password);
     // firebase
     //   .auth()
     //   .signInWithEmailAndPassword(email, password)
@@ -46,20 +57,20 @@ export const Signup = () => {
     //   });
     firebase
       .auth()
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(profile.email, profile.password)
       .then((user) => {
-        toast.success("sign up successfully", {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 5000,
-        });
         console.log("emptyone", user);
         realtime
           .ref("users")
           .child(`${user?.user?.uid}`)
-          .set({ email, password })
+          .set(profile)
           .then((res) => {
             console.log("res", res);
             history.push("/Signin");
+            toast.success("sign up successfully", {
+              position: toast.POSITION.TOP_RIGHT,
+              autoClose: 5000,
+            });
           })
           .catch((err) => {
             console.log(err);
@@ -92,20 +103,22 @@ export const Signup = () => {
                 <h1 className="subheadertwosup">coinapp account</h1>
                 <div>
                   <Input
+                    name="email"
                     type="email"
-                    value={email}
+                    value={profile.email}
                     autoComplete="off"
                     placeholder="Enter your email address"
                     className="email"
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={handleChange}
                   />
                   <Input
+                    name="password"
                     type="password"
-                    value={password}
+                    value={profile.email}
                     placeholder="Enter your password"
                     className="passwordsignup"
                     autoComplete="off"
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={handleChange}
                   />
                   <p className="footer">
                     By signing up you accept the Terms of Service and{" "}

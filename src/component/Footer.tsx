@@ -9,9 +9,6 @@ import { Row } from "reactstrap";
 import "../pages/Settings";
 import { MdStars } from "react-icons/md";
 import { connect } from "react-redux";
-import { startAction } from "../actions/startActions";
-import { stopAction } from "../actions/stopAction";
-import rotateAction from "../actions/rotation";
 
 const CoinSetting = () => {
   return (
@@ -63,10 +60,7 @@ export const Footer = (props: any) => {
         )}
 
         <Link to="/Settings">
-          <IoIosSettings
-            className="iossettingicon"
-            onClick={() => props.rotateAction(!props.rotating)}
-          />
+          <IoIosSettings className="iossettingicon" />
         </Link>
       </div>
     </Row>
@@ -77,10 +71,6 @@ const mapStateToProps = (state: any) => ({
   ...state,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
-  startAction: () => dispatch(startAction),
-  stopAction: () => dispatch(stopAction),
-  rotateAction: (payload: any) => dispatch(rotateAction(payload)),
-});
+const mapDispatchToProps = (dispatch: any) => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);

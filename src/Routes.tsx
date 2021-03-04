@@ -162,10 +162,11 @@ const Routes = ({ isAuthenticated }: any) => {
             isAuth={isAuthenticated}
           />
 
-          <Route
+          <ProtectedRoute
             component={(props: any) => <CryptoStats {...props} />}
             exact
             path="/details/:id"
+            isAuth={isAuthenticated}
           />
         </Switch>
       </div>

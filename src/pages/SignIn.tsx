@@ -29,12 +29,12 @@ export const Signin = () => {
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
         dispatch(setUid(`${user.user?.uid}`));
-        console.log("emptyone", user.user);
-        history.push("/list");
         toast.success("user signed in successfully", {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 1000,
         });
+        console.log("emptyone", user.user);
+        history.push("/list");
       })
       .catch((error) => {
         //this.setState({ error: error });

@@ -8,7 +8,9 @@ import { IoMdStats } from "react-icons/io";
 import "./Dashboard.css";
 import { useHistory } from "react-router-dom";
 import { Footer } from "../component/Footer";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import { realtime } from "../firebase";
+import { setCryptoObj, setFavList } from "../reducer/FavList/action";
 
 export type ICyptoData = {
   id: String;
@@ -25,11 +27,27 @@ export type ICyptoData = {
 };
 
 const List = (props: any) => {
-  console.log("props in luis", props);
+  console.log("props in list", props);
+  const dispatch = useDispatch();
   const history = useHistory();
   const [cryptoList, setCyptos] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
-
+  useEffect(() => {
+    if (props.uid) {
+      realtime
+        .ref("fav-list/")
+        .child(props.uid)
+        .on("value", (snap) => {
+          console.log("snap of fav", snap.val());
+          const fav = snap.val();
+          console.log("crypto obj in dashboar list", fav);
+          const bitVal = Object.values(fav);
+          console.log(typeof bitVal, ` Values: ${bitVal} bitVal`);
+          dispatch(setCryptoObj(fav));
+          dispatch(setFavList(bitVal));
+        });
+    }
+  }, [props.uid]);
   useEffect(() => {
     axios
       .get("https://api.coincap.io/v2/assets")
@@ -131,7 +149,9 @@ const List = (props: any) => {
     </Container>
   );
 };
+
 const mapStateToProps = (store: any) => ({
   uid: store.userReducer.uid,
 });
+
 export default connect(mapStateToProps, {})(List);

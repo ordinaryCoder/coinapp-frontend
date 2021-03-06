@@ -1,12 +1,14 @@
 import { SET_UID } from "./types"
 
 interface IInitialReducer{
-    uid:string,
-    email:string
+    uid:string;
+    email:string;
+    favList:[];
 }
 const initialReducer:IInitialReducer = {
-    uid:'',
-    email:''
+    uid:'wZ3x4Tew2oMxbpgoqaHBas3rPWI2',
+    email:'',
+    favList:[]
 }
 export default (
     state:IInitialReducer=initialReducer,

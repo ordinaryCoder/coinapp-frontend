@@ -8,8 +8,11 @@ import { Header } from "../component/Header";
 import { IoMdStats } from "react-icons/io";
 import "./Dashboard.css";
 import { useHistory } from "react-router-dom";
+import firebase, { realtime } from "../firebase";
 import { Footer } from "../component/Footer";
 import { FavouriteListItem } from "../component/FavouriteList";
+import { connect, useDispatch } from "react-redux";
+import { setFavList } from "../reducer/FavList/action";
 
 export type ICyptoData = {
   id: String;
@@ -25,22 +28,35 @@ export type ICyptoData = {
   vwap24Hr: String;
 };
 
-const FavouriteCoinList = () => {
+const FavouriteCoinList = (props: any) => {
+  const dispatch = useDispatch();
   const history = useHistory();
   const [FavList, setFav] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
   const [searchList, setSearchList] = useState<ICyptoData[]>([]);
 
+  console.log("props in Favorite coin", props);
+  console.log("favcoin favlist", FavList);
+
   useEffect(() => {
-    axios
-      .get("https://api.coincap.io/v2/assets?limit=5")
-      .then((response) => {
-        console.log("dashboard data", response.data);
-        setFav(response.data.data);
-      })
-      .catch((err) => {
-        console.log("Dashboard error ", err);
-      });
+    let currentUser = firebase.auth().currentUser?.uid;
+    console.log("currentUser", currentUser);
+    console.log("props.uid", props.uid);
+    if (currentUser === props.uid) {
+      realtime
+        .ref("fav-list/")
+        .child(`${props.uid}`)
+        .on("value", (snapshot) => {
+          if (snapshot.val()) {
+            setFav(snapshot.val());
+            console.log("FavList Value", FavList);
+            // dispatch(setFavList(FavList));
+          } else {
+            setFav([]);
+            console.log("FavList Value", FavList);
+          }
+        });
+    }
   }, []);
 
   const searchCoins = (searchItem: String) => {
@@ -136,4 +152,7 @@ const FavouriteCoinList = () => {
   );
 };
 
-export default FavouriteCoinList;
+const mapStateToProps = (store: any) => ({
+  uid: store.userReducer.uid,
+});
+export default connect(mapStateToProps, {})(FavouriteCoinList);

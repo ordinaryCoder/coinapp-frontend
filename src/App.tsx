@@ -7,7 +7,7 @@ function App() {
     authenticated: false,
     initializing: true,
   });
-
+  console.log("authentication", authentication);
   React.useEffect(
     () =>
       firebase.auth().onAuthStateChanged((user) => {

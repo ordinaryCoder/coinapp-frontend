@@ -22,7 +22,8 @@ export const Signup = () => {
 
   const handleChange = (evt: any) => {
     evt.preventDefault();
-    useState((prevState: any) => ({
+
+    setProfile((prevState: any) => ({
       ...prevState,
       [evt.target.name]: evt.target.value,
     }));
@@ -68,15 +69,35 @@ export const Signup = () => {
           .child(`${user?.user?.uid}`)
           .set(profile)
           .then((res) => {
-            console.log("res", res);
-            history.push("/Signin");
-            toast.success("sign up successfully", {
-              position: toast.POSITION.TOP_RIGHT,
-              autoClose: 5000,
-            });
+            console.log("after user profile creation", res);
+            realtime
+              .ref("user-settings")
+              .child(`${user?.user?.uid}`)
+              .set({
+                General: {
+                  currencyPref: "USD",
+                  Notifications: {
+                    pushNotify: "",
+                    eodPortPolioUpdate: "",
+                    newReleaseAvail: "",
+                    others: "",
+                  },
+                },
+              })
+              .then((res) => {
+                console.log("after setting creation", res);
+                history.push("/Signin");
+                toast.success("sign up successfully", {
+                  position: toast.POSITION.TOP_RIGHT,
+                  autoClose: 5000,
+                });
+              })
+              .catch((err) => {
+                console.log("Setting creation error", err);
+              });
           })
           .catch((err: any) => {
-            console.log(err);
+            console.log("user Creation errors", err);
           });
       })
       .catch((error) => {
@@ -117,7 +138,7 @@ export const Signup = () => {
                   <Input
                     name="password"
                     type="password"
-                    value={profile.email}
+                    value={profile.password}
                     placeholder="Enter your password"
                     className="passwordsignup"
                     autoComplete="off"

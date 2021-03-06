@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "reactstrap";
+import { Form, Input } from "reactstrap";
 import { Button } from "reactstrap";
 import "./SignIn.css";
 import firebase from "../firebase";
@@ -63,7 +63,7 @@ export const Signin = () => {
 
                 <h1 className="mainheading">Welcome back! </h1>
                 <h1 className="mainheadingtwo">You've been missed</h1>
-                <div>
+                <Form>
                   <Input
                     type="email"
                     name="email"
@@ -88,7 +88,7 @@ export const Signin = () => {
                       Forget password?
                     </Link>
                   </p>
-                </div>
+                </Form>
               </div>
             </div>
           </Col>

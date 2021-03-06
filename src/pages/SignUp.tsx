@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "reactstrap";
+import { Form, Input } from "reactstrap";
 import { Button } from "reactstrap";
 import "./SignUp.css";
 import firebase, { realtime } from "../firebase";
@@ -22,7 +22,7 @@ export const Signup = () => {
 
   const handleChange = (evt: any) => {
     evt.preventDefault();
-    useState((prevState: any) => ({
+    setProfile((prevState: any) => ({
       ...prevState,
       [evt.target.name]: evt.target.value,
     }));
@@ -104,7 +104,7 @@ export const Signup = () => {
                 <img src={coinapp} className="imagesignup" />
                 <h1 className="subheadersup">Lets create your</h1>
                 <h1 className="subheadertwosup">coinapp account</h1>
-                <div>
+                <Form>
                   <Input
                     name="email"
                     type="email"
@@ -117,17 +117,17 @@ export const Signup = () => {
                   <Input
                     name="password"
                     type="password"
-                    value={profile.email}
+                    value={profile.password}
                     placeholder="Enter your password"
                     className="passwordsignup"
                     autoComplete="off"
                     onChange={handleChange}
                   />
                   <p className="footer">
-                    By signing up you accept the Terms of Service and{" "}
+                    By signing up you accept the Terms of{" "}
                   </p>
                   <p className="footertwo">Service and Privacy Policy.</p>
-                </div>
+                </Form>
               </div>
             </div>
             <Col className="mycoltwo">

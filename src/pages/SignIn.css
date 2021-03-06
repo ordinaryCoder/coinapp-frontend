@@ -2,10 +2,8 @@
   background-color: #0e0f18;
   height: 100vh;
 }
-.align-center{
-
+.align-center {
   text-align: center;
- 
 }
 .headersignin {
   color: #ffffff;
@@ -15,23 +13,19 @@
   padding-right: 220px;
 }
 .adjustcentertwo {
-
   padding-top: 0%;
 }
 
-.imagesignin{
-
+.imagesignin {
   width: 25px;
   padding-top: 8px;
 }
 
-
 .mainheading {
-  
   color: #ffffff;
   font-size: 30px;
   font-weight: bold;
-  letter-spacing:10;
+  letter-spacing: 10;
   padding-top: 35px;
   padding-right: 95px;
 }
@@ -39,7 +33,7 @@
 .mainheadingtwo {
   color: #ffffff;
   font-size: 31px;
-    padding-right: 36px;
+  padding-right: 36px;
 
   padding-bottom: 100px;
 }
@@ -56,8 +50,8 @@
   border-radius: 0;
 }
 
-.emailid:focus{
-  outline:none;
+.emailid:focus {
+  outline: none;
 }
 
 .password {
@@ -72,22 +66,22 @@
   border-radius: 0;
 }
 
-.password:focus{
+.password:focus {
   outline: none;
 }
 
 .forgotpass {
-  font-weight:normal;
-  color: #ffffff; 
+  font-weight: normal;
+  color: #ffffff;
   font-size: 19px;
-  padding-top: 35px;
+  /* padding-top: 35px; */
   padding-bottom: 26px;
   margin-top: 6vh;
 }
 
 .signinbutton {
   background-color: #0057ff;
-  color: #ffffff; 
+  color: #ffffff;
   height: 80px;
   font-size: 18px;
   width: 100%;
@@ -95,25 +89,21 @@
   margin-top: 9vh;
 }
 
-.mycol{
+.mycol {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 }
-.myrow{
-
+.myrow {
   position: relative;
-    height: 100vh;
-  
+  height: 100vh;
 }
 
-.linkclass{
-
+.linkclass {
   color: #ffffff;
 }
 
-.linkclassforogt{
+.linkclassforogt {
   color: #ffffff;
-
 }

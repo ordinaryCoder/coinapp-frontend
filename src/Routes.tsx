@@ -25,6 +25,7 @@ import { CryptoStats } from "./pages/CryptoStats";
 import EnteroldPassword from "./pages/EnteroldPassword";
 import AddnewPin from "./pages/AddnewPin";
 import FavouriteCoinList from "./pages/FavouriteList";
+import ErrorPage from "./pages/ErrorPage";
 
 const ProtectedRoute: FC<RouteProps & { isAuth: boolean; component: FC }> = ({
   component: Component,
@@ -41,9 +42,15 @@ const Routes = ({ isAuthenticated }: any) => {
         {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
         <Switch>
+
+
+
           <Route exact path="/">
             <Home />
           </Route>
+          {/* <Route component={Home} > 
+
+          </Route>*/}
 
           <Route exact path="/Signin">
             <Signin />
@@ -168,9 +175,10 @@ const Routes = ({ isAuthenticated }: any) => {
             path="/details/:id"
             isAuth={isAuthenticated}
           />
+          <Route component={ErrorPage} />
         </Switch>
       </div>
-    </Router>
+    </Router >
   );
 };
 

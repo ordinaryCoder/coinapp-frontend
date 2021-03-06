@@ -1,40 +1,28 @@
-.addpinicon{
-
-    font-size: 30px;
-    padding-top: 24px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    margin-right: 211px;
+.addpinicon {
+  font-size: 30px;
+  padding-top: 24px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-right: 211px;
 }
-  
 
+.addpinheader {
+  margin-top: 50px;
+  font-weight: bold;
+}
 
+.addpinsubheader {
+  font-size: 16px;
 
-  .addpinheader{
+  margin-top: 20px;
+}
+.addsubheadertwo {
+  font-size: 16px;
+  margin-top: -11px;
+}
 
-    margin-top: 50px;
-    font-weight: bold;
-   
-  }
-
-  .addpinsubheader{
-
-    font-size: 16px;
-   
-    margin-top: 20px;
-  }
-  .addsubheadertwo{
-
-    font-size: 16px;
-    margin-top: -11px;
-  
-  }
-
-  .flex-container > div {
-
-   
-
+.flex-container > div {
   color: white;
   width: 100px;
   margin: 10px;
@@ -42,49 +30,42 @@
   line-height: 75px;
   font-size: 30px;
   display: inline-grid;
-    width: 56px;
-    height: 61px;
-  
-    margin-top: 83px;
-  }
+  width: 56px;
+  height: 61px;
 
+  margin-top: 83px;
+}
 
-  .inputone{
+.inputone {
+  border-radius: 0;
+  width: 55px;
+  border-inline-end: none;
+  border-inline-start: none;
+  border-block-start: none;
+  background: transparent;
+}
 
+.savepinbutton {
+  background-color: #0057ff;
+  color: #ffffff;
 
-    border-radius: 0;
-    width: 55px;
-    border-inline-end: none;
-    border-inline-start: none;
-    border-block-start: none;
-    background: transparent;
-  }
+  font-size: 18px;
 
-  .savepinbutton{
+  bottom: 0;
+  height: 10%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
 
+.newclasscol {
+  height: 100%;
+  position: relative;
+}
 
-    background-color: #0057ff;
-    color:#ffffff;
-   
-    font-size: 18px;
-   
-    bottom: 0;
-    height: 10%;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .newclasscol{
-
-    height: 100%;
-    position: relative;
-  }
-
-  .rowclass{
-
-    margin-right: -15px;
-    margin-left: -15px;
-    height: 100%;
-  }
+.rowclass {
+  margin-right: -15px;
+  margin-left: -15px;
+  height: 100%;
+}

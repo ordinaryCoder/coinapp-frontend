@@ -12,19 +12,13 @@ import { IoMdStats } from "react-icons/io";
 import { BiLeftArrowAlt } from "react-icons/bi";
 import { Footer } from "../component/Footer";
 import { realtime } from "../firebase";
+import { connect, useDispatch } from "react-redux";
+import { setCryptoObj } from "../reducer/FavList/action";
 
-export const CryptoStats = () => {
+const CryptoStats = (props: any) => {
   const history = useHistory();
-
-  const handleBackClick = () => {
-    window.history.back();
-  };
-
-  const handleStatClick = () => {
-    history.push("/market");
-  };
-
-  const { id } = useParams<{ id: string }>();
+  const dispatch = useDispatch();
+  const id = props.computedMatch.params.id;
   const [cryptoStats, setStats] = useState<ICyptoData>({
     id: "",
     rank: "",
@@ -38,8 +32,10 @@ export const CryptoStats = () => {
     changePercent24Hr: "",
     vwap24Hr: "",
   });
-
-  console.log("crypto stats");
+  const [inFav, setFav] = useState(false);
+  const [cryptoObj, setCrypto] = useState({});
+  const { favObj, favList } = props;
+  console.log("crypto stats redux props and if ", props);
   useEffect(() => {
     axios
       .get(`https://api.coincap.io/v2/assets/${id}`)
@@ -52,14 +48,44 @@ export const CryptoStats = () => {
       });
   }, []);
 
-  const [inFav, setFavFlag] = useState(false);
+  useEffect(() => {
+    let isFav: boolean = false;
+    if (id) {
+      console.log(`favList : ${props.favList}`);
+      isFav = props.favList.some(
+        (favItem: any) => favItem["id"] === props.currentCryptoId
+      );
+      console.log(`Found ${isFav} Coin is Favourite Marked`);
+      setFav(isFav);
+    }
+  }, [id]);
+
+  const getKeyByValue = (object: any, value: any) => {
+    return Object.keys(object).find((key) => object[key] === value);
+  };
 
   const handleAddToFav = (flag: boolean) => {
-    // const uid =
-    const todoRef = realtime.ref("fav");
+    if (flag) {
+      realtime.ref("fav-list/").child(`${props.uid}`).push(id);
+      setFav(flag);
+      // dispatch(setCryptoId(id));
+    } else {
+      const map = props.favObj;
+      console.log(`"fav Obj" ${props.favObj}`);
+      const remId: any = getKeyByValue(map, id);
+      console.log(`remove id ${remId}`);
+      realtime.ref(`fav-list/${props.uid}`).child(remId).remove();
+      setFav(flag);
+    }
+    // todoRef.child(uid).set({bitcoiin})
+  };
 
-    // todoRef.child(uid).set({bitcoiin});
-    setFavFlag(flag);
+  const handleBackClick = () => {
+    window.history.back();
+  };
+
+  const handleStatClick = () => {
+    history.push("/market");
   };
 
   return (
@@ -163,3 +189,11 @@ export const CryptoStats = () => {
     </Container>
   );
 };
+
+const mapStateToProps = (store: any) => ({
+  uid: store.userReducer.uid,
+  favList: store.FavListReducer.favList,
+  favObj: store.FavListReducer.favObj,
+  store,
+});
+export default connect(mapStateToProps, {})(CryptoStats);

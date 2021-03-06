@@ -18,10 +18,9 @@ import Settings from "./pages/Settings";
 import AllNotify from "./pages/AllNotify";
 
 import MarketView from "./pages/MarketView";
-import FavList from "./pages/Favourites";
 import AddPin from "./pages/AddPin";
 
-import { CryptoStats } from "./pages/CryptoStats";
+import CryptoStats from "./pages/CryptoStats";
 import EnteroldPassword from "./pages/EnteroldPassword";
 import AddnewPin from "./pages/AddnewPin";
 import FavouriteCoinList from "./pages/FavouriteList";
@@ -171,7 +170,7 @@ const Routes = ({ isAuthenticated }: any) => {
 
           <ProtectedRoute
             component={(props: any) => <CryptoStats {...props} />}
-            exact
+            // exact
             path="/details/:id"
             isAuth={isAuthenticated}
           />

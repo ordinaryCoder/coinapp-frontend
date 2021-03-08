@@ -5,7 +5,6 @@ import { IoIosArrowForward, IoIosSettings } from "react-icons/io";
 import { FiCopy } from "react-icons/fi";
 import { TiDocument } from "react-icons/ti";
 import { BsFillPlusCircleFill } from "react-icons/bs";
-
 import './Settings.css'
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';

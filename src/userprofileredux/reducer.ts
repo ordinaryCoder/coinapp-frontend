@@ -1,24 +1,24 @@
-import { SET_UID } from "./types";
+import { SET_USER_PROF } from "./types";
 
 interface IInitialReducer {
-  uid: string;
-  email: string;
-  favList: [];
+  //uid: string;
+  // email: string;
+  //favList: [];
+  userProfile: {};
 }
+
 const initialReducer: IInitialReducer = {
-  uid: "",
-  email: "",
-  favList: [],
+  userProfile: {},
 };
 export default (
   state: IInitialReducer = initialReducer,
   { type, payload }: { type: string; payload: any }
 ) => {
   switch (type) {
-    case SET_UID: {
+    case SET_USER_PROF: {
       return {
         ...state,
-        uid: payload,
+        userProfileObj: payload,
       };
     }
     default:

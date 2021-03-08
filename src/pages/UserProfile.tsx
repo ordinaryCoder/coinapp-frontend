@@ -1,22 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiArrowBack } from "react-icons/bi";
 import { IoIosArrowForward } from "react-icons/io";
 import "./UserProfile.css";
 import { Container, Row, Col, Button, Input, } from "reactstrap";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setUid } from "../reducer/user/actions";
+import { connect, useDispatch } from "react-redux";
+import { setUserProfile } from "../userprofileredux/actions";
 
 
 
 const UserProfile = () => {
 
+
   const dispatch = useDispatch();
   const [isEditing, editField] = useState(false);
+
   const [userProfile, setProfile] = useState({
     firstName: "Premraj",
     lastName: "Gavali",
     emailId: "prem@gmail.com"
+  })
+
+  useEffect(() => {
+    const Userdata = Object.values(fav);
+    dispatch(setUserProfile(Userdata));
+
   })
 
   return (
@@ -96,4 +104,14 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+
+
+const mapStateToProps = (store: any) => ({
+  uid: store.userReducer.uid,
+});
+
+export default connect(mapStateToProps, {})(UserProfile);
+function fav(fav: any) {
+  throw new Error("Function not implemented.");
+}
+

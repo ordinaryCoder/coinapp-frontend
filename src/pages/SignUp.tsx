@@ -35,29 +35,9 @@ export const Signup = () => {
       email: profile.email,
       password: profile.password,
     });
-    // .then(() => {
-    //   // alert("successfully Logged In");
-    // })
-    //   .then(() => {
-    //     // alert("successfully Logged In");
-    //   })
-    //   .catch((error) => {
-    //     // alert(error.message);
-    //   });
-
     console.log(profile.email);
     console.log(profile.password);
-    // firebase
-    //   .auth()
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then((user) => {
-    //     console.log(user)
-    //     // this.props.history.push('/');
-    //   })
-    //   .catch((error) => {
-    //     //this.setState({ error: error });
-    //     console.log("signin error", error);
-    //   });
+
     firebase
       .auth()
       .createUserWithEmailAndPassword(profile.email, profile.password)
@@ -100,7 +80,7 @@ export const Signup = () => {
           });
       })
       .catch((error) => {
-        toast.error("sign up failed empty field", {
+        toast.error(error.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
           autoClose: 5000,
         });

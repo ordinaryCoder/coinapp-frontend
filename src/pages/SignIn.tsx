@@ -36,7 +36,7 @@ export const Signin = () => {
       })
       .catch((error) => {
         //this.setState({ error: error });
-        toast.error("No user found", {
+        toast.error(error.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
           autoClose: 5000,
         });

@@ -11,6 +11,7 @@ import { Footer } from "../component/Footer";
 import { connect, useDispatch } from "react-redux";
 import { realtime } from "../firebase";
 import { setCryptoObj, setFavList } from "../reducer/FavList/action";
+import ReactPaginate from "react-paginate";
 
 export type ICyptoData = {
   id: String;
@@ -41,7 +42,8 @@ const List = (props: any) => {
           console.log("snap of fav", snap.val());
           const fav = snap.val();
           console.log("crypto obj in dashboar list", fav);
-          const bitVal = Object.values(fav);
+          let bitVal = [];
+          bitVal = Object.values(fav);
           console.log(typeof bitVal, ` Values: ${bitVal} bitVal`);
           dispatch(setCryptoObj(fav));
           dispatch(setFavList(bitVal));
@@ -139,6 +141,7 @@ const List = (props: any) => {
         title={"Coin Market"}
         rightIcon={<IoMdStats size={20} onClick={handleStatClick} />}
       />
+
       {optSearch ? Search : Sort}
       {cryptoList.length > 0 &&
         cryptoList.map((item) => (

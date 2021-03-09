@@ -11,6 +11,8 @@ import { Footer } from "../component/Footer";
 import { connect, useDispatch } from "react-redux";
 import { realtime } from "../firebase";
 import { setCryptoObj, setFavList } from "../reducer/FavList/action";
+import ReactPaginate from "react-paginate";
+import { constants } from "node:os";
 
 export type ICyptoData = {
   id: String;
@@ -32,35 +34,31 @@ const List = (props: any) => {
   const history = useHistory();
   const [cryptoList, setCyptos] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
-
-  // useEffect(() => {
-  //   if (props.uid) {
-  //     realtime
-  //       .ref("fav-list/")
-  //       .child(props.uid)
-  //       .on("value", (result) => {
-
-  //         console.log("snap of user", result.val());
-  //       
-  //  let fav = [];
-  //         fav = snap.val();
-  //         console.log("crypto obj in dashboar list", fav);
-
-  //         let bitVal = {};
-  //         bitVal = Object.values(fav ?? {});
-  //         console.log(typeof bitVal, ` Values: ${bitVal} bitVal`);
-  //         dispatch(setCryptoObj(fav));
-  //         dispatch(setFavList(bitVal));
-  //       });
-  //   }
-  // }, [props.uid]);
-
-
-
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
+    if (props.uid) {
+      realtime
+        .ref("fav-list/")
+        .child(props.uid)
+        .on("value", (snap) => {
+          console.log("snap of Dashboard", snap.val());
+          if (snap.val() !== null) {
+            let fav = [];
+            fav = snap.val();
+            console.log("crypto obj in dashboard list", fav);
+            const bitVal = Object.values(fav);
+            console.log(typeof bitVal, ` Values: ${bitVal} bitVal`);
+            dispatch(setCryptoObj(fav));
+            dispatch(setFavList(bitVal));
+          }
+        });
+    }
+  }, [props.uid]);
+  useEffect(() => {
+    console.log("offset value", offset);
     axios
-      .get("https://api.coincap.io/v2/assets")
+      .get(`https://api.coincap.io/v2/assets?limit=40&offset=${offset}`)
       .then((response) => {
         console.log("dashboard data", response.data);
         setCyptos(response.data.data);
@@ -68,7 +66,7 @@ const List = (props: any) => {
       .catch((err) => {
         console.log("Dashboard error ", err);
       });
-  }, []);
+  }, [offset]);
 
   const searchCoins = (searchItem: String) => {
     console.log("onchange", searchItem);
@@ -122,6 +120,12 @@ const List = (props: any) => {
     history.push("/market");
   };
 
+  const handlePageClick = (evt: any) => {
+    if (evt.selected === 0) {
+      setOffset(0);
+    } else setOffset(40 * evt.selected - 1);
+  };
+
   const Search = (
     <InputGroup className="p-15">
       <Input
@@ -149,12 +153,25 @@ const List = (props: any) => {
         title={"Coin Market"}
         rightIcon={<IoMdStats size={20} onClick={handleStatClick} />}
       />
-      {optSearch ? Search : Sort}
-      {cryptoList.length > 0 &&
-        cryptoList.map((item) => (
-          <DashboardListItem key={item.id.toString()} item={item} />
-        ))}
-
+      <ReactPaginate
+        previousLabel={"previous"}
+        nextLabel={"next"}
+        breakLabel={"..."}
+        breakClassName={"break-me"}
+        pageCount={42}
+        marginPagesDisplayed={1}
+        pageRangeDisplayed={2}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        activeClassName={"active"}
+      />
+      <Row id="dashboard-content">
+        {optSearch ? Search : Sort}
+        {cryptoList.length > 0 &&
+          cryptoList.map((item) => (
+            <DashboardListItem key={item.id.toString()} item={item} />
+          ))}
+      </Row>
       <Footer inStats={false} inFav={false} />
     </Container>
   );

@@ -22,7 +22,7 @@ export default (
         favList: payload,
       };
     case SET_FAV_OBJ:
-      console.log("payload in reducer", { ...payload });
+      
       return {
         ...state,
         favObj: { ...payload },

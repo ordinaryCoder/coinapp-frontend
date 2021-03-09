@@ -3,16 +3,13 @@ import React, { useEffect, useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Container, Input, InputGroup, Row } from "reactstrap";
-import { DashboardListItem } from "../component/DashboardListItem";
 import { Header } from "../component/Header";
-import { IoMdStats } from "react-icons/io";
 import "./Dashboard.css";
 import { useHistory } from "react-router-dom";
 import firebase, { realtime } from "../firebase";
 import { Footer } from "../component/Footer";
-import { FavouriteListItem } from "../component/FavouriteList";
+import { FavouriteListItem } from "../component/FavouriteListItem";
 import { connect, useDispatch } from "react-redux";
-import { setFavList } from "../reducer/FavList/action";
 
 export type ICyptoData = {
   id: String;
@@ -33,10 +30,9 @@ const FavouriteCoinList = (props: any) => {
   const history = useHistory();
   const [FavList, setFav] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
-  const [searchList, setSearchList] = useState<ICyptoData[]>([]);
 
-  console.log("props in Favorite coin", props);
-  console.log("favcoin favlist", FavList);
+  console.log("props in Favorite coin", props.uid, props.favList);
+  console.log("favcoin favlist and length", Object.keys(FavList).length);
 
   useEffect(() => {
     let currentUser = firebase.auth().currentUser?.uid;
@@ -138,14 +134,12 @@ const FavouriteCoinList = (props: any) => {
         title={"Favourite Coin"}
         rightIcon={<BiSearchAlt size={20} onClick={handleSearchClick} />}
       />
-      {optSearch ? Search : Sort}
-      {FavList.length > 0 && optSearch === false
-        ? FavList.map((item) => (
-            <FavouriteListItem key={item.id.toString()} item={item} />
-          ))
-        : searchList.map((item) => (
-            <FavouriteListItem key={item.id.toString()} item={item} />
-          ))}
+      <Row id="fav-content">
+        {" "}
+        {props.favList.length > 0 &&
+          props.favList.map((item: any) => <FavouriteListItem id={item} />)}
+        {/* <FavouriteListItem key={props.item.id.toString()} item={props.item} /> */}
+      </Row>
 
       <Footer />
     </Container>
@@ -154,5 +148,8 @@ const FavouriteCoinList = (props: any) => {
 
 const mapStateToProps = (store: any) => ({
   uid: store.userReducer.uid,
+  favList: store.favListReducer.favList,
+  store,
 });
+
 export default connect(mapStateToProps, {})(FavouriteCoinList);

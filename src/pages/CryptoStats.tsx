@@ -52,9 +52,7 @@ const CryptoStats = (props: any) => {
     let isFav: boolean = false;
     if (id) {
       console.log(`favList : ${props.favList}`);
-      isFav = props.favList.some(
-        (favItem: any) => favItem["id"] === props.currentCryptoId
-      );
+      isFav = props.favList.some((favItem: any) => favItem.includes(id));
       console.log(`Found ${isFav} Coin is Favourite Marked`);
       setFav(isFav);
     }
@@ -192,8 +190,8 @@ const CryptoStats = (props: any) => {
 
 const mapStateToProps = (store: any) => ({
   uid: store.userReducer.uid,
-  favList: store.FavListReducer.favList,
-  favObj: store.FavListReducer.favObj,
+  favList: store.favListReducer.favList,
+  favObj: store.favListReducer.favObj,
   store,
 });
 export default connect(mapStateToProps, {})(CryptoStats);

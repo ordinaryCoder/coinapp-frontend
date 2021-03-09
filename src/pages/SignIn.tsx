@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Input } from "reactstrap";
 import { Button } from "reactstrap";
 import "./SignIn.css";
-import firebase from "../firebase";
+import firebase, { realtime } from "../firebase";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import coinapp from "./../assets/images/coinapp.png";
@@ -44,6 +44,8 @@ export const Signin = () => {
         console.log("signin err cons", error.message);
       });
   };
+
+
 
   return (
     <div style={{ height: "100vh" }}>

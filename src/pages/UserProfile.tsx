@@ -6,26 +6,48 @@ import { Container, Row, Col, Button, Input, } from "reactstrap";
 import { Link } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import { setUserProfile } from "../userprofileredux/actions";
+import { setCryptoObj } from "../reducer/FavList/action";
+import { realtime } from "../firebase";
 
 
 
-const UserProfile = () => {
-
+const UserProfile = (props: any) => {
+  console.log("userprofile props", props)
 
   const dispatch = useDispatch();
   const [isEditing, editField] = useState(false);
 
   const [userProfile, setProfile] = useState({
-    firstName: "Premraj",
-    lastName: "Gavali",
-    emailId: "prem@gmail.com"
+    firstName: "",
+    lastName: "",
+    email: ""
   })
+
 
   useEffect(() => {
-    const Userdata = Object.values(fav);
-    dispatch(setUserProfile(Userdata));
+    if (props.uid) {
+      realtime.ref("users").child(`${props.uid}`).on("value", (snap) => {
+        console.log("snap of user", snap.val());
+        setProfile(snap.val())
+      })
 
-  })
+    }
+  }, [props.uid])
+
+
+
+  const handleEdit = () => {
+    console.log("userprofile upodated isEWditing  ", isEditing, userProfile)
+    if (!isEditing) {
+      realtime.ref("users/").child(`${props.uid}`
+      ).set(userProfile)
+      console.log("userprofile upodated in firebase", userProfile)
+      editField(!isEditing)
+    } else {
+      editField(!isEditing)
+    }
+  };
+
 
   return (
     <div>
@@ -66,8 +88,8 @@ const UserProfile = () => {
                   <p className="userdetailsprofileemail">Email address</p>
                   <Input className="usermyemail" placeholder="Enter your email address" onChange={(evt) => setProfile(prevState => ({
                     ...prevState,
-                    emailId: evt.target.value
-                  }))} value={userProfile.emailId} />
+                    email: evt.target.value
+                  }))} value={userProfile.email} />
                 </> :
                 <>
                   <p className="userdetailsprofile">First name</p>
@@ -75,7 +97,7 @@ const UserProfile = () => {
                   <p className="userdetailsprofile">Last name</p>
                   <p className="usermylastname">{userProfile.lastName}</p>
                   <p className="userdetailsprofileemail">Email address</p>
-                  <p className="usermyemail">{userProfile.emailId}</p>
+                  <p className="usermyemail">{userProfile.email}</p>
                 </>
               }
             </div>
@@ -92,7 +114,7 @@ const UserProfile = () => {
               <IoIosArrowForward className="forwardicontwo" />
             </div>
 
-            <Button color="primary" className="user-profile-button" onClick={() => editField(!isEditing)} >
+            <Button color="primary" className="user-profile-button" onClick={handleEdit} >
               {isEditing ? "Save" : "Edit"}
             </Button>
 

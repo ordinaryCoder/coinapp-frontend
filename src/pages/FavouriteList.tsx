@@ -141,11 +141,11 @@ const FavouriteCoinList = (props: any) => {
       {optSearch ? Search : Sort}
       {FavList.length > 0 && optSearch === false
         ? FavList.map((item) => (
-            <FavouriteListItem key={item.id.toString()} item={item} />
-          ))
+          <FavouriteListItem key={item.id.toString()} item={item} />
+        ))
         : searchList.map((item) => (
-            <FavouriteListItem key={item.id.toString()} item={item} />
-          ))}
+          <FavouriteListItem key={item.id.toString()} item={item} />
+        ))}
 
       <Footer />
     </Container>
@@ -154,5 +154,6 @@ const FavouriteCoinList = (props: any) => {
 
 const mapStateToProps = (store: any) => ({
   uid: store.userReducer.uid,
+
 });
 export default connect(mapStateToProps, {})(FavouriteCoinList);

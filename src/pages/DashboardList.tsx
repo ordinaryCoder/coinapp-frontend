@@ -32,22 +32,32 @@ const List = (props: any) => {
   const history = useHistory();
   const [cryptoList, setCyptos] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
-  useEffect(() => {
-    if (props.uid) {
-      realtime
-        .ref("fav-list/")
-        .child(props.uid)
-        .on("value", (snap) => {
-          console.log("snap of fav", snap.val());
-          const fav = snap.val();
-          console.log("crypto obj in dashboar list", fav);
-          const bitVal = Object.values(fav);
-          console.log(typeof bitVal, ` Values: ${bitVal} bitVal`);
-          dispatch(setCryptoObj(fav));
-          dispatch(setFavList(bitVal));
-        });
-    }
-  }, [props.uid]);
+
+  // useEffect(() => {
+  //   if (props.uid) {
+  //     realtime
+  //       .ref("fav-list/")
+  //       .child(props.uid)
+  //       .on("value", (result) => {
+
+  //         console.log("snap of user", result.val());
+  //       
+  //  let fav = [];
+  //         fav = snap.val();
+  //         console.log("crypto obj in dashboar list", fav);
+
+  //         let bitVal = {};
+  //         bitVal = Object.values(fav ?? {});
+  //         console.log(typeof bitVal, ` Values: ${bitVal} bitVal`);
+  //         dispatch(setCryptoObj(fav));
+  //         dispatch(setFavList(bitVal));
+  //       });
+  //   }
+  // }, [props.uid]);
+
+
+
+
   useEffect(() => {
     axios
       .get("https://api.coincap.io/v2/assets")

@@ -5,6 +5,7 @@ import { IoIosArrowForward, IoIosSettings } from "react-icons/io";
 import { FiCopy } from "react-icons/fi";
 import { TiDocument } from "react-icons/ti";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+
 import './Settings.css'
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
@@ -69,7 +70,8 @@ const Settings = () => {
           <div >
             <div className="setnotification" >
               <p><Link to={'Allnotify'} className="link-class-settings-notification">Notifications</Link></p>
-              <IoIosArrowForward className="notifiicon" />
+              <Link to={'Allnotify'} > <IoIosArrowForward className="notifiicon" /> </Link>
+
             </div>
             <div className="setcurrency">
               <p >Currency Preference</p>
@@ -98,16 +100,16 @@ const Settings = () => {
           <div>
             <div className="hearderuserprofile">
               <p><Link to={'UserProfile'} className="link-class-settings-profile">User Profile</Link></p>
-              <IoIosArrowForward className="accountarraw" />
+              <Link to={'UserProfile'} >  <IoIosArrowForward className="accountarraw" /> </Link>
             </div>
             <div className="headerchangepin">
               <p><Link to={'AddPin'} className="link-class-settings-pin">Change PIN</Link></p>
-              <IoIosArrowForward className="accountarrawtwo" />
+              <Link to={'AddPin'} >  <IoIosArrowForward className="accountarrawtwo" /> </Link>
             </div>
 
             <div className="headerlogout">
               <p onClick={logouttwo}>Log Out</p>
-              <IoIosArrowForward className="accountarrowthree" />
+              <Link to={'Signin'} onClick={logouttwo} >   <IoIosArrowForward className="accountarrowthree" /></Link>
             </div>
 
 

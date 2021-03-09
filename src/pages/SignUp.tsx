@@ -15,10 +15,10 @@ export const Signup = () => {
   const history = useHistory();
   const [profile, setProfile] = useState({
     email: "",
-    password: "",
     firstName: "",
     lastName: "",
   });
+  const [password, setPassword] = useState("")
 
   const handleChange = (evt: any) => {
     evt.preventDefault();
@@ -31,16 +31,16 @@ export const Signup = () => {
   const handlesignup = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    db.collection("posts").add({
-      email: profile.email,
-      password: profile.password,
-    });
-    console.log(profile.email);
-    console.log(profile.password);
+    // db.collection("posts").add({
+    //   email: profile.email,
+    //   password: profile.password,
+    // });
+    // console.log(profile.email);
+    // console.log(profile.password);
 
     firebase
       .auth()
-      .createUserWithEmailAndPassword(profile.email, profile.password)
+      .createUserWithEmailAndPassword(profile.email, password)
       .then((user) => {
         console.log("emptyone", user);
         realtime
@@ -117,11 +117,11 @@ export const Signup = () => {
                   <Input
                     name="password"
                     type="password"
-                    value={profile.password}
+                    value={password}
                     placeholder="Enter your password"
                     className="passwordsignup"
                     autoComplete="off"
-                    onChange={handleChange}
+                    onChange={(evt) => setPassword(evt.target.value)}
                   />
                   <p className="footer">
                     By signing up you accept the Terms of{" "}

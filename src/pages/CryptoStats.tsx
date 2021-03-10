@@ -35,7 +35,7 @@ const CryptoStats = (props: any) => {
   const [cryptoObj, setCrypto] = useState({});
   const { favObj, favList } = props;
   console.log("crypto stats redux props and if ", props);
-
+  console.log("id ", id);
   useEffect(() => {
     axios
       .get(`https://api.coincap.io/v2/assets/${id}`)
@@ -52,7 +52,7 @@ const CryptoStats = (props: any) => {
     let isFav: boolean = false;
     if (id) {
       console.log(`favList : ${props.favList}`);
-      isFav = props.favList.some((favItem: any) => favItem.includes(id));
+      isFav = props.favList.some((favItem: string) => favItem === id);
       console.log(`Found ${isFav} Coin is Favourite Marked`);
       setFav(isFav);
     }
@@ -63,17 +63,23 @@ const CryptoStats = (props: any) => {
   };
 
   const handleAddToFav = (flag: boolean) => {
-    if (flag) {
-      realtime.ref("fav-list/").child(`${props.uid}`).push(id);
-      setFav(flag);
-      // dispatch(setCryptoId(id));
+    if (props.uid !== "") {
+      if (flag) {
+        realtime.ref("fav-list/").child(`${props.uid}`).push(id);
+        setFav(flag);
+        alert("added to Favourite");
+        // dispatch(setCryptoId(id));
+      } else {
+        const map = props.favObj;
+        console.log(`"fav Obj" ${props.favObj}`);
+        const remId: any = getKeyByValue(map, id);
+        console.log(`remove id ${remId}`);
+        realtime.ref(`fav-list/${props.uid}`).child(remId).remove();
+        setFav(flag);
+        alert("removed from Favourite");
+      }
     } else {
-      const map = props.favObj;
-      console.log(`"fav Obj" ${props.favObj}`);
-      const remId: any = getKeyByValue(map, id);
-      console.log(`remove id ${remId}`);
-      realtime.ref(`fav-list/${props.uid}`).child(remId).remove();
-      setFav(flag);
+      alert("Please login to continue");
     }
     // todoRef.child(uid).set({bitcoiin})
   };

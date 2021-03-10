@@ -11,6 +11,8 @@ import { Footer } from "../component/Footer";
 import { FavouriteListItem } from "../component/FavouriteListItem";
 import { connect, useDispatch } from "react-redux";
 
+
+
 export type ICyptoData = {
   id: String;
   rank: String;
@@ -135,10 +137,11 @@ const FavouriteCoinList = (props: any) => {
         rightIcon={<BiSearchAlt size={20} onClick={handleSearchClick} />}
       />
       <Row id="fav-content">
-        {" "}
+
         {props.favList.length > 0 &&
           props.favList.map((item: any) => <FavouriteListItem id={item} />)}
         {/* <FavouriteListItem key={props.item.id.toString()} item={props.item} /> */}
+
       </Row>
 
       <Footer />

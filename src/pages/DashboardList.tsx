@@ -58,7 +58,7 @@ const List = (props: any) => {
   useEffect(() => {
     console.log("offset value", offset);
     axios
-      .get(`https://api.coincap.io/v2/assets?limit=40&offset=${offset}`)
+      .get(`https://api.coincap.io/v2/assets?limit=10&offset=${offset}`)
       .then((response) => {
         console.log("dashboard data", response.data);
         setCyptos(response.data.data);
@@ -121,9 +121,9 @@ const List = (props: any) => {
   };
 
   const handlePageClick = (evt: any) => {
-    if (evt.selected === 0) {
-      setOffset(0);
-    } else setOffset(40 * evt.selected - 1);
+
+    setOffset(10 * (evt.selected));
+    window.scrollTo(0, 0)
   };
 
   const Search = (
@@ -153,24 +153,28 @@ const List = (props: any) => {
         title={"Coin Market"}
         rightIcon={<IoMdStats size={20} onClick={handleStatClick} />}
       />
-      <ReactPaginate
-        previousLabel={"previous"}
-        nextLabel={"next"}
-        breakLabel={"..."}
-        breakClassName={"break-me"}
-        pageCount={42}
-        marginPagesDisplayed={1}
-        pageRangeDisplayed={2}
-        onPageChange={handlePageClick}
-        containerClassName={"pagination"}
-        activeClassName={"active"}
-      />
+
       <Row id="dashboard-content">
         {optSearch ? Search : Sort}
         {cryptoList.length > 0 &&
           cryptoList.map((item) => (
             <DashboardListItem key={item.id.toString()} item={item} />
           ))}
+
+        {cryptoList.length > 0 ? <div className="pagiclass">
+          <ReactPaginate
+            previousLabel={"previous"}
+            nextLabel={"next"}
+            breakLabel={"..."}
+            breakClassName={"break-me"}
+            pageCount={166}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={2}
+            onPageChange={handlePageClick}
+            containerClassName={"pagination"}
+            activeClassName={"active"}
+          />
+        </div> : null}
       </Row>
       <Footer inStats={false} inFav={false} />
     </Container>

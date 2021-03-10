@@ -20,7 +20,6 @@ const CoinSetting = () => {
 
 export const Footer = (props: any) => {
   const [showAdd, setShow] = useState(false);
-
   const addTransaction = () => {
     console.log("click add transaction");
     setShow(!showAdd);
@@ -28,12 +27,11 @@ export const Footer = (props: any) => {
 
   const addToFav = () => {
     props.handleAddToFav(true);
-    alert("added to Favourite");
+
   };
 
   const removeFromFav = () => {
     props.handleAddToFav(false);
-    alert("removed from Favourite");
   };
 
   return (

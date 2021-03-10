@@ -3,17 +3,16 @@ import { Button, Col, Container, Row } from "reactstrap";
 import { Header } from "../component/Header";
 import "./CryptoStats.css";
 import { getColor, priceChange } from "../component/DashboardListItem";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { ICyptoData } from "./DashboardList";
 import { AiOutlineExpandAlt, AiOutlineLineChart } from "react-icons/ai";
-import CoinChart from "../component/CoinChart";
+import CryptoChart from "../component/CryptoChart";
 import { IoMdStats } from "react-icons/io";
 import { BiLeftArrowAlt } from "react-icons/bi";
 import { Footer } from "../component/Footer";
 import { realtime } from "../firebase";
 import { connect, useDispatch } from "react-redux";
-import { setCryptoObj } from "../reducer/FavList/action";
 
 const CryptoStats = (props: any) => {
   const history = useHistory();
@@ -36,6 +35,7 @@ const CryptoStats = (props: any) => {
   const [cryptoObj, setCrypto] = useState({});
   const { favObj, favList } = props;
   console.log("crypto stats redux props and if ", props);
+
   useEffect(() => {
     axios
       .get(`https://api.coincap.io/v2/assets/${id}`)
@@ -129,7 +129,7 @@ const CryptoStats = (props: any) => {
           <AiOutlineExpandAlt />
         </Button>
       </Row>
-      <CoinChart />
+      <CryptoChart id={id} />
       <Row className="d-flex m-0">
         <Col id="mkt-det-wrapper">
           <div id="market-details">

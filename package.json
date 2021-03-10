@@ -20,6 +20,7 @@
     "react-apexcharts": "^1.3.7",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^17.0.1",
+    "react-highcharts": "^16.1.0",
     "react-icons": "^4.2.0",
     "react-paginate": "^7.1.0",
     "react-pin-input": "^1.0.1",
@@ -61,6 +62,7 @@
   },
   "devDependencies": {
     "@types/chart.js": "^2.9.30",
+    "@types/react-highcharts": "^16.0.2",
     "@types/react-paginate": "^6.2.1",
     "@types/react-redux": "^7.1.16",
     "@types/react-router-dom": "^5.1.7"

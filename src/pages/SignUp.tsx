@@ -89,11 +89,16 @@ export const Signup = () => {
   };
   return (
     <div style={{ height: "100vh" }}>
-      <Container
-        style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}
-      >
+      {/* <Container
+        style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
+
         <Row className="myrowtwo">
-          <Col lg="12" md="12" sm="12" className="px-0">
+          <Col lg="12" md="12" sm="12" className="px-0"></Col> */}
+      <Container
+      >
+
+        <Row >
+          <Col >
             <div className="align-center">
               <div className="adjustcentersignup">
                 <p className="headersignup">
@@ -124,9 +129,9 @@ export const Signup = () => {
                     onChange={(evt) => setPassword(evt.target.value)}
                   />
                   <p className="footer">
-                    By signing up you accept the Terms of{" "}
+                    By signing up you accept the Terms of Service and
                   </p>
-                  <p className="footertwo">Service and Privacy Policy.</p>
+                  <p className="footertwo"> Privacy Policy.</p>
                 </Form>
               </div>
             </div>

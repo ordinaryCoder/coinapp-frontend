@@ -52,10 +52,9 @@ const UserProfile = (props: any) => {
   return (
     <div>
       <Container
-        style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}
       >
         <Row className="parentrow">
-          <Col lg="12" md="12" sm="12" style={{ height: "100%" }}>
+          <Col>
             <div className="userprofileicon">
               <Link to={"/Settings"}>
                 {" "}

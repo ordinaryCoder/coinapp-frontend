@@ -9,6 +9,9 @@ import { Row } from "reactstrap";
 import "../pages/Settings";
 import { MdStars } from "react-icons/md";
 import { connect } from "react-redux";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { toast } from "react-toastify";
+
 
 const CoinSetting = () => {
   return (
@@ -23,6 +26,7 @@ export const Footer = (props: any) => {
   const addTransaction = () => {
     console.log("click add transaction");
     setShow(!showAdd);
+
   };
 
   const addToFav = () => {
@@ -32,7 +36,23 @@ export const Footer = (props: any) => {
 
   const removeFromFav = () => {
     props.handleAddToFav(false);
+
   };
+  const footerhandle = () => {
+
+    window.scrollTo(0, 0)
+
+  }
+  const copyhandle = () => {
+    toast.success("URL copied successfully", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 5000,
+    });
+  }
+
+  const starhandle = () => {
+    window.scrollTo(0, 0)
+  }
 
   return (
     <Row className="list-footer">
@@ -42,7 +62,12 @@ export const Footer = (props: any) => {
           <FiCopy className="copyicon" />
         </Link>
 
-        <TiDocument className="documenticon" />
+
+        <CopyToClipboard text={window.location.href}>
+          <TiDocument className="documenticon" onClick={copyhandle} />
+        </CopyToClipboard>
+
+
         <BsFillPlusCircleFill onClick={addTransaction} className="plusicon" />
 
         {props.inStats ? (
@@ -53,11 +78,11 @@ export const Footer = (props: any) => {
           )
         ) : (
           <Link to="/favourite">
-            <AiOutlineStar className="staricon" />
+            <AiOutlineStar className="staricon" onClick={starhandle} />
           </Link>
         )}
 
-        <Link to="/Settings">
+        <Link to="/Settings" onClick={footerhandle}>
           <IoIosSettings className="iossettingicon" />
         </Link>
       </div>

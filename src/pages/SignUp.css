@@ -1,5 +1,4 @@
-
-.align-center{
+.align-center {
   text-align: center;
 }
 .headersignup {
@@ -8,24 +7,20 @@
   padding-top: 46px;
   margin-bottom: -36px;
   padding-right: 220px;
-} 
+}
 
-.px-0{
+.px-0 {
   padding-left: 0;
   padding-right: 0;
 }
 
 .adjustcentersignup {
-
   padding-top: 0%;
 }
 .imagesignup {
- 
   width: 30px;
   padding-top: 8px;
 }
-
-
 
 .subheadersup {
   color: #ffffff;
@@ -44,7 +39,7 @@
   font-weight: bold;
 }
 
-.email{
+.email {
   background-color: #0e0f18;
   height: 50px;
   color: #ffffff;
@@ -54,16 +49,13 @@
   border-bottom: 2px solid #adb3bc;
   margin: 0 auto;
   border-radius: 0;
-  
 }
-.email:focus{
+.email:focus {
   outline: none;
-
 }
 
-.passwordsignup{
- 
-  color: #ffffff; 
+.passwordsignup {
+  color: #ffffff;
   background-color: #0e0f18;
   height: 50px;
   width: 326px;
@@ -74,29 +66,28 @@
   border-radius: 0;
 }
 
-.password:focus{
-
+.password:focus {
   outline: none;
 }
 
 .footer {
   font-weight: normal;
-  color:#ffffff;
+  color: #ffffff;
   font-size: 19px;
   padding-bottom: 14px;
-  padding-top: 57px;
-  font-size: 13px;
+  padding-top: 11%;
+  font-size: 18px;
   letter-spacing: 0;
 }
 
 .footertwo {
   color: #ffffff;
-  font-size: 13px;
+  font-size: 18px;
   margin-top: -19px;
 }
 
 .signupbutton {
-  background-color: #0057FF;
+  background-color: #0057ff;
   color: #ffffff;
   height: 80px;
   font-size: 18px;
@@ -104,29 +95,25 @@
   border-radius: 0;
   margin-top: 9vh;
 }
-.signupbutton:focus{
+.signupbutton:focus {
   outline: none;
-
 }
 
-.mycoltwo{
+.mycoltwo {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 }
-.myrowtwo{
-
+.myrowtwo {
   position: relative;
-    height: 100vh;
-  
+  height: 100vh;
 }
 
-.Toastify__toast-body{
+.Toastify__toast-body {
   background: transparent;
 }
 
-.lickclasssignup{
-
-  color:#ffffff;
+.lickclasssignup {
+  color: #ffffff;
 }

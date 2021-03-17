@@ -26,9 +26,9 @@ const AllNotify = () => {
     return (
 
         <>
-            <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
+            <Container >
                 <Row>
-                    <Col lg="12" md="12" sm="12">
+                    <Col >
                         <Link to={'/Settings'}> <BiArrowBack className="backnotify" /></Link>
                         <h2 className="headernotify">Notifications</h2>
 

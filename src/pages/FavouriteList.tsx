@@ -106,6 +106,7 @@ const FavouriteCoinList = (props: any) => {
   };
 
   const handleDelete = () => {
+
     alert("coin deleted");
   };
 
@@ -137,7 +138,7 @@ const FavouriteCoinList = (props: any) => {
         rightIcon={<BiSearchAlt size={20} onClick={handleSearchClick} />}
       />
       <Row id="fav-content">
-
+        {optSearch ? Search : Sort}
         {props.favList.length > 0 &&
           props.favList.map((item: any) => <FavouriteListItem id={item} />)}
         {/* <FavouriteListItem key={props.item.id.toString()} item={props.item} /> */}

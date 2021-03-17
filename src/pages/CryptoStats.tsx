@@ -92,6 +92,7 @@ const CryptoStats = (props: any) => {
     history.push("/market");
   };
 
+
   return (
     <Container className="p-15">
       <Header
@@ -172,7 +173,7 @@ const CryptoStats = (props: any) => {
             </p>
           </div>
           <div id="market-details">
-            <p className="mkt-dt-title">Total Supply</p>
+            <p className="mkt-dt-title mkt-dt-title-cl">Total Supply</p>
             <p className="mkt-dt-content">
               {/* {parseFloat(cryptoStats?.maxSuppy.toString()).toFixed(2)}
               {cryptoStats.symbol} */}
@@ -180,7 +181,7 @@ const CryptoStats = (props: any) => {
           </div>
 
           <div id="market-details">
-            <p className="mkt-dt-title">High (24 hours)</p>
+            <p className="mkt-dt-title ">High (24 hours)</p>
             <p className="mkt-dt-content">
               {parseFloat(
                 cryptoStats?.changePercent24Hr.toString()
@@ -188,8 +189,9 @@ const CryptoStats = (props: any) => {
             </p>
           </div>
         </Col>
-        <Footer inStats={true} inFav={inFav} handleAddToFav={handleAddToFav} />
       </Row>
+      <Footer inStats={true} inFav={inFav} handleAddToFav={handleAddToFav} />
+
     </Container>
   );
 };

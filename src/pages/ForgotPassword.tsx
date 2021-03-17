@@ -20,9 +20,9 @@ const ForgotPassword = () => {
 
     return (
         <div>
-            <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-                <Row className="rowforgotpass">
-                    <Col lg="12" md="12" sm="12" className="newcolforgotpass">
+            <Container >
+                <Row >
+                    <Col >
 
                         <div className="myicon">
                             <Link to={'/Signin'}> <BiArrowBack /> </Link>

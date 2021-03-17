@@ -2,7 +2,7 @@
   background-color: #0e0f18;
   height: 100vh;
 }
-.align-center {
+.align-center-in {
   text-align: center;
 }
 .headersignin {
@@ -76,7 +76,7 @@
   font-size: 19px;
   /* padding-top: 35px; */
   padding-bottom: 26px;
-  margin-top: 6vh;
+  margin-top: 8vh;
 }
 
 .signinbutton {

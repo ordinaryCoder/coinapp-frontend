@@ -416,48 +416,11 @@ class ApexChartX extends React.Component<any, any> {
 
   render() {
     return (
+
+
       <div id="chart">
-        <div className="toolbar pl-15">
-          <button
-            id="one_month"
-            onClick={() => this.updateData("one_month")}
-            className={this.state.selection === "one_month" ? "active" : ""}
-          >
-            1M
-          </button>
-          &nbsp;
-          <button
-            id="six_months"
-            onClick={() => this.updateData("six_months")}
-            className={this.state.selection === "six_months" ? "active" : ""}
-          >
-            6M
-          </button>
-          &nbsp;
-          <button
-            id="one_year"
-            onClick={() => this.updateData("one_year")}
-            className={this.state.selection === "one_year" ? "active" : ""}
-          >
-            1Y
-          </button>
-          &nbsp;
-          <button
-            id="ytd"
-            onClick={() => this.updateData("ytd")}
-            className={this.state.selection === "ytd" ? "active" : ""}
-          >
-            YTD
-          </button>
-          &nbsp;
-          <button
-            id="all"
-            onClick={() => this.updateData("all")}
-            className={this.state.selection === "all" ? "active" : ""}
-          >
-            ALL
-          </button>
-        </div>
+
+
 
         <div id="chart-timeline">
           <ReactApexChart
@@ -467,7 +430,53 @@ class ApexChartX extends React.Component<any, any> {
             height={350}
           />
         </div>
-      </div>
+
+        <div className="toolbar pl-15" style={{
+          display: "flex",
+          justifyContent: "space-evenly"
+        }}>
+
+          <button
+            id="one_month"
+            onClick={() => this.updateData("one_month")}
+            className={this.state.selection === "one_month" ? "active" : ""}
+          >
+            1M
+          </button>
+          &nbsp;
+        <button
+            id="six_months"
+            onClick={() => this.updateData("six_months")}
+            className={this.state.selection === "six_months" ? "active" : ""}
+          >
+            6M
+          </button>
+          &nbsp;
+        <button
+            id="one_year"
+            onClick={() => this.updateData("one_year")}
+            className={this.state.selection === "one_year" ? "active" : ""}
+          >
+            1Y
+          </button>
+          &nbsp;
+        <button
+            id="ytd"
+            onClick={() => this.updateData("ytd")}
+            className={this.state.selection === "ytd" ? "active" : ""}
+          >
+            YTD
+          </button>
+          &nbsp;
+        <button
+            id="all"
+            onClick={() => this.updateData("all")}
+            className={this.state.selection === "all" ? "active" : ""}
+          >
+            ALL
+          </button>
+        </div>
+      </div >
     );
   }
 }

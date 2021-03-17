@@ -13,9 +13,9 @@ import { Link } from 'react-router-dom';
 const AddPin = () => {
     return (
         <div >
-            <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-                <Row className="rowclass">
-                    <Col lg="12" md="12" sm="12" className="newclasscol">
+            <Container>
+                <Row>
+                    <Col>
 
 
                         <div className="addpinicon">

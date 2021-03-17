@@ -64,11 +64,11 @@ export const FavouriteListItem = (props: any) => {
       ? (Math.abs(Number(labelValue)) / 1.0e9).toFixed(1) + " Billions"
       : // Six Zeroes for Millions
       Math.abs(Number(labelValue)) >= 1.0e6
-      ? (Math.abs(Number(labelValue)) / 1.0e6).toFixed(1) + " Millions"
-      : // Three Zeroes for Thousands
-      Math.abs(Number(labelValue)) >= 1.0e3
-      ? (Math.abs(Number(labelValue)) / 1.0e3).toFixed(1) + " K"
-      : Math.abs(Number(labelValue)).toFixed(2);
+        ? (Math.abs(Number(labelValue)) / 1.0e6).toFixed(1) + " Millions"
+        : // Three Zeroes for Thousands
+        Math.abs(Number(labelValue)) >= 1.0e3
+          ? (Math.abs(Number(labelValue)) / 1.0e3).toFixed(1) + " K"
+          : Math.abs(Number(labelValue)).toFixed(2);
   }
 
   return (
@@ -104,13 +104,13 @@ export const FavouriteListItem = (props: any) => {
             >
               $
               {priceChange(
-                favListItem?.vwap24Hr?.toString(),
-                favListItem?.priceUsd?.toString()
-              )}
+              favListItem?.vwap24Hr?.toString(),
+              favListItem?.priceUsd?.toString()
+            )}
               (
               {parseFloat(favListItem?.changePercent24Hr?.toString()).toFixed(
-                2
-              )}
+              2
+            )}
               %)
             </p>
           </div>

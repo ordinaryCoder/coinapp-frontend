@@ -114,17 +114,20 @@ const List = (props: any) => {
 
   const handleSearchClick = () => {
     setSearch(!optSearch);
+
   };
 
   const handleStatClick = () => {
     history.push("/market");
   };
 
+
   const handlePageClick = (evt: any) => {
 
     setOffset(10 * (evt.selected));
     window.scrollTo(0, 0)
   };
+
 
   const Search = (
     <InputGroup className="p-15">

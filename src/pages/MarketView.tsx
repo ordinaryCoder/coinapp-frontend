@@ -5,6 +5,7 @@ import Chart from "../component/CoinChart";
 import { Header } from "../component/Header";
 import { useHistory } from "react-router-dom";
 import { IoMdStats } from "react-icons/io";
+import Footer from "../component/Footer";
 
 const MarketView = () => {
   const history = useHistory();
@@ -55,6 +56,7 @@ const MarketView = () => {
             </div>
           </Col>
         </Row>
+        <Footer />
       </Container>
     </div>
   );

@@ -8,7 +8,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 const EnteroldPassword = () => {
     return (
-        <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
+        <Container >
             <Row>
                 <Col >
                     <div className="oldpassicon">

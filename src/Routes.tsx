@@ -25,6 +25,7 @@ import EnteroldPassword from "./pages/EnteroldPassword";
 import AddnewPin from "./pages/AddnewPin";
 import FavouriteCoinList from "./pages/FavouriteList";
 import ErrorPage from "./pages/ErrorPage";
+import ModalPage from "./pages/ModalPage";
 
 const ProtectedRoute: FC<RouteProps & { isAuth: boolean; component: FC }> = ({
   component: Component,
@@ -174,7 +175,14 @@ const Routes = ({ isAuthenticated }: any) => {
             path="/details/:id"
             isAuth={isAuthenticated}
           />
+
+          <Route exact path="/ModalPage">
+            <ModalPage />
+          </Route>
+
+
           <Route component={ErrorPage} />
+
         </Switch>
       </div>
     </Router >

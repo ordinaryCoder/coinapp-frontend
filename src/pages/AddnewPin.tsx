@@ -9,9 +9,9 @@ import { Container, Row, Col } from 'reactstrap';
 const AddnewPin = () => {
     return (
         <div>
-            <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
-                <Row className="rowclassnewpin">
-                    <Col lg="12" md="12" sm="12" className="newclassnewpin">
+            <Container >
+                <Row >
+                    <Col >
 
 
                         <div className="addnewpinicon">

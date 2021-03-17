@@ -12,9 +12,9 @@ import { Link } from 'react-router-dom';
 const Notification = () => {
     return (
 
-        <Container style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}>
+        <Container>
             <Row>
-                <Col lg="12" md="12" sm="12">
+                <Col>
                     <div className="alldiv">
 
                         <div >
@@ -40,7 +40,6 @@ const Notification = () => {
                     </div>
                 </Col>
             </Row>
-
         </Container>
     )
 }

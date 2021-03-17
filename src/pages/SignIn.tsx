@@ -48,13 +48,13 @@ export const Signin = () => {
 
 
   return (
-    <div style={{ height: "100vh" }}>
-      <Container
-        style={{ height: "100vh", minWidth: "200px", maxWidth: "420px" }}
-      >
-        <Row className="myrow">
-          <Col lg="12" md="12" sm="12">
-            <div className="align-center">
+    <div >
+      <Container >
+
+
+        <Row >
+          <Col >
+            <div className="align-center-in">
               <div className=" adjustcentertwo">
                 <p className="headersignin">
                   <Link to={"/Signup"} className="linkclass">

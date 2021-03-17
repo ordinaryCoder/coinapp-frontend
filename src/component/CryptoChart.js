@@ -56,7 +56,7 @@ class CryptoChart extends React.Component {
               color: "#000",
               position: "absolute",
             },
-            align: "left",
+            align: "left",      
           },
         },
       ],

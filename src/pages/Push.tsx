@@ -1,7 +1,8 @@
-import firebase from 'firebase';
-import React from 'react'
+import firebase from "firebase";
+import React from "react";
 
 function Push() {
+<<<<<<< HEAD
 
     React.useEffect(() => {
 
@@ -20,6 +21,20 @@ function Push() {
             <h1>hi push</h1>
         </div>
     )
+=======
+  React.useEffect(() => {
+    getToken();
+  }, []);
+  const getToken = async () => {
+    const token = await firebase.messaging().getToken();
+    console.log("token", token);
+  };
+  return (
+    <div>
+      <h1>hi push</h1>
+    </div>
+  );
+>>>>>>> 4ae66e79e432bcb305ab3c6fcceff6f2433a3c16
 }
 
-export default Push
+export default Push;

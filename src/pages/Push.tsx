@@ -11,7 +11,7 @@ function Push() {
 
 
         }).then((data) => {
-            console.warn("token", data)
+            console.log("token", data)
 
         })
     })

@@ -10,6 +10,9 @@ import firebase, { realtime } from "../firebase";
 import { Footer } from "../component/Footer";
 import { FavouriteListItem } from "../component/FavouriteListItem";
 import { connect, useDispatch } from "react-redux";
+import { getKeyByValue } from "../utils/getKeyByValue";
+import { setUid } from "../reducer/user/actions";
+import { SET_UID } from "../reducer/user/types";
 
 
 
@@ -28,13 +31,15 @@ export type ICyptoData = {
 };
 
 const FavouriteCoinList = (props: any) => {
+
   const dispatch = useDispatch();
   const history = useHistory();
   const [FavList, setFav] = useState<ICyptoData[]>([]);
   const [optSearch, setSearch] = useState(false);
 
-  console.log("props in Favorite coin", props.uid, props.favList);
-  console.log("favcoin favlist and length", Object.keys(FavList).length);
+  console.log("props in Favorite coin", props);
+  // const {favObj} = props
+  console.log("my favobj is:", props.favObj)
 
   useEffect(() => {
     let currentUser = firebase.auth().currentUser?.uid;
@@ -48,6 +53,7 @@ const FavouriteCoinList = (props: any) => {
           if (snapshot.val()) {
             setFav(snapshot.val());
             console.log("FavList Value", FavList);
+
             // dispatch(setFavList(FavList));
           } else {
             setFav([]);
@@ -107,6 +113,7 @@ const FavouriteCoinList = (props: any) => {
 
   const handleDelete = () => {
 
+
     alert("coin deleted");
   };
 
@@ -131,16 +138,16 @@ const FavouriteCoinList = (props: any) => {
   );
 
   return (
-    <Container className="j-even p-15">
+    <Container className="j-even p-15" >
       <Header
-        leftIcon={<RiDeleteBinLine size={20} onClick={handleDelete} />}
+        leftIcon={''}
         title={"Favourite Coin"}
         rightIcon={<BiSearchAlt size={20} onClick={handleSearchClick} />}
       />
-      <Row id="fav-content">
+      <Row id="fav-content" >
         {optSearch ? Search : Sort}
         {props.favList.length > 0 &&
-          props.favList.map((item: any) => <FavouriteListItem id={item} />)}
+          props.favList.map((item: any) => <FavouriteListItem uid={props.uid} favObj={props.favObj} id={item} />)}
         {/* <FavouriteListItem key={props.item.id.toString()} item={props.item} /> */}
 
       </Row>
@@ -153,6 +160,7 @@ const FavouriteCoinList = (props: any) => {
 const mapStateToProps = (store: any) => ({
   uid: store.userReducer.uid,
   favList: store.favListReducer.favList,
+  favObj: store.favListReducer.favObj,
   store,
 });
 

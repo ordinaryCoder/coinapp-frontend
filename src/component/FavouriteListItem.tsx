@@ -4,6 +4,9 @@ import { ICyptoData } from "../pages/DashboardList";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { setFavList } from "../reducer/FavList/action";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { getKeyByValue } from "../utils/getKeyByValue";
+import { realtime } from "../firebase";
 
 export interface IDashboardListItem {
   item: ICyptoData;
@@ -30,7 +33,7 @@ export const priceChange = (newPrice: string, oldPrice: string) => {
 };
 
 export const FavouriteListItem = (props: any) => {
-  console.log("In Favalist Item,", props.id);
+  var id: string;
   const [favListItem, setFavListItem] = useState<ICyptoData>({
     id: "",
     rank: "",
@@ -70,52 +73,76 @@ export const FavouriteListItem = (props: any) => {
           ? (Math.abs(Number(labelValue)) / 1.0e3).toFixed(1) + " K"
           : Math.abs(Number(labelValue)).toFixed(2);
   }
+  const handleDeletedown = () => {
+    console.log("In Favalist Item,", props);
+    const key = getKeyByValue(props.favObj, props.id)
+    console.log('my handledelete func is:', key)
+    realtime.ref("fav-list/").child(props.uid + "/" + key).remove()
+  }
 
   return (
-    <Link to={`/details/${props.id}`}>
-      <Row id="single-list-wrapper" className=" d-flex m-auto pl-pr-15-pb-10">
-        <Col id="logo-wrapper" xs="2">
-          <img
-            id="coin-logo"
-            className="coin-logo mr-auto"
-            src={`https://static.coincap.io/assets/icons/${favListItem?.symbol.toLowerCase()}@2x.png`}
-            alt="coin logo"
-          />
-        </Col>
+    <Row style={{ alignItems: "center" }} className="d-flex flex-row align-items-center">
+      <Link className="justify-content-between d-flex" style={{ flex: 1 }} to={`/details/${props.id}`}>
+        <Row id="single-list-wrapper" style={{ flex: 0.95 }} className="d-flex flex-row">
+          <Col id="logo-wrapper" xs="2">
+            <img
+              id="coin-logo"
+              className="coin-logo mr-auto"
+              src={`https://static.coincap.io/assets/icons/${favListItem?.symbol.toLowerCase()}@2x.png`}
+              alt="coin logo"
+            />
+          </Col>
 
-        <Col id="cypto-name" xs="5">
-          <h2>
-            {favListItem?.rank}. {favListItem?.id}
-            <span>({favListItem?.symbol})</span>
-          </h2>
-          <p>${roundOff(favListItem?.marketCapUsd?.toString())}</p>
-        </Col>
+          <Col id="cypto-name" xs="5">
+            <h2>
+              {favListItem?.rank}. {favListItem?.id}
+              <span>({favListItem?.symbol})</span>
+            </h2>
+            <p>${roundOff(favListItem?.marketCapUsd?.toString())}</p>
+          </Col>
 
-        <Col id="crypto-rate" xs="5" className="ml-auto d-block">
-          <p className="text-right">
-            ${parseFloat(favListItem?.priceUsd?.toString()).toFixed(2)}
-          </p>
-          <div id="price-change" className="d-flex">
-            <p
-              className={getColor(
+          <Col id="crypto-rate" xs="5" className="ml-auto d-block">
+            <p className="text-right">
+              ${parseFloat(favListItem?.priceUsd?.toString()).toFixed(2)}
+            </p>
+            <div id="price-change" className="d-flex">
+
+              <p
+                className={getColor(
+                  favListItem?.vwap24Hr?.toString(),
+                  favListItem?.priceUsd?.toString()
+                )}
+              >
+                $
+              {priceChange(
                 favListItem?.vwap24Hr?.toString(),
                 favListItem?.priceUsd?.toString()
               )}
-            >
-              $
-              {priceChange(
-              favListItem?.vwap24Hr?.toString(),
-              favListItem?.priceUsd?.toString()
-            )}
               (
               {parseFloat(favListItem?.changePercent24Hr?.toString()).toFixed(
-              2
-            )}
+                2
+              )}
               %)
             </p>
-          </div>
-        </Col>
-      </Row>
-    </Link>
+
+
+            </div>
+
+          </Col>
+
+        </Row>
+
+      </Link>
+
+      <RiDeleteBinLine size={20} onClick={handleDeletedown} />
+
+
+    </Row>
+
   );
 };
+
+//  position: absolute;
+//      top: 20%;
+//     right: 2%;
+//       left: 94%;

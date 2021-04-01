@@ -26,6 +26,7 @@ import AddnewPin from "./pages/AddnewPin";
 import FavouriteCoinList from "./pages/FavouriteList";
 import ErrorPage from "./pages/ErrorPage";
 import ModalPage from "./pages/ModalPage";
+import Push from './pages/Push';
 
 const ProtectedRoute: FC<RouteProps & { isAuth: boolean; component: FC }> = ({
   component: Component,
@@ -178,6 +179,11 @@ const Routes = ({ isAuthenticated }: any) => {
 
           <Route exact path="/ModalPage">
             <ModalPage />
+          </Route>
+
+
+          <Route exact path="/Push">
+            <Push />
           </Route>
 
 

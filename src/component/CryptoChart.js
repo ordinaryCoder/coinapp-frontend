@@ -3,6 +3,9 @@ import ReactHighcharts from "react-highcharts/ReactHighcharts.src";
 import priceData from "../assets/btcdata.json";
 import moment from "moment";
 import axios from "axios";
+import LineChart from 'react-linechart';
+import { Line } from 'react-chartjs-2'
+
 
 class CryptoChart extends React.Component {
   constructor(props) {
@@ -183,7 +186,13 @@ class CryptoChart extends React.Component {
         </div>
 
         <div id="chart-timeline">
-          <ReactHighcharts config={configPrice}></ReactHighcharts>
+           <ReactHighcharts config={configPrice}></ReactHighcharts> 
+          {/* <LineChart 
+                        width={600}
+                        height={400}
+                        config={configPrice}
+                    /> */}
+                    {/* <Line config={configPrice}/> */}
         </div>
       </div>
     );

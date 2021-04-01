@@ -1,25 +1,19 @@
-import firebase from 'firebase';
-import React from 'react'
+import firebase from "firebase";
+import React from "react";
 
 function Push() {
-
-    React.useEffect(() => {
-
-        const msg = firebase.messaging();
-        msg.requestPermission().then(() => {
-            return msg.getToken();
-
-
-        }).then((data) => {
-            console.warn("token", data)
-
-        })
-    })
-    return (
-        <div>
-            <h1>hi push</h1>
-        </div>
-    )
+  React.useEffect(() => {
+    getToken();
+  }, []);
+  const getToken = async () => {
+    const token = await firebase.messaging().getToken();
+    console.log("token", token);
+  };
+  return (
+    <div>
+      <h1>hi push</h1>
+    </div>
+  );
 }
 
-export default Push
+export default Push;

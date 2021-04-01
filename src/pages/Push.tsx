@@ -7,7 +7,7 @@ function Push() {
     }, []);
     const getToken = async () => {
         const token = await firebase.messaging().getToken();
-        console.log("token", token);
+        console.log(" checking token", token);
     };
     return (
         <div>

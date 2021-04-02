@@ -37,7 +37,7 @@ export const Signin = () => {
       .catch((error) => {
         //this.setState({ error: error });
         toast.error(error.message, {
-          position: toast.POSITION.BOTTOM_RIGHT,
+          position: toast.POSITION.TOP_RIGHT,
           autoClose: 5000,
         });
 

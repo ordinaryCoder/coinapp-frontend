@@ -65,7 +65,7 @@ const ForgotPassword = () => {
                         </div>
 
                         <div className="forgotpasspage">
-                            <h1 >Forgot password</h1>
+                            <h1>Forgot password</h1>
                         </div>
 
                         <div >
@@ -87,8 +87,7 @@ const ForgotPassword = () => {
                                     placeholder="Enter your email address" />
                             </div>
 
-                            <Button className="recoverpass"
-                            >
+                            <Button className="recoverpass">
                                 <Link to={'Notifications'}
                                     className="link-class-recover-pass"> Recover password</Link></Button>
 

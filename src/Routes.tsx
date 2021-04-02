@@ -1,32 +1,28 @@
 import React, { FC } from "react";
 import {
   BrowserRouter as Router,
-  Switch,
+  Redirect,
   Route,
   RouteProps,
-  Redirect,
+  Switch,
 } from "react-router-dom";
+import AddnewPin from "./pages/AddnewPin";
+import AddPin from "./pages/AddPin";
+import AllNotify from "./pages/AllNotify";
+import CryptoStats from "./pages/CryptoStats";
 import List from "./pages/DashboardList";
+import EnteroldPassword from "./pages/EnteroldPassword";
+import ErrorPage from "./pages/ErrorPage";
+import FavouriteCoinList from "./pages/FavouriteList";
+import ForgotPassword from "./pages/ForgotPassword";
 import Home from "./pages/Home";
+import MarketView from "./pages/MarketView";
+import ModalPage from "./pages/ModalPage";
+import Notifications from "./pages/Notifications";
+import Settings from "./pages/Settings";
 import { Signin } from "./pages/SignIn";
 import { Signup } from "./pages/SignUp";
-import ForgotPassword from "./pages/ForgotPassword";
-import Notifications from "./pages/Notifications";
 import UserProfile from "./pages/UserProfile";
-import Settings from "./pages/Settings";
-
-import AllNotify from "./pages/AllNotify";
-
-import MarketView from "./pages/MarketView";
-import AddPin from "./pages/AddPin";
-
-import CryptoStats from "./pages/CryptoStats";
-import EnteroldPassword from "./pages/EnteroldPassword";
-import AddnewPin from "./pages/AddnewPin";
-import FavouriteCoinList from "./pages/FavouriteList";
-import ErrorPage from "./pages/ErrorPage";
-import ModalPage from "./pages/ModalPage";
-import Push from './pages/Push';
 
 const ProtectedRoute: FC<RouteProps & { isAuth: boolean; component: FC }> = ({
   component: Component,
@@ -43,9 +39,6 @@ const Routes = ({ isAuthenticated }: any) => {
         {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
         <Switch>
-
-
-
           <Route exact path="/">
             <Home />
           </Route>
@@ -181,17 +174,10 @@ const Routes = ({ isAuthenticated }: any) => {
             <ModalPage />
           </Route>
 
-
-          <Route exact path="/Push">
-            <Push />
-          </Route>
-
-
           <Route component={ErrorPage} />
-
         </Switch>
       </div>
-    </Router >
+    </Router>
   );
 };
 

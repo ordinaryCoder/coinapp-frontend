@@ -1,0 +1,80 @@
+/* @font-face {
+  font-family: "sfPro";
+  src: url("../customFonts/FontsFree-Net-SFProText-Regular.ttf") format("ttf");
+} */
+
+@font-face {
+  font-family: "sfpro";
+  src: url("../customFonts/FontsFree-Net-SFProText-Regular.ttf") format("ttf");
+}
+.align-center {
+  text-align: center;
+  background-color: #0e0f18;
+  height: 100vh;
+}
+
+.adjustcenter {
+  padding-top: 12%;
+}
+.heading {
+  font-size: 30px;
+  color: #ffffff;
+
+  padding-bottom: 14px;
+  padding-top: 55px;
+  font-family: "sfpro";
+  font-weight: bold;
+  letter-spacing: -10;
+  line-break: 36;
+}
+
+.subheading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.childsubheading {
+  padding-top: 11px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+.buttonsign {
+  background-color: transparent;
+  padding: 11px;
+  border-radius: 117px;
+  width: 190px;
+  margin-top: 18px;
+  height: 49px;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: -10;
+}
+.buttonsign:hover {
+  background-color: #0057ff;
+  border-color: #0057ff;
+}
+
+.buttonsignup {
+  background-color: transparent;
+
+  padding: 11px;
+  border-radius: 117px;
+  width: 190px;
+  margin-top: 18px;
+  height: 49px;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: -10;
+}
+.buttonsignup:hover {
+  background-color: #0057ff;
+  border-color: #0057ff;
+}

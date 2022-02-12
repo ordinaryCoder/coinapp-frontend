@@ -1,0 +1,300 @@
+.seticon {
+  font-size: 30px;
+  margin-top: 30px;
+  /* margin-left: 16px; */
+  color: #666666;
+}
+.Settingheader {
+  /* margin-left: 155px; */
+  margin-top: -34px;
+  font-size: 20px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.headergeneral {
+  padding-top: 30px;
+  font-size: 34px;
+
+  font-weight: bold;
+  /* margin-left: 19px; */
+  color: #ffffff;
+}
+
+.setnotification {
+  font-size: 16px;
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 23px; */
+}
+
+.notifiicon {
+  /* margin-left: 327px; */
+
+  margin-top: -20px;
+  font-size: 30px;
+  color: #666666;
+}
+.setcurrency {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 23px; */
+}
+.currcyicon {
+  /* margin-left: 327px; */
+
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.setalerts {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 23px; */
+}
+.alerticon {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.setpolicy {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 23px; */
+}
+
+.policyicon {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+/* Account Section */
+
+.headerAcount {
+  padding-top: 1px;
+  font-size: 34px;
+
+  font-weight: bold;
+  /* margin-left: 19px; */
+}
+
+.hearderuserprofile {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 23px; */
+}
+
+.accountarraw {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.headerchangepin {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accountarrawtwo {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.headerlogout {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accountarrowthree {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+/* Social Section */
+
+.headersocial {
+  padding-top: 1px;
+  font-size: 34px;
+
+  font-weight: bold;
+  /* margin-left: 19px; */
+}
+
+.headertelegram {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 23px; */
+}
+
+.forwardarrow {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.headertwiter {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forwardarrowtwo {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.headermedium {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forwardarrowthree {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+.shareapp {
+  font-size: 16px;
+
+  padding-top: 23px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.forwardarrowfour {
+  /* margin-left: 327px; */
+  margin-top: -19px;
+  font-size: 30px;
+  color: #666666;
+}
+
+.setfooter {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+.copyicon {
+  font-size: 30px;
+  /* margin-left: 23px; */
+}
+
+.documenticon {
+  font-size: 30px;
+  /* margin-left: 43px; */
+}
+
+.plusicon {
+  font-size: 60px;
+  /* margin-left: 36px; */
+}
+
+.staricon {
+  font-size: 30px;
+  /* margin-left: 40px; */
+}
+
+.iossettingicon {
+  font-size: 30px;
+  /* margin-left: 43px; */
+}
+
+.link-class-settings-notification {
+  color: #ffffff;
+}
+
+.link-class-settings-profile {
+  color: #ffffff;
+}
+
+.link-class-settings-pin {
+  color: #ffffff;
+}
+
+.button-class {
+  background-color: transparent;
+  color: black;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  margin-top: -2px;
+  margin-right: 14px;
+}
+.modal-body {
+  position: relative;
+  padding: 82px;
+  background-color: #ffffff;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.iconclass {
+  background-color: #ffffff !important;
+}
+.header-class {
+  position: absolute;
+  top: 1%;
+  background-color: transparent;
+  color: black;
+  margin-top: 38px;
+  font-size: 17px;
+}
+.modal-dialog {
+  margin-top: 25%;
+}

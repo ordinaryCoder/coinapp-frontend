@@ -1,0 +1,109 @@
+.background {
+  background-color: #0e0f18;
+  height: 100vh;
+}
+.align-center-in {
+  text-align: center;
+}
+.headersignin {
+  color: #ffffff;
+  font-size: 25px;
+  padding-top: 46px;
+  margin-bottom: -36px;
+  padding-right: 220px;
+}
+.adjustcentertwo {
+  padding-top: 0%;
+}
+
+.imagesignin {
+  width: 25px;
+  padding-top: 8px;
+}
+
+.mainheading {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10;
+  padding-top: 35px;
+  padding-right: 95px;
+}
+
+.mainheadingtwo {
+  color: #ffffff;
+  font-size: 31px;
+  padding-right: 36px;
+
+  padding-bottom: 100px;
+}
+
+.emailid {
+  background-color: #0e0f18;
+  height: 50px;
+  color: #ffffff;
+  width: 326px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #adb3bc;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.emailid:focus {
+  outline: none;
+}
+
+.password {
+  color: #ffffff;
+  background-color: #0e0f18;
+  height: 50px;
+  width: 326px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #adb3bc;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.password:focus {
+  outline: none;
+}
+
+.forgotpass {
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 19px;
+  /* padding-top: 35px; */
+  padding-bottom: 26px;
+  margin-top: 8vh;
+}
+
+.signinbutton {
+  background-color: #0057ff;
+  color: #ffffff;
+  height: 80px;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 0;
+  margin-top: 9vh;
+}
+
+.mycol {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.myrow {
+  position: relative;
+  height: 100vh;
+}
+
+.linkclass {
+  color: #ffffff;
+}
+
+.linkclassforogt {
+  color: #ffffff;
+}

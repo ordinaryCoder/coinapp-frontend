@@ -1,0 +1,113 @@
+.userprofileicon {
+  font-size: 30px;
+  padding-top: 33px;
+  color: #666666;
+}
+.userprofileupper {
+  font-size: 18px;
+  margin-top: -38px;
+  padding-left: 115px;
+  color: #ffffff;
+}
+.Headingdetails {
+  color: #ffffff;
+  font-size: 32px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+.userdetailsprofile {
+  font-size: 16px;
+  color: #666666;
+  margin-top: 33px;
+}
+
+.usermyname {
+  color: #ffffff;
+}
+.userdetailsprofilename {
+  font-size: 16px;
+  color: #666666;
+  margin-top: 35px;
+}
+
+.usermylastname {
+  color: #ffffff;
+}
+.userdetailsprofileemail {
+  font-size: 16px;
+  color: #666666;
+  margin-top: 35px;
+}
+
+.usermyemail {
+  color: #ffffff;
+}
+
+.changepass {
+  font-size: 20px;
+  margin-top: 35px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forwardicon {
+  margin-bottom: 3px;
+
+  font-size: 30px;
+  color: #666666;
+}
+.deleteAccount {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forwardicontwo {
+  margin-bottom: 7px;
+
+  font-size: 30px;
+  color: #666666;
+}
+
+.usermyname {
+  margin-top: 7px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+}
+
+.usermylastname {
+  margin-top: 7px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+}
+
+.usermyemail {
+  margin-top: 7px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+}
+
+.user-profile-button {
+  background-color: #0057ff;
+  color: white;
+
+  font-size: 18px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  left: 0;
+  right: 0;
+}
+
+.parentrow {
+  height: 100%;
+}

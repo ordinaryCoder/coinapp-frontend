@@ -1,0 +1,75 @@
+.addnewpinicon {
+  font-size: 30px;
+  padding-top: 24px;
+  margin-left: 10px;
+}
+
+.addnewpinimage {
+  margin-left: 136px;
+  width: 35px;
+}
+
+.addnewpinheader {
+  margin-top: 50px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.addnewpinsubheader {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.addnewsubheadertwo {
+  font-size: 16px;
+  margin-top: 9px;
+  margin-left: 8px;
+}
+
+.newpincontainer > div {
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  display: inline-grid;
+  width: 56px;
+  height: 61px;
+  margin-left: 23px;
+  margin-top: 83px;
+}
+
+.inputnewpinone {
+  width: 55px;
+  border-radius: 0;
+  border-inline-end: none;
+  border-inline-start: none;
+  border-block-start: none;
+  background: transparent;
+}
+
+.newpinbutton {
+  background-color: #0057ff;
+  color: white;
+
+  font-size: 18px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  left: 0;
+  right: 0;
+}
+
+.rowclassnewpin {
+  margin-right: -15px;
+  margin-left: -15px;
+  height: 100%;
+}
+
+.newclassnewpin {
+  height: 100%;
+  position: relative;
+}

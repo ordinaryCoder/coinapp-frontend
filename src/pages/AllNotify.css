@@ -1,0 +1,58 @@
+.backnotify {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 16px;
+  color: #666666;
+}
+
+.headernotify {
+  margin-left: 138px;
+  margin-top: -31px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.pushnotify {
+  font-size: 18px;
+
+  margin-left: 23px;
+  padding-top: 52px;
+  margin-top: -22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.updatenotify {
+  font-size: 18px;
+
+  margin-left: 23px;
+  padding-top: 32px;
+  margin-top: -22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.releasenotify {
+  font-size: 18px;
+
+  margin-left: 23px;
+  padding-top: 32px;
+  margin-top: -22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.othernotifications {
+  font-size: 18px;
+  margin-left: 23px;
+  padding-top: 32px;
+  margin-top: -22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.react-switch-handle {
+  height: 21px !important;
+  width: 23px !important;
+  top: 3.5px !important;
+}

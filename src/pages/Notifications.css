@@ -1,0 +1,60 @@
+
+
+.alldiv{
+
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.imageNotifications{
+
+    width: 39px;
+    margin-top: 35px;
+    
+}
+.iconNotifications{
+
+    font-size: 138px;
+    margin-top: 75px;
+   
+}
+
+.headingNotifications{
+    font-size: 30px;
+    margin-top: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    padding-left: 22px;
+
+
+}
+.subheadingNotifications{
+
+    font-size: 16px;
+    margin-top: 0px;
+    color: #666666;
+    padding-left: 23px;
+
+}
+.subheadingNotificationstwo{
+
+    margin-top: -5px;
+    padding-left: 27px;
+    color: #666666;
+}
+.Notificationsbutton{
+    width: 185px;
+    height: 50px;
+    color:#ffffff;
+    border-radius: 40px;
+    background-color: #0057ff;
+    margin-top: 48px;
+    border-color: #0057ff;
+}
+
+.linkclassnotifi{
+
+    color:#ffffff;
+}
